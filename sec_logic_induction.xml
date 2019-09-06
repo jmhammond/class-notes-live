@@ -2,10 +2,30 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_logic_induction">
   <title>Mathematical Induction</title>
 
+  <!-- <theorem> -->
+  <!--   <title> -->
+  <!--       The Principle of Mathematical Induction -->
+  <!--   </title> -->
+  <!--   <statement> -->
+  <!--     <p> -->
+  <!--       Let <m>S\subseteq \N</m> be a subset of the set of natural numbers with the following properties:  -->
+  <!--       <ol> -->
+  <!--         <li> -->
+  <!--           <m>1 \in S</m> -->
+  <!--         </li> -->
+  <!--         <li> -->
+  <!--           For all <m>n\in \mathbb{N}</m>, having <m>n \in S</m> implies that <m>n+1 \in S</m>. -->
+  <!--         </li> -->
+  <!--       </ol> -->
+  <!--       Then <m>S = \N</m> -->
+  <!--     </p> -->
+  <!--   </statement> -->
+  <!-- </theorem> -->
+
   <definition>
     <statement>
       <p>
-        To prove that a statement <m>P(n)</m> is true for all integers <m>n\ge 0</m>, we use the principal of <term>math induction</term>. The process has two core steps:
+        To prove that a statement <m>P(n)</m> is true for all integers <m>n\ge 0</m>, we use the <term>principal of math induction</term>. The process has two core steps:
         <ol>
           <li>Basis step: Prove that <m>P(0)</m> is true.</li>
           <li>Inductive step: Assume that <m>P(k)</m> is true for some value of <m>k \ge 0</m> and show that <m>P(k+1)</m> is true. </li>
@@ -138,6 +158,7 @@
       </p>
     </statement>
   </example>
+
 
 
   <exercises>
@@ -375,6 +396,144 @@
       </solution>
     </exercise>
 
- </exercises>
+
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Use the product rule for logarithms (<m>\log(ab) = \log(a) + \log(b)</m>) to prove, by induction on <m>n</m>, that <m>\log(a^n) = n \log(a)</m>, for all natural numbers <m>n \ge 2</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The idea here is that if we take the logarithm of <m>a^n</m>, we can increase <m>n</m> by 1 if we multiply by another <m>a</m> (inside the logarithm). This results in adding 1 more <m>\log(a)</m> to the total.
+        </p>
+
+        <proof>
+          <p>
+            Let <m>P(n)</m> be the statement <m>\log(a^n) = n \log(a)</m>. The base case, <m>P(2)</m> is true, because <m>\log(a^2) = \log(a\cdot a) = \log(a) + \log(a) = 2\log(a)</m>, by the product rule for logarithms. Now assume, for induction, that <m>P(k)</m> is true. That is, <m>\log(a^k) = k\log(a)</m>. Consider <m>\log(a^{k+1})</m>. We have
+            <me>
+              \log(a^{k+1}) = \log(a^k\cdot a) = \log(a^k) + \log(a) = k\log(a) + \log(a)
+            </me>
+            with the last equality due to the inductive hypothesis. But this simplifies to <m>(k+1) \log(a)</m>, establishing <m>P(k+1)</m>. Therefore by the principle of mathematical induction, <m>P(n)</m> is true for all <m>n \ge 2</m>.
+          </p>
+        </proof>
+
+      </solution>
+    </exercise>
+
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Let <m>f_1, f_2,\ldots, f_n</m> be differentiable functions. Prove, using induction, that
+          <me>
+            (f_1 + f_2 + \cdots + f_n)' = f_1' + f_2' + \cdots + f_n'
+          </me>
+        </p>
+
+        <p>
+          You may assume <m>(f+g)' = f' + g'</m> for any differentiable functions <m>f</m> and <m>g</m>. (You don't actually need to know calculus to be able to do this).
+        </p>
+      </statement>
+      <hint>
+        <p>
+          You are allowed to assume the base case. For the inductive case, group all but the last function together as one sum of functions, then apply the usual sum of derivatives rule, and then the inductive hypothesis.
+        </p>
+      </hint>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Recall that <m>F_n</m> is the <m>n</m>th Fibonacci number defined in <xref ref="fib-def"/>.
+        </p>
+        <p>
+          Prove, by mathematical induction, that <m>F_0 + F_1 + F_2 + \cdots + F_{n} = F_{n+2} - 1</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    
+
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
+    <exercise xml:id="fibonacci-sum-of-evens">
+      <statement>
+        <p>
+          Prove that <m>F_0 + F_2 + F_4 + \cdots + F_{2n} = F_{2n+1} - 1</m> where <m>F_n</m> is the <m>n</m>th Fibonacci number.
+        </p>
+      </statement>
+      <solution>
+
+        <proof>
+          <p>
+            Let <m>P(n)</m> be the statement <m>F_0 + F_2 + F_4 + \cdots + F_{2n} = F_{2n+1} - 1</m>. We will show that <m>P(n)</m> is true for all <m>n \ge 0</m>. First the base case is easy because <m>F_0 = 0</m> and <m>F_1 = 1</m> so <m>F_0 = F_1 - 1</m>. Now consider the inductive case. Assume <m>P(k)</m> is true, that is, assume <m>F_0 + F_2 + F_4 + \cdots + F_{2k} = F_{2k+1} - 1</m>. To establish <m>P(k+1)</m> we work from left to right:
+            <md>
+              <mrow> F_0 + F_2 + \cdots + F_{2k} + F_{2k+2} ~ \amp = F_{2k+1} - 1 + F_{2k+2} \amp \text{by ind. hyp.}</mrow>
+              <mrow> \amp = F_{2k+1} + F_{2k+2} - 1 \amp</mrow>
+              <mrow> \amp = F_{2k+3} - 1 \amp \text{by recursive def.}</mrow>
+            </md>
+          </p>
+
+          <p>
+            Therefore <m>F_0 + F_2 + F_4 + \cdots + F_{2k+2} = F_{2k+3} - 1</m>, which is to say <m>P(k+1)</m> holds. Therefore by the principle of mathematical induction, <m>P(n)</m> is true for all <m>n \ge 0</m>.
+          </p>
+        </proof>
+
+      </solution>
+    </exercise>
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+      <exercise>
+        <statement>
+          <p>
+            Prove, using strong induction, that every natural number is either a Fibonacci number or can be written as the <em>sum</em> of <em>distinct</em> Fibonacci numbers.
+          </p>
+        </statement>
+
+      </exercise>
+
+    <exercise xml:id="fibonacci-sum-of-odds">
+      <statement>
+        <p>
+          Prove, by mathematical induction, that <m>F_1 + F_3 + F_5 + \dots + F_{2n -1} = F_{2n}</m>, where <m>F_n</m> is the <m>n</m>th Fibonacci number.
+        </p>
+      </statement>
+
+    </exercise>
+
+    <exercise xml:id="fibonacci-sum_of_squares">
+      <statement>
+        <p>
+          Prove, by mathematical induction, that <m>F_1^2 + F_2^2 + F_3^2 + \dots + F_n^2 = F_n \cdot F_{n+1}</m>, where <m>F_n</m> is the <m>n</m>th Fibonacci number.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          <m>F_{k+1}\left(F_{k} + F_{k+1}\right) = F_{k+1}F_{k+2} </m>
+        </p>
+      </hint>
+    </exercise>
+  </exercises>
+
+  <subsection>
+    <title>Forum Posts about this section</title>
+
+    <slate xml:id="discourse" surface="html" >
+      <div id='discourse-comments'></div>
+      <script type="text/javascript">
+        DiscourseEmbed = { discourseUrl: 'https://discourse.math.wichita.edu/',
+        discourseEmbedUrl: location.href };
+
+        (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+        })();
+      </script>
+    </slate>
+  </subsection>
+
 </section>
 

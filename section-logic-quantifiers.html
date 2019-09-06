@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-04-04T17:11:24-05:00    *-->
+<!--*    on 2019-09-05T19:35:44-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -42,9 +42,7 @@ MathJax.Hub.Config({
     },
 });
 </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>(function() {
-  var cx = '
-        015422183392601792159:vae7vvmmczm
-      ';
+  var cx = '015422183392601792159:vae7vvmmczm';
   var gcse = document.createElement('script');
   gcse.type = 'text/javascript';
   gcse.async = true;
@@ -52,7 +50,7 @@ MathJax.Hub.Config({
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(gcse, s);
 })();
-</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
@@ -64,6 +62,7 @@ MathJax.Hub.Config({
 var role = 'student';
 var guest_access = true;
 var login_required = false;
+var js_version = 0.11;
 </script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
@@ -129,24 +128,24 @@ var login_required = false;
 \newcommand{\card}[1]{\left| #1 \right|}
 \newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
 \newcommand{\fixspacing}{\vspace{0pt plus 1filll}\mbox{}}
+\usepackage{cancel} 
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
 <a id="logo-link" href="http://www.math.wichita.edu/discrete-book" target="_blank"><img src="./images/WSULogo.png" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="discrete-class-notes.html"><span class="title">Math 321 Class Notes</span></a></h1>
 <p class="byline">John Hammond</p>
 </div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-logic-equivalences.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-logic-arguments.html" title="Next">Next</a></span></div>
-<button class="sidebar-right-toggle-button button active">Annotations</button>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_application_set_proofs.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-logic-arguments.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-logic-equivalences.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-logic-arguments.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_application_set_proofs.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-logic-arguments.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -159,208 +158,254 @@ var login_required = false;
 </ul>
 </li>
 <li class="link">
-<a href="ch_logic.html" data-scroll="ch_logic"><span class="codenumber">1</span> <span class="title">Symbolic Logic and Proofs</span></a><ul>
+<a href="ch_basics.html" data-scroll="ch_basics"><span class="codenumber">1</span> <span class="title">Basic Objects and Symbols</span></a><ul>
 <li><a href="section-prop-logic.html" data-scroll="section-prop-logic">Propositional Logic</a></li>
-<li><a href="section-logic-equivalences.html" data-scroll="section-logic-equivalences">Logical Equivalences</a></li>
-<li><a href="section-logic-quantifiers.html" data-scroll="section-logic-quantifiers" class="active">Predicates and Logical Quantifiers</a></li>
-<li><a href="section-logic-arguments.html" data-scroll="section-logic-arguments">Logical Arguments</a></li>
-<li><a href="section-logic-proofs.html" data-scroll="section-logic-proofs">An introduction to proofs</a></li>
-<li><a href="sec_logic_induction.html" data-scroll="sec_logic_induction">Mathematical Induction</a></li>
-<li><a href="section-7.html" data-scroll="section-7">Supplemental Exercises</a></li>
+<li><a href="sec_objects_sets.html" data-scroll="sec_objects_sets">Sets</a></li>
+<li><a href="sec_relationsfunctions.html" data-scroll="sec_relationsfunctions">Relations and Functions</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="ch_objects.html" data-scroll="ch_objects"><span class="codenumber">2</span> <span class="title">Mathematical Objects</span></a><ul>
-<li><a href="sec_objects_sets.html" data-scroll="sec_objects_sets">Sets</a></li>
-<li><a href="section-objects-functions.html" data-scroll="section-objects-functions">Functions</a></li>
-<li><a href="sec_objects_matrices.html" data-scroll="sec_objects_matrices">Matrices</a></li>
-<li><a href="section-objects-seqseries.html" data-scroll="section-objects-seqseries">Sequences and Series</a></li>
-<li><a href="section-solvingrecurrences.html" data-scroll="section-solvingrecurrences">Solving Recurrence Relations</a></li>
+<a href="ch_logic.html" data-scroll="ch_logic"><span class="codenumber">2</span> <span class="title">Symbolic Logic and Proofs</span></a><ul>
+<li><a href="section-logic-equivalences.html" data-scroll="section-logic-equivalences">Logical Equivalences</a></li>
+<li><a href="sec_application_set_proofs.html" data-scroll="sec_application_set_proofs">Application: Set Properties and Equivalences</a></li>
+<li><a href="section-logic-quantifiers.html" data-scroll="section-logic-quantifiers" class="active">Predicates and Logical Quantifiers</a></li>
+<li><a href="section-logic-arguments.html" data-scroll="section-logic-arguments">Logical Arguments</a></li>
+<li><a href="section-logic-proofs.html" data-scroll="section-logic-proofs">An introduction to proofs</a></li>
+<li><a href="section-prop-supplementatal.html" data-scroll="section-prop-supplementatal">Chapter Review</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="ch_numtheory.html" data-scroll="ch_numtheory"><span class="codenumber">3</span> <span class="title">Some Classic Number Theory</span></a><ul>
 <li><a href="section-numtheory-divcong.html" data-scroll="section-numtheory-divcong">Divisibility and Congruences</a></li>
+<li><a href="section-primes.html" data-scroll="section-primes">Prime Numbers</a></li>
+<li><a href="section-gcd-euclid.html" data-scroll="section-gcd-euclid">GCDs and The Euclidean Algorithm</a></li>
+<li><a href="section-multiplicative-inverses.html" data-scroll="section-multiplicative-inverses">Multiplicative Inverses</a></li>
 <li><a href="section-numtheory-modularexp.html" data-scroll="section-numtheory-modularexp">Modular exponentiation</a></li>
-<li><a href="section-numtheory-euclid.html" data-scroll="section-numtheory-euclid">Prime Numbers</a></li>
-<li><a href="sec_numtheory_gcds.html" data-scroll="sec_numtheory_gcds">Greatest Common Divisors and the Euclidean Algorithm</a></li>
-<li><a href="numtheory_inverses.html" data-scroll="numtheory_inverses">Multiplicative Inverses</a></li>
 <li><a href="section-numtheory-encryption.html" data-scroll="section-numtheory-encryption">Application: Encryption</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="ch_counting.html" data-scroll="ch_counting"><span class="codenumber">4</span> <span class="title">Counting Techniques</span></a><ul>
-<li><a href="section-counting-basics.html" data-scroll="section-counting-basics">The Multiplicative and Additive Principles</a></li>
-<li><a href="section-counting-combperm.html" data-scroll="section-counting-combperm">Combinations and Permutations</a></li>
-<li><a href="section-counting-binomial.html" data-scroll="section-counting-binomial">The Binomial Theorem and Binomial Coefficients</a></li>
-<li><a href="section-counting-fib.html" data-scroll="section-counting-fib">A surprise connection - Counting Fibonacci numbers</a></li>
-<li><a href="section-counting-morecounting.html" data-scroll="section-counting-morecounting"></a></li>
+<a href="ch_sequences.html" data-scroll="ch_sequences"><span class="codenumber">4</span> <span class="title">Sequences, Recurrence, and Induction</span></a><ul>
+<li><a href="section-objects-seqseries.html" data-scroll="section-objects-seqseries">Sequences and Series</a></li>
+<li><a href="section-solvingrecurrences.html" data-scroll="section-solvingrecurrences">Solving Recurrence Relations</a></li>
+<li><a href="sec_logic_induction.html" data-scroll="sec_logic_induction">Mathematical Induction</a></li>
 </ul>
 </li>
-<li class="link"><a href="ch_appendix.html" data-scroll="ch_appendix"><span class="codenumber">5</span> <span class="title">Appendices</span></a></li>
+<li class="link">
+<a href="ch_counting.html" data-scroll="ch_counting"><span class="codenumber">5</span> <span class="title">Counting Techniques</span></a><ul>
+<li><a href="section-counting-basics.html" data-scroll="section-counting-basics">The Multiplicative and Additive Principles</a></li>
+<li><a href="section-counting-combperm.html" data-scroll="section-counting-combperm">Combinations and Permutations</a></li>
+<li><a href="section-counting-binomial.html" data-scroll="section-counting-binomial">The Binomial Theorem and Combinatorial Proofs</a></li>
+<li><a href="section-counting-fib.html" data-scroll="section-counting-fib">A surprise connection - Counting Fibonacci numbers</a></li>
+</ul>
+</li>
+<li class="link"><a href="ch_appendix.html" data-scroll="ch_appendix"><span class="codenumber">6</span> <span class="title">Appendices</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="section-logic-quantifiers"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">Predicates and Logical Quantifiers</span>
+<span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Predicates and Logical Quantifiers</span>
 </h2>
-<a href="section-logic-quantifiers.html" class="permalink">¶</a><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.3.1</span> <span class="title">Predicates</span>
+<a href="section-logic-quantifiers.html" class="permalink">¶</a><section class="subsection" id="subsection-13"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.1</span> <span class="title">Predicates</span>
 </h3>
-<p id="p-84">Consider this mathematical sentence: “\(x \lt 5 \)”.</p>
+<p id="p-279">Consider this mathematical sentence: “\(x \lt 5 \)”.</p>
 <ul class="disc">
-<li id="li-79">\(x\) is a variable, the subject of the sentence.</li>
-<li id="li-80">“is less than five” is the <dfn class="terminology">predicate</dfn>
+<li id="li-308">\(x\) is a variable, the subject of the sentence.</li>
+<li id="li-309">“is less than five” is the <dfn class="terminology">predicate</dfn>
 </li>
-<li id="li-82">
-<p id="p-85">We can write \(P(x) :=\) “\(x \lt 5 \text{,}\)” where</p>
+<li id="li-311">
+<p id="p-280">We can write \(P(x) :=\) “\(x \lt 5 \text{,}\)” where</p>
 <ul class="circle">
-<li id="li-83">the value of \(P(x)\) is the value of the <dfn class="terminology">propositional function</dfn> P at \(x\text{.}\)</li>
-<li id="li-84">Assigning a value to \(x\) makes \(P\) a proposition (it then has a truth value)</li>
+<li id="li-312">the value of \(P(x)\) is the value of the <dfn class="terminology">propositional function</dfn> P at \(x\text{.}\)</li>
+<li id="li-313">Assigning a value to \(x\) makes \(P\) a proposition (it then has a truth value)</li>
 </ul>
 </li>
 </ul>
-<article class="definition-like" id="definition-10"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">1.3.1</span>.</h6>
-<p id="p-86">The <dfn class="terminology">domain of discourse</dfn> (or <dfn class="terminology">universe of discourse</dfn>) is the collection from which variables can take values.</p>
-<p id="p-87">For example, if my predicate function is “\(x\) is sharp”, the function has a different meaning if my universe of discourse is “all college students” versus “all tools.”</p></article><article class="example-like" id="example-9"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">1.3.2</span>.</h6>
-<p id="p-88">Determine the truth values of the following:</p>
+<article class="definition-like" id="definition-29"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.3.1</span>.</h6>
+<p id="p-281">The <dfn class="terminology">domain of discourse</dfn> (or <dfn class="terminology">universe of discourse</dfn>) is the collection from which variables can take values.</p>
+<p id="p-282">For example, if my predicate function is “\(x\) is sharp”, the function has a different meaning if my universe of discourse is “all college students” versus “all tools.”</p></article><article class="example-like" id="example-29"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.3.2</span>.</h6>
+<p id="p-283">Determine the truth values of the following:</p>
 <ol class="decimal">
-<li id="li-85">
-<p id="p-89">If \(P(x):=\) “The word \(x \) contains the letter a”.</p>
+<li id="li-314">
+<p id="p-284">If \(P(x):=\) “The word \(x \) contains the letter a”.</p>
 <ol class="lower-alpha">
-<li id="li-86">P(elephant)</li>
-<li id="li-87">P(purple)</li>
-<li id="li-88">P(true)</li>
-<li id="li-89">P(false)</li>
+<li id="li-315">P(elephant)</li>
+<li id="li-316">P(purple)</li>
+<li id="li-317">P(true)</li>
+<li id="li-318">P(false)</li>
 </ol>
 </li>
-<li id="li-90">
-<p id="p-90">If \(Q(x,y):=\) “\(x^2 + y^2 = 25\)”.</p>
+<li id="li-319">
+<p id="p-285">If \(Q(x,y):=\) “\(x^2 + y^2 = 25\)”.</p>
 <ol class="lower-alpha">
-<li id="li-91">\(Q(4,5)\)</li>
-<li id="li-92">\(Q(3,4)\)</li>
+<li id="li-320">\(Q(4,5)\)</li>
+<li id="li-321">\(Q(3,4)\)</li>
 </ol>
 </li>
-</ol></article></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.3.2</span> <span class="title">Logical Quantifiers</span>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-32" id="answer-32"><span class="type">Answer/Video</span></a><div id="hk-answer-32" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-32" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/BUP1k8Yy0X4?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article></section><section class="subsection" id="subsection-14"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.2</span> <span class="title">Logical Quantifiers</span>
 </h3>
-<article class="definition-like" id="definition-11"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">1.3.3</span>.</h6>
-<p id="p-91">The <dfn class="terminology">universal quantification</dfn> of \(P(x)\) is the statement that \(P(x)\) is true for all values of \(x\) in the domain of discourse. We write \(\forall x P(x)\)</p>
-<p id="p-92">A <dfn class="terminology">counterexample</dfn> is an \(x\) value for which \(P(x)\) is false.</p></article><article class="definition-like" id="definition-12"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">1.3.4</span>.</h6>
-<p id="p-93">The <dfn class="terminology">existential quantification</dfn> of \(P(x)\) is the statement that there is some value \(x\) in the universe of discourse for which \(P(x)\) is true. We write \(\exists x P(x)\)</p></article><article class="example-like" id="example-10"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">1.3.5</span>.</h6>
-<p id="p-94">Let \(P(x)\) be “\(x^2 \ge 0\)”. What is the truth value of \(\forall x P(x)\) if the domain is:</p>
+<article class="definition-like" id="definition-30"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.3.3</span>.</h6>
+<p id="p-286">The <dfn class="terminology">universal quantification</dfn> of \(P(x)\) is the statement that \(P(x)\) is true for all values of \(x\) in the domain of discourse. We write \(\forall x P(x)\)</p>
+<p id="p-287">A <dfn class="terminology">counterexample</dfn> is an \(x\) value for which \(P(x)\) is false.</p>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-33" id="answer-33"><span class="type">Answer/Video</span></a><div id="hk-answer-33" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-33" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/Z7wornF1Euw?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></article><article class="definition-like" id="definition-31"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.3.4</span>.</h6>
+<p id="p-288">The <dfn class="terminology">existential quantification</dfn> of \(P(x)\) is the statement that there is some value \(x\) in the universe of discourse for which \(P(x)\) is true. We write \(\exists x P(x)\)</p>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-34" id="answer-34"><span class="type">Answer/Video</span></a><div id="hk-answer-34" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-34" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/H_tA2tyGDdQ?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></article><article class="example-like" id="example-30"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.3.5</span>.</h6>
+<p id="p-289">Let \(P(x)\) be “\(x^2 \ge 0\)”. What is the truth value of \(\forall x P(x)\) if the domain is:</p>
 <ol class="decimal">
-<li id="li-93">All real numbers</li>
-<li id="li-94">All complex numbers</li>
-</ol></article><article class="example-like" id="example-11"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">1.3.6</span>.</h6>
-<p id="p-95">Let the domain be all real numbers. Find a counterexample to the following statements:</p>
+<li id="li-322">All real numbers</li>
+<li id="li-323">All complex numbers</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-35" id="answer-35"><span class="type">Answer/Video</span></a><div id="hk-answer-35" class="hidden-content tex2jax_ignore"><div class="solution">
 <ol class="decimal">
-<li id="li-95">\(\forall x (x^2 \not= x)\)</li>
-<li id="li-96">\(\forall x (|x| \gt 0)\)</li>
-<li id="li-97">\(\forall x (x \gt 3 \vee x \lt 2)\)</li>
-</ol></article><article class="example-like" id="example-12"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">1.3.7</span>.</h6>
-<p id="p-96">We can combine quantifers, where each variable might come from a different domain. Precedence of quantifiers is left to right.</p>
-<p id="p-97">What is the truth value of the following expressions where the domain is all real numbers:</p>
+<li id="li-324">Since \(x^2 \ge 0\) for all real numbers (what you learned in Algebra is true), this statement is true.</li>
+<li id="li-325">This is false. Let \(x = \sqrt{-1}\text{.}\) Then \((\sqrt{-1})^2 = -1 \not\ge 0\text{.}\)</li>
+</ol>
+<p id="p-290">We showed that \(\sqrt{-1}\) is a counterexample to the universal quanfication.</p>
+</div></div>
+</div></article><article class="example-like" id="example-31"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.3.6</span>.</h6>
+<p id="p-291">Let the domain be all real numbers. Find a counterexample to the following statements:</p>
 <ol class="decimal">
-<li id="li-98">\(\forall x \exists y ( xy = 5)\)</li>
-<li id="li-99">\(\exists x \forall y ( xy = 5)\)</li>
-</ol></article><article class="definition-like" id="definition-13"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">1.3.8</span>.</h6>
-<p id="p-98">The negation of quantifiers is found as follows:</p>
+<li id="li-326">\(\forall x (x^2 \not= x)\)</li>
+<li id="li-327">\(\forall x (|x| \gt 0)\)</li>
+<li id="li-328">\(\forall x (x \gt 3 \vee x \lt 2)\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-36" id="answer-36"><span class="type">Answer/Video</span></a><div id="hk-answer-36" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-35" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/n9jfIFqiVnU?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example-like" id="example-32"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.3.7</span>.</h6>
+<p id="p-292">We can combine quantifers, where each variable might come from a different domain. Precedence of quantifiers is left to right.</p>
+<p id="p-293">What is the truth value of the following expressions where the domain is all real numbers:</p>
+<ol class="decimal">
+<li id="li-329">\(\forall x \exists y ( xy = 5)\)</li>
+<li id="li-330">\(\exists x \forall y ( xy = 5)\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-37" id="answer-37"><span class="type">Answer/Video</span></a><div id="hk-answer-37" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-36" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/8kb1Krhw6Ks?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="definition-like" id="definition-32"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.3.8</span>.</h6>
+<p id="p-294">The negation of quantifiers is found as follows:</p>
 <div class="displaymath">
 \begin{align*}
 \neg \forall x P(x) \amp\equiv \exists x \neg P(x) \\
 \neg \exists x P(x) \amp\equiv \forall x \neg P(x)  
 \end{align*}
 </div>
-<p id="p-99">It might help to think “not all...” is equivalent to “some... do”. While “there isn't one who...” is the same as “no one does...”.</p></article><article class="remark-like" id="note-5"><h6 class="heading">
-<span class="type">Note</span> <span class="codenumber">1.3.9</span>.</h6>
-<p id="p-100">Counterexamples to universal statements work because if \(\exists x \neg P(x)\) is true, then \(\neg \forall x P(x)\) is also true, that is, \(\forall x P(x)\) is false!</p></article><article class="example-like" id="example-13"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">1.3.10</span>.</h6>
-<p id="p-101">For each negation below, write the statement using quantifiers to confirm each is correct.</p>
+<p id="p-295">It might help to think “not all...” is equivalent to “some... do”. While “there isn't one who...” is the same as “no one does...”.</p>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-38" id="answer-38"><span class="type">Answer/Video</span></a><div id="hk-answer-38" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-37" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/wgjXIN8csMs?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></article><article class="remark-like" id="note-13"><h6 class="heading">
+<span class="type">Note</span> <span class="codenumber">2.3.9</span>.</h6>
+<p id="p-296">Counterexamples to universal statements work because if \(\exists x \neg P(x)\) is true, then \(\neg \forall x P(x)\) is also true, that is, \(\forall x P(x)\) is false!</p></article><article class="example-like" id="example-33"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.3.10</span>.</h6>
+<p id="p-297">For each negation below, write the statement using quantifiers to confirm each is correct.</p>
 <ol class="decimal">
-<li id="li-100">The negation of “There exists a green horse” is “No horse is green”.</li>
-<li id="li-101">The negation of “All people wear hats” is the statement “Some person doesn't wear hats”.</li>
-<li id="li-102">The negation of “Nobody loves math” is “Someone does love math”.</li>
-<li id="li-103">Find the negation of “some drivers don't obey the speed limit.”.</li>
-</ol></article><article class="example-like" id="example-14"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">1.3.11</span>.</h6>
-<p id="p-102">If the universe of discourse is all people at the university, and \(P(x)\) is the statement “\(x\) loves to drink coffee,” express each statement in plain English:</p>
-<ol class="decimal">
-<li id="li-104">\(\forall x P(x)\)</li>
-<li id="li-105">\(\exists x P(x)\)</li>
-<li id="li-106">\(\forall x \neg P(x)\)</li>
-</ol></article><article class="example-like" id="example-15"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">1.3.12</span>.</h6>
-<p id="p-103">Translate the statement into logical expressions using predicates, quantifiers, and logical connectives.</p>
-<ol class="decimal">
-<li id="li-107">All of your friends are perfect.</li>
-<li id="li-108">Not everybody is your friend or someone is not perfect.</li>
-</ol></article></section><section class="exercises" id="exercises-3"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.3.3</span> <span class="title">Exercises</span>
-</h3>
-<article class="exercise-like" id="exercise-16"><h6 class="heading"><span class="codenumber">1.</span></h6>
-<p id="p-104">Determine the truth value of the each of these statements if the domain consists of all integers</p>
-<ol class="lower-alpha cols2">
-<li id="li-109">\(\forall n (n+1 &gt; n)\)</li>
-<li id="li-110">\(\exists n (n^3 = -1)\)</li>
-<li id="li-111">\(\exists n (2n = 5n)\)</li>
-<li id="li-112">\(\forall n (3n \le 4n)\)</li>
-<li id="li-113">\(\forall x \forall y ((x^2 = y^2) \to (x = y))\)</li>
-</ol></article><article class="exercise-like" id="exercise-17"><h6 class="heading"><span class="codenumber">2.</span></h6>
-<p id="p-105">Determine the truth value of each of the following statements if the domain consists of all real numbers.</p>
-<ol class="lower-alpha cols2">
-<li id="li-114">\(\exists x(x^2 = 2)\)</li>
-<li id="li-115">\(\exists x (x^2 = -1)\)</li>
-<li id="li-116">\(\forall x (x^2 + 2 \ge 1)\)</li>
-<li id="li-117">\(\forall x (2x &gt; 2)\)</li>
-<li id="li-118">\(\forall x (x+4)^2 = x^2 + 16\)</li>
-</ol></article><article class="exercise-like" id="exercise-18"><h6 class="heading"><span class="codenumber">3.</span></h6>
-<p id="p-106">Consider the statement, “There is a building on the campus of some college in the United States in which every room is painted white.”</p>
-<ol class="lower-alpha">
-<li id="li-119">Express the statement using quantifiers. Be sure to define your predicate function and specify the domain of each of the three variables.</li>
-<li id="li-120">Express the negation of the above logical quantified statement so that no negation is to the left of a quantifier.</li>
-<li id="li-121">Write the negation of the statement in plain English.</li>
-</ol></article><article class="exercise-like" id="exercise-19"><h6 class="heading"><span class="codenumber">4.</span></h6>
-<p id="p-107">Translate these statements into English where \(F(x)\) is “\(x\) is fast” and \(A(x)\) is “\(x\) is an athlete”, here the domain is the set of people.</p>
-<ol class="lower-alpha cols2">
-<li id="li-122">\(\forall x (A(x) \to F(x))\)</li>
-<li id="li-123">\(\forall x (F(x) \land A(x))\)</li>
-<li id="li-124">\(\exists x (F(x) \to A(x))\)</li>
-<li id="li-125">\(\exists x (A(x) \land \neg F(x))\)</li>
+<li id="li-331">The negation of “There exists a green horse” is “No horse is green”.</li>
+<li id="li-332">The negation of “All people wear hats” is the statement “Some person doesn't wear hats”.</li>
+<li id="li-333">The negation of “Nobody loves math” is “Someone does love math”.</li>
+<li id="li-334">Find the negation of “some drivers don't obey the speed limit.”.</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-7" id="solution-7"><span class="type">Solution</span></a><div id="hk-solution-7" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-108">Your answer shouldn't have \(x\) in it anywhere! Regular people don't say “For all x if x is fast, then...” Here some some ideas (your answer may very)</p>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-39" id="answer-39"><span class="type">Answer/Video</span></a><div id="hk-answer-39" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-38" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/DQEKqe7ZYro?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example-like" id="example-34"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.3.11</span>.</h6>
+<p id="p-298">If the universe of discourse is all people at the university, and \(P(x)\) is the statement “\(x\) loves to drink coffee,” express each statement in plain English:</p>
+<ol class="decimal">
+<li id="li-335">\(\forall x P(x)\)</li>
+<li id="li-336">\(\exists x P(x)\)</li>
+<li id="li-337">\(\forall x \neg P(x)\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-40" id="answer-40"><span class="type">Answer/Video</span></a><div id="hk-answer-40" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-39" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/9qVRwljEnu4?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example-like" id="example-35"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.3.12</span>.</h6>
+<p id="p-299">Translate the statement into logical expressions using predicates, quantifiers, and logical connectives.</p>
+<ol class="decimal">
+<li id="li-338">All of your friends are perfect.</li>
+<li id="li-339">Not everybody is your friend or someone is not perfect.</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-41" id="answer-41"><span class="type">Answer/Video</span></a><div id="hk-answer-41" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-40" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/ao3a6VF4xUU?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article></section><section class="exercises" id="exercises-6"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">2.3.3</span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise-like" id="exercise-53"><h6 class="heading"><span class="codenumber">1.</span></h6>
+<p id="p-300">Determine the truth value of the each of these statements if the domain consists of all integers</p>
 <ol class="lower-alpha cols2">
-<li id="li-126">All athletes are fast.</li>
-<li id="li-127">Everyone is a fast athlete.</li>
-<li id="li-128">Some fast person is is an athlete.</li>
-<li id="li-129">There is a slow athlete.</li>
+<li id="li-340">\(\forall n (n+1 &gt; n)\)</li>
+<li id="li-341">\(\exists n (n^3 = -1)\)</li>
+<li id="li-342">\(\exists n (2n = 5n)\)</li>
+<li id="li-343">\(\forall n (3n \le 4n)\)</li>
+<li id="li-344">\(\forall x \forall y ((x^2 = y^2) \to (x = y))\)</li>
+</ol></article><article class="exercise-like" id="exercise-54"><h6 class="heading"><span class="codenumber">2.</span></h6>
+<p id="p-301">Determine the truth value of each of the following statements if the domain consists of all real numbers.</p>
+<ol class="lower-alpha cols2">
+<li id="li-345">\(\exists x(x^2 = 2)\)</li>
+<li id="li-346">\(\exists x (x^2 = -1)\)</li>
+<li id="li-347">\(\forall x (x^2 + 2 \ge 1)\)</li>
+<li id="li-348">\(\forall x (2x &gt; 2)\)</li>
+<li id="li-349">\(\forall x (x+4)^2 = x^2 + 16\)</li>
+</ol></article><article class="exercise-like" id="exercise-55"><h6 class="heading"><span class="codenumber">3.</span></h6>
+<p id="p-302">Consider the statement, “There is a building on the campus of some college in the United States in which every room is painted white.”</p>
+<ol class="lower-alpha">
+<li id="li-350">Express the statement using quantifiers. Be sure to define your predicate function and specify the domain of each of the three variables.</li>
+<li id="li-351">Express the negation of the above logical quantified statement so that no negation is to the left of a quantifier.</li>
+<li id="li-352">Write the negation of the statement in plain English.</li>
+</ol></article><article class="exercise-like" id="exercise-56"><h6 class="heading"><span class="codenumber">4.</span></h6>
+<p id="p-303">Translate these statements into English where \(F(x)\) is “\(x\) is fast” and \(A(x)\) is “\(x\) is an athlete”, here the domain is the set of people.</p>
+<ol class="lower-alpha cols2">
+<li id="li-353">\(\forall x (A(x) \to F(x))\)</li>
+<li id="li-354">\(\forall x (F(x) \land A(x))\)</li>
+<li id="li-355">\(\exists x (F(x) \to A(x))\)</li>
+<li id="li-356">\(\exists x (A(x) \land \neg F(x))\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-24" id="solution-24"><span class="type">Solution</span></a><div id="hk-solution-24" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-304">Your answer shouldn't have \(x\) in it anywhere! Regular people don't say “For all x if x is fast, then...” Here some some ideas (your answer may very)</p>
+<ol class="lower-alpha cols2">
+<li id="li-357">All athletes are fast.</li>
+<li id="li-358">Everyone is a fast athlete.</li>
+<li id="li-359">Some fast person is is an athlete.</li>
+<li id="li-360">There is a slow athlete.</li>
 </ol>
 </div></div>
-</div></article><article class="exercise-like" id="exercise-20"><h6 class="heading"><span class="codenumber">5.</span></h6>
-<p id="p-109">Let \(C(x)\) denote the predicate “\(x\) is in the correct place”, let \(E(x)\) denote “\(x\) is in excellent condition”, and let \(T(x)\) denote “\(x\) is a tool” where the domain of each predicate is the set of objects in a garage. Translate each into plain English:</p>
+</div></article><article class="exercise-like" id="exercise-57"><h6 class="heading"><span class="codenumber">5.</span></h6>
+<p id="p-305">Let \(C(x)\) denote the predicate “\(x\) is in the correct place”, let \(E(x)\) denote “\(x\) is in excellent condition”, and let \(T(x)\) denote “\(x\) is a tool” where the domain of each predicate is the set of objects in a garage. Translate each into plain English:</p>
 <ol class="lower-alpha">
-<li id="li-130">\(\exists x \neg C(x)\)</li>
-<li id="li-131">\(\exists x (T(x) \land \neg C(x))\)</li>
-<li id="li-132">\(\forall x (T(x) \to (C(x) \land E(x)))\)</li>
-</ol></article><article class="exercise-like" id="exercise-21"><h6 class="heading"><span class="codenumber">6.</span></h6>
-<p id="p-110">Simplify the statements below so that negations are only directly next to the predicates.</p>
+<li id="li-361">\(\exists x \neg C(x)\)</li>
+<li id="li-362">\(\exists x (T(x) \land \neg C(x))\)</li>
+<li id="li-363">\(\forall x (T(x) \to (C(x) \land E(x)))\)</li>
+</ol></article><article class="exercise-like" id="exercise-58"><h6 class="heading"><span class="codenumber">6.</span></h6>
+<p id="p-306">Simplify the statements below so that negations are only directly next to the predicates.</p>
 <ol class="lower-alpha">
-<li id="li-133">\(\neg \exists x \forall y (\neg O(x) \vee E(y))\text{.}\)</li>
-<li id="li-134">\(\neg \forall x \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z))\text{.}\)</li>
-<li id="li-135"><p id="p-111">There is a number \(n\) for which no other number is either less than or equal to \(n\text{.}\)</p></li>
-<li id="li-136"><p id="p-112">It is false that for every number \(n\) there are two other numbers which \(n\) is between.</p></li>
-</ol></article></section></section></div></main>
+<li id="li-364">\(\neg \exists x \forall y (\neg O(x) \vee E(y))\text{.}\)</li>
+<li id="li-365">\(\neg \forall x \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z))\text{.}\)</li>
+<li id="li-366"><p id="p-307">There is a number \(n\) for which no other number is either less than or equal to \(n\text{.}\)</p></li>
+<li id="li-367"><p id="p-308">It is false that for every number \(n\) there are two other numbers which \(n\) is between.</p></li>
+</ol></article></section><section class="subsection" id="subsection-15"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.4</span> <span class="title">Forum Posts about this section</span>
+</h3>
+<div xmlns:xi="http://www.w3.org/2001/XInclude" id="discourse-comments"></div>
+<script xmlns:xi="http://www.w3.org/2001/XInclude" type="text/javascript">
+        DiscourseEmbed = { discourseUrl: 'https://discourse.math.wichita.edu/',
+        discourseEmbedUrl: location.href };
+
+        (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+        })();
+      </script></section></section></div></main>
 </div>
 <div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.1/login.js"></script>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
 </body>
 </html>

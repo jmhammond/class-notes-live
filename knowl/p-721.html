@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-04-04T17:11:29-05:00    *-->
+<!--*    on 2019-09-05T19:35:50-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -10,10 +10,35 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Here's a simple, typed example. We'll find \(37^{82} \pmod{52}\)</p>
-<span class="incontext"><a href="section-numtheory-modularexp.html#p-721">in-context</a></span>
+<p><div class="sagecell-sage" id="sage-10"><script type="text/x-sage">v=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+def f(n):
+    return 3*pow(2,n)+pow(-1, n+1)
+
+def recur(n):
+    if n==0:
+        return 2
+    elif n==1:
+        return 7
+    else:
+        return recur(n-1) + 2*recur(n-2)
+
+print("Explicit solution: " + str(map(f,v)))
+print("\n")
+print("Recursive sequence: " + str(map(recur,v)))
+</script></div></p>
+<span class="incontext"><a href="section-solvingrecurrences.html#p-721">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-04-04T17:11:30-05:00    *-->
+<!--*    on 2019-09-05T19:35:50-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,16 +13,14 @@
 </head>
 <body>
 <div class="displaymath">
-\begin{gather*}
-a = bq_1 + r_1 \text{ where } 0 \le r_1 \lt b\\
-b = r_1q_2 + r_2 \text{ where } 0 \le r_2 \lt r_1\\
-r_1 = r_2q_3 + r_3 \text{ where } 0 \le r_3 \lt r_2\\
-r_2 = r_3q_4 + r_4 \text{ where } 0 \le r_4 \lt r_3\\
-\dots \\
-r_{n-2} = r_{n-1}q_{n-1} + r_n \text{ where } 0 \le r_n \lt r_{n-1}\\
-r_{n-1} = r_{n}q_{n} + 0 
-\end{gather*}
+\begin{align*}
+\displaystyle a_n &amp;= c_1 a_{n-1} + c_2a_{n-2} \\
+\displaystyle r^n &amp;= c_1 r^{n-1} + c_2r^{n-2} \\
+\text{ Divide both sides by } r^{n-2}\\
+\displaystyle r^2 &amp;= c_1 r + c_2 \\
+\displaystyle r^2 - c_1 r - c_2 &amp;= 0
+\end{align*}
 </div>
-<span class="incontext"><a href="sec_numtheory_gcds.html#mjx-eqn-mrow-43">in-context</a></span>
+<span class="incontext"><a href="section-solvingrecurrences.html#mjx-eqn-mrow-43">in-context</a></span>
 </body>
 </html>

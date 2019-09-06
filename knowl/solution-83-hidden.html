@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-09-05T19:35:51-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>We begin by asking a question, and answering the question in two ways:</p>
+<p>“How many subsets of size \(k\) are there from a set of size \(n\text{?}\)”</p>
+<p>Answer one: There are \(\binom{n}{k}\) such subsets.</p>
+<p>Answer two: Pick any element of the set. That element is either included in a subset, or it is not.</p>
+<ul class="disc">
+<li>How many subsets contain this element? We will be picking from the remaining \(n-1\) elements. Since we want the subsets to have \(k\) elements, but we already have one of them, we have a total of \(\binom{n-1}{k-1}\) such subsets.</li>
+<li>How many subsets do not contain this element? We will be picking from the remaining \(n-1\) elements. Since we want the subsets to have \(k\) elements, we have \(\binom{n-1}{k}\) such subsets.</li>
+</ul>
+<p>Thus there are \(\binom{n-1}{k-1} + \binom{n-1}{k}\) subsets of \(k\) elements from a set of \(n\) elements.</p>
+<p>Because each answer counted the same objects, but in two different ways, those answers much be the same. Thus</p>
+<div class="displaymath">
+\begin{equation*}
+{n \choose k} = {n-1\choose k-1} + {n-1 \choose k}.
+\end{equation*}
+</div>
+</div></body>
+</html>

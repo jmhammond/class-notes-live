@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-04-04T17:11:30-05:00    *-->
+<!--*    on 2019-09-05T19:35:51-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,13 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Condition on the breakability of the \(n+1\)st space.</p>
-<span class="incontext"><a href="section-counting-fib.html#p-849">in-context</a></span>
+<ol class="lower-alpha">
+<li>\(8^5 = 32768\) words, since you select from 8 letters 5 times.</li>
+<li>\(8\cdot 7\cdot 6\cdot 5\cdot 4 = 6720\) words. After selecting a letter, you have fewer letters to select for the next one.</li>
+<li><p>\(8 \cdot 8 =64\) words: you need to select the 4th and 5th letters.</p></li>
+<li>\(64 + 64 - 0 = 128\) words. There are 64 words which start with “aha” and another 64 words that end with “bah.” Perhaps we over counted the words that both start with “aha” and end with “bah”, but since the words are only 5 letters long, there are no such words.</li>
+<li>\((8\cdot 7\cdot 6\cdot 5\cdot 4) - 3\cdot (5\cdot 4) = 6660\) words. All the words minus the bad ones. The taboo word can be in any of three positions (starting with letter 1, 2, or 3) and for each position we must choose the other two letters (from the remaining 5 letters).</li>
+</ol>
+<span class="incontext"><a href="section-counting-basics.html#p-849">in-context</a></span>
 </body>
 </html>

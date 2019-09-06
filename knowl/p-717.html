@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-04-04T17:11:29-05:00    *-->
+<!--*    on 2019-09-05T19:35:50-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,16 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We begin by finding the binary, base-2, representation of a number.</p>
-<span class="incontext"><a href="section-numtheory-modularexp.html#p-717">in-context</a></span>
+<p>If \(a_n = r^n\) is a solution to the (degree two) recurrence relation \(a_n = c_1 a_{n-1} + c_2 a_{n-2}\text{,}\) then we we can plug it in:</p>
+<div class="displaymath">
+\begin{align*}
+\displaystyle a_n &amp;= c_1 a_{n-1} + c_2a_{n-2} \\
+\displaystyle r^n &amp;= c_1 r^{n-1} + c_2r^{n-2} \\
+\text{ Divide both sides by } r^{n-2}\\
+\displaystyle r^2 &amp;= c_1 r + c_2 \\
+\displaystyle r^2 - c_1 r - c_2 &amp;= 0
+\end{align*}
+</div>
+<span class="incontext"><a href="section-solvingrecurrences.html#p-717">in-context</a></span>
 </body>
 </html>

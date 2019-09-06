@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_application_set_proofs">
+  <title> Application: Set Properties and Equivalences </title>
+
+  <definition>
+    <title>Set operations defined via logic</title>
+    <statement>
+      <p>
+        Let <m>A \and B</m> be sets.
+        <ol>
+          <li>
+            <m>A \subseteq B \iff (x \in A) \to (x \in B)</m>
+          </li>
+          <li>
+            <m>x \in A \cup B  \iff x \in A \lor x \in B</m>
+          </li>
+          
+          <li>
+            <m>x \in A \cap B  \iff x \in A \land x \in B</m>
+          </li>
+          
+          <li>
+            <m>x \in A \setminus B  \iff x \in A \land x \not\in B</m>
+          </li>
+          <li>
+            <m>A = B</m> if and only if <m>A \subseteq B</m> and <m>B \subseteq A</m>.
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <video youtube="gfnlEc9qxSQ"/>
+    </answer>
+
+  </definition>
+
+
+  <example>
+    <statement>
+      <p>
+        Prove that if <m>S</m> is any set:
+        <ol>
+          <li>
+            <m>\emptyset \subseteq S</m>
+          </li>
+          <li>
+            <m>S \subseteq S</m>
+          </li> 
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <ol>
+          <li>
+            <p>
+              The logical statement we're trying to prove is <m>(x \in \emptyset) \to (x \in S)</m>
+            </p>
+            <p>
+              Assume that <m>x \in \emptyset</m>. This is false, since nothing is in the empty set. That means that the conditional statement <m>(x \in \emptyset) \to (x\in S)</m> is vacuously true, since the conditional <m>F \to p</m> is always true. Thus <m>\emptyset \subseteq S</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              The logical statement we're trying to prove is <m>(x \in S) \to (x\in S)</m>
+            </p>
+            <p>
+              Assume that <m>x \in S</m>. Then <m>x \in S</m> is trivially true. Thus <m>S \subseteq S</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Prove the following identities:
+        <ol>
+          <li>
+            <m>
+              A \cup \emptyset = A
+            </m>
+          </li>
+          <li>
+            <m>A \subseteq (A \cup B)</m>
+          </li>
+          <li>
+            <m>A \cap (A \cup B) = A</m>
+          </li>
+          <li>
+            <m>\overline{A \cup B} = \overline{A} \cap \overline{B}</m>
+          </li>
+          <li>
+            <m>A \cap (A \cup B) = A</m>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We'll prove the first via an <q>iff</q> argument:
+        <md>
+          <mrow> x\in A \cup \emptyset \amp \iff x \in A \lor x\in \emptyset</mrow>
+          <mrow> \amp \iff x\in A \lor F</mrow>
+          <mrow> \amp \iff x\in A </mrow>
+        </md>
+        thus <m>A \cup \emptyset = A</m>.
+      </p>
+    </solution>
+    <answer>
+      <video youtube="cNiSxQsOloI"/>
+    </answer>
+  </example>
+
+
+
+
+  <exercises>
+    <exercise>
+      <statement>
+        <p>
+          Let <m>A, B, \and C</m> be sets. Prove the following identities:
+          <ol>
+            <li>
+              <m>A \cup (B \cup C) = (A \cup B) \cup C</m>
+            </li>
+            <li>
+              <m>\overline{\overline{A}} = A</m>
+            </li>
+            <li>
+              <m>A \cup (A \cap B) = A</m>
+            </li>
+            <li>
+              <m>A \cup (B \cap C) = (A \cup B) \cap (A \cup C)</m>
+            </li>
+            <li>
+              <m>\overline{A \cap B} = \overline{A} \cup \overline{B}</m>
+            </li>
+            <li>
+              <m>A \subseteq B</m> if and only if <m>\overline{B} \subseteq \overline{A}</m>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+  </exercises>
+
+  <subsection>
+    <title>Forum Posts about this section</title>
+
+    <slate xml:id="discourse" surface="html" >
+      <div id='discourse-comments'></div>
+      <script type="text/javascript">
+        DiscourseEmbed = { discourseUrl: 'https://discourse.math.wichita.edu/',
+        discourseEmbedUrl: location.href };
+
+        (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+        })();
+      </script>
+    </slate>
+  </subsection>
+ 
+
+</section>

@@ -13,6 +13,10 @@
   <subsection xml:id="section-numtheory-div">
     <title>The Divides Relation</title>
 
+    <p>
+      In <xref ref="ex_divides_relation"/>, we saw the divides relation. Because we're going to use this relation frequently, we will introduce its own notation.
+    </p>
+
     <definition>
       <statement>
         <p>
@@ -258,7 +262,7 @@
               <li> 8 </li>
               <li> 0 </li>
               <li> 6 </li>
-              <li> 11 </li>
+              <li> 0 </li>
             </ol>
           </p>
         </statement>
@@ -316,5 +320,23 @@
 
 
   </exercises>
+
+  <subsection>
+    <title>Forum Posts about this section</title>
+
+    <slate xml:id="discourse" surface="html" >
+      <div id='discourse-comments'></div>
+      <script type="text/javascript">
+        DiscourseEmbed = { discourseUrl: 'https://discourse.math.wichita.edu/',
+        discourseEmbedUrl: location.href };
+
+        (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+        })();
+      </script>
+    </slate>
+  </subsection>
 
 </section>

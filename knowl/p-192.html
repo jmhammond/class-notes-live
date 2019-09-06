@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-04-04T17:11:27-05:00    *-->
+<!--*    on 2019-09-05T19:35:47-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,26 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Since we know that \(x^2 \ge 0\) for any real number, \(x^2 + 1 \ge x^2 \ge 0\text{.}\) We didn't need the hypothesis \(x \gt 0\text{.}\) This is a trivial proof.</p>
-<span class="incontext"><a href="section-logic-proofs.html#p-192">in-context</a></span>
+<p>Since given a function \(f: A \to B\) we define \(f^{-1}: B \to A\) by \(f(a) = b \iff f^{-1}(b) = a\) for \(a \in A\text{,}\) \(b \in B\text{,}\) we have:</p>
+<ul class="disc">
+<li>
+<p>for \(b \in B\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+(f \circ f^{-1})(b) = f(f^{-1}(b)) = f(a) = b \in B 
+\end{equation*}
+</div>
+</li>
+<li>
+<p>and for \(a \in A\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+(f^{-1} \circ f)(a) = f^{-1}(f(a)) = f^{-1}(b) = a \in A
+\end{equation*}
+</div>
+</li>
+</ul>
+<p>That is, the inverse “undoes” a function.</p>
+<span class="incontext"><a href="sec_relationsfunctions.html#p-192">in-context</a></span>
 </body>
 </html>
