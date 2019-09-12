@@ -131,6 +131,10 @@
           Prove that the sum of two odd numbers is even.
         </p>
       </statement>
+      <answer>
+        <video youtube="mQ_cvHA1SUw"/>
+      </answer>
+
     </example>
 
 
@@ -140,6 +144,10 @@
           Prove that if <m>n</m> is even, then <m>n^2</m> is even.
         </p>
       </statement>
+      <answer>
+        <video youtube="vsFVy3q3q5M"/>
+      </answer>
+
     </example>
 
     <example>
@@ -148,6 +156,10 @@
           Prove that if <m>m+n</m> and <m>n + p</m> are even integers, then <m>m+p</m> is even.
         </p>
       </statement>
+      <answer>
+        <video youtube="0SIbTxN9WHw"/>
+      </answer>
+
     </example>
     
   </subsection>
@@ -176,6 +188,10 @@
             Show that if <m>n</m> is an integer and <m>n^3 + 5</m> is odd, then <m>n</m> is even.
           </p>
         </statement>
+        <answer>
+          <video youtube="-fXm5dnyevg"/>
+        </answer>
+
       </example>
       <example xml:id="example-n2even">
         <statement>
@@ -183,6 +199,10 @@
             Prove that if <m>n^2</m> is even, then <m>n</m> is even.
           </p>
         </statement>
+        <answer>
+          <video youtube="P8n4FjM_Rxc"/>
+        </answer>
+
       </example>
     </subsubsection>
 
