@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-12T17:53:53-05:00    *-->
+<!--*    on 2020-12-06T18:12:56-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>GCDs and The Euclidean Algorithm</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -50,20 +50,17 @@ MathJax.Hub.Config({
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(gcse, s);
 })();
-</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.11;
-</script>
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\def\ds{\displaystyle}
@@ -150,7 +147,7 @@ var js_version = 0.11;
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
@@ -205,36 +202,47 @@ var js_version = 0.11;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="section-gcd-euclid"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">GCDs and The Euclidean Algorithm</span>
 </h2>
-<a href="section-gcd-euclid.html" class="permalink">¶</a><article class="definition-like" id="definition-45"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">3.3.1</span>.</h6>
-<p id="p-609">Let \(a \and b\) be integers, not both zero. The largest integer \(d\) such that \(d\divides a\) and \(d \divides b\) is called the <dfn class="terminology">greatest common divisor of \(a \and b\)</dfn> which we denote by \(\gcd(a,b)\text{.}\)</p>
-<p id="p-610">We say \(a \and b\) are <dfn class="terminology">relatively prime</dfn> if \(\gcd(a,b)=1\text{.}\)</p></article><article class="example-like" id="example-70"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.3.2</span>.</h6>
-<p id="p-611">Find the following (by listing prime factors):</p>
+<article class="definition definition-like" id="definition-45"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span>
+</h6>
+<p id="p-651">Let \(a \and b\) be integers, not both zero. The largest integer \(d\) such that \(d\divides a\) and \(d \divides b\) is called the <dfn class="terminology">greatest common divisor of \(a \and b\)</dfn> which we denote by \(\gcd(a,b)\text{.}\)</p>
+<p id="p-652">We say \(a \and b\) are <dfn class="terminology">relatively prime</dfn> if \(\gcd(a,b)=1\text{.}\)</p></article><article class="example example-like" id="example-70"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
+</h6>
+<p id="p-653">Find the following (by listing prime factors):</p>
 <ol class="decimal">
-<li id="li-546">\(\gcd(36, 69)\)</li>
-<li id="li-547">\(\gcd(10, 27)\)</li>
-<li id="li-548">\(\gcd(360, 1000)\)</li>
-</ol></article><article class="definition-like" id="definition-46"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">3.3.3</span>.</h6>
-<p id="p-612">Let \(a \and b\) be integers, not both zero. The smallest integer \(m\) such that \(a\divides m\) and \(b \divides m\) is called the <dfn class="terminology">least common multiple of \(a \and b\)</dfn> which we denote by \(\lcm(a,b)\text{.}\)</p></article><article class="example-like" id="example-71"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.3.4</span>.</h6>
-<p id="p-613">Find the following:</p>
+<li id="li-578">\(\displaystyle \gcd(36, 69)\)</li>
+<li id="li-579">\(\displaystyle \gcd(10, 27)\)</li>
+<li id="li-580">\(\displaystyle \gcd(360, 1000)\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-66" id="answer-66"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-66"><div class="answer solution-like"><iframe id="video-65" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/4qb3kxR0Ivc?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="definition definition-like" id="definition-46"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span>
+</h6>
+<p id="p-654">Let \(a \and b\) be integers, not both zero. The smallest integer \(m\) such that \(a\divides m\) and \(b \divides m\) is called the <dfn class="terminology">least common multiple of \(a \and b\)</dfn> which we denote by \(\lcm(a,b)\text{.}\)</p></article><article class="example example-like" id="example-71"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.4</span><span class="period">.</span>
+</h6>
+<p id="p-655">Find the following:</p>
 <ol class="decimal">
-<li id="li-549">\(\lcm(36, 69)\)</li>
-<li id="li-550">\(\lcm(10, 27)\)</li>
-<li id="li-551">\(\lcm(360, 1000)\)</li>
-</ol></article><article class="theorem-like" id="theorem-5"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">3.3.5</span>.</h6>
-<p id="p-614">Let \(a \and b\) be two positive integers. Then</p>
+<li id="li-581">\(\displaystyle \lcm(36, 69)\)</li>
+<li id="li-582">\(\displaystyle \lcm(10, 27)\)</li>
+<li id="li-583">\(\displaystyle \lcm(360, 1000)\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-67" id="answer-67"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-67"><div class="answer solution-like"><iframe id="video-66" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/YxfXqwLklsc?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="theorem theorem-like" id="theorem-5"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.5</span><span class="period">.</span>
+</h6>
+<p id="p-656">Let \(a \and b\) be two positive integers. Then</p>
 <div class="displaymath">
 \begin{equation*}
 ab = \gcd(a,b) \cdot \text{lcm}(a,b)
 \end{equation*}
-</div></article><article class="theorem-like" id="euclidean-algorithm"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">3.3.6</span>. <span class="title">The Euclidean Algorithm.</span>
+</div></article><article class="theorem theorem-like" id="euclidean-algorithm"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">The Euclidean Algorithm.</span>
 </h6>
-<p id="p-615">Let \(a\) and \(b\) be two positive integers where \(a \ge b\text{.}\) If we apply the division algorithm recursively so that</p>
+<p id="p-657">Let \(a\) and \(b\) be two positive integers where \(a \ge b\text{.}\) If we apply the division algorithm recursively so that</p>
 <div class="displaymath">
 \begin{gather*}
 a = bq_1 + r_1 \text{ where } 0 \le r_1 \lt b\\
@@ -246,12 +254,13 @@ r_{n-2} = r_{n-1}q_{n-1} + r_n \text{ where } 0 \le r_n \lt r_{n-1}\\
 r_{n-1} = r_{n}q_{n} + 0 
 \end{gather*}
 </div>
-<p>Then \(\gcd(a,b) = r_n\text{,}\) the last non-zero remainder.</p></article><article class="example-like" id="example-72"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.3.7</span>.</h6>
-<p id="p-616">Here's a fully worked out example showing how to run the algorithm to find \(\gcd(7592, 5913)\)</p>
+<p data-braille="continuation">Then \(\gcd(a,b) = r_n\text{,}\) the last non-zero remainder.</p></article><article class="example example-like" id="example-72"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.7</span><span class="period">.</span>
+</h6>
+<p id="p-658">Here's a fully worked out example showing how to run the algorithm to find \(\gcd(7592, 5913)\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-48" id="solution-48"><span class="type">Solution</span></a><div id="hk-solution-48" class="hidden-content tex2jax_ignore"><div class="solution">
-<div class="displaymath" id="p-617">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-63" id="solution-63"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-63"><div class="solution solution-like">
+<div class="displaymath" id="p-659">
 \begin{align*}
 7592 &amp;= 5913 \cdot 1 + 1679\\
 5913 &amp;= 1679 \cdot 3 + 876\\
@@ -260,23 +269,28 @@ r_{n-1} = r_{n}q_{n} + 0
 803 &amp;= 73 \cdot 11 + 0 
 \end{align*}
 </div>
-<p>According to the Euclidean Algorithm, the last non-zero remainder is the gcd, and so \(\gcd(7592, 5913) = 73\text{.}\)</p>
+<p data-braille="continuation">According to the Euclidean Algorithm, the last non-zero remainder is the gcd, and so \(\gcd(7592, 5913) = 73\text{.}\)</p>
 </div></div>
-</div></article><article class="example-like" id="example-73"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.3.8</span>.</h6>
-<p id="p-618">Find \(\gcd(5040, 4704)\text{.}\)</p></article><article class="theorem-like" id="proposition-5"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">3.3.9</span>. <span class="title">Bézout's Lemma.</span>
+</div></article><article class="example example-like" id="example-73"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.8</span><span class="period">.</span>
 </h6>
-<p id="p-619">If \(a \and b\) are positive integers, then there exist integers \(s \and t\) such that \({\gcd(a,b) = as + bt}\)</p></article><article class="definition-like" id="definition-47"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">3.3.10</span>.</h6>
-<p id="p-620">We call \(s \and t\) in the theorem above the <dfn class="terminology">Bézout coefficients</dfn> of \(a \and b\text{.}\)</p></article><article class="example-like" id="example-74"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.3.11</span>. <span class="title">Back Substition.</span>
-</h6>
-<p id="p-621">We can reverse the Euclidean Algorithm to find the Bézout coefficients, a process that we'll call <dfn class="terminology">back substitution</dfn>. We solve each equation in the Euclidean Algorithm for the remainder, and repeatedly substitute and combine like terms until we arrive at the gcd written as a <dfn class="terminology">linear combination</dfn> of the original two numbers, in this case, \(73 = 7592s + 5913t\)</p>
+<p id="p-660">Find \(\gcd(5040, 4704)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-49" id="solution-49"><span class="type">Solution</span></a><div id="hk-solution-49" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-622"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-68" id="answer-68"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-68"><div class="answer solution-like"><iframe id="video-67" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/AKbvbhoIrE0?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="proposition theorem-like" id="proposition-5"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.3.9</span><span class="period">.</span><span class="space"> </span><span class="title">Bézout's Lemma.</span>
+</h6>
+<p id="p-661">If \(a \and b\) are positive integers, then there exist integers \(s \and t\) such that \({\gcd(a,b) = as + bt}\)</p></article><article class="definition definition-like" id="definition-47"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.3.10</span><span class="period">.</span>
+</h6>
+<p id="p-662">We call \(s \and t\) in the theorem above the <dfn class="terminology">Bézout coefficients</dfn> of \(a \and b\text{.}\)</p></article><article class="example example-like" id="example-74"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.11</span><span class="period">.</span><span class="space"> </span><span class="title">Back Substition.</span>
+</h6>
+<p id="p-663">We can reverse the Euclidean Algorithm to find the Bézout coefficients, a process that we'll call <dfn class="terminology">back substitution</dfn>. We solve each equation in the Euclidean Algorithm for the remainder, and repeatedly substitute and combine like terms until we arrive at the gcd written as a <dfn class="terminology">linear combination</dfn> of the original two numbers, in this case, \(73 = 7592s + 5913t\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-64" id="solution-64"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-64"><div class="solution solution-like"><p id="p-664"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;">
-<p id="p-623">The remainders:</p>
+<p id="p-665">The remainders:</p>
 <div class="displaymath">
 \begin{align*}
 73 &amp;= 876 - 803 \cdot 1\\
@@ -287,7 +301,7 @@ r_{n-1} = r_{n}q_{n} + 0
 </div>
 </div>
 <div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;">
-<p id="p-624">Substition and combining like terms:</p>
+<p id="p-666">Substition and combining like terms:</p>
 <div class="displaymath">
 \begin{align*}
 73 &amp;= 876 - 803 \cdot 1\\
@@ -302,27 +316,52 @@ r_{n-1} = r_{n}q_{n} + 0
 </div>
 </div>
 </div></div> So \(73 = 5913 \cdot 9 + 7592 \cdot(-7)\) is the linear combination we desired.</p></div></div>
-</div></article><article class="example-like" id="example-75"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.3.12</span>.</h6>
-<p id="p-625">Express the gcd of 168 and 525 as a linear combination of those numbers.</p></article><article class="example-like" id="example-76"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.3.13</span>.</h6>
-<ol id="p-626" class="decimal">
-<li id="li-552">Use the Euclidean algorithm to find \(\gcd(4147, 10672)\text{.}\)</li>
-<li id="li-553">Use back-substitution (reverse the steps of the Euclidean Algorithm) to write the greatest common divisor of 4147 and 10672 as a linear combination of those numbers.</li>
-</ol></article><section class="exercises" id="exercises-12"><h3 class="heading hide-type">
+</div></article><article class="example example-like" id="example-75"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.12</span><span class="period">.</span>
+</h6>
+<p id="p-667">Express the gcd of 168 and 525 as a linear combination of those numbers.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-69" id="answer-69"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-69"><div class="answer solution-like"><iframe id="video-68" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/NAgHNxBe_FA?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-76"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.13</span><span class="period">.</span>
+</h6>
+<ol id="p-668" class="decimal">
+<li id="li-584">Use the Euclidean algorithm to find \(\gcd(4147, 10672)\text{.}\)</li>
+<li id="li-585">Use back-substitution (reverse the steps of the Euclidean Algorithm) to write the greatest common divisor of 4147 and 10672 as a linear combination of those numbers.</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-70" id="answer-70"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-70"><div class="answer solution-like"><iframe id="video-69" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/0BCRLQz8WMA?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><section class="exercises" id="exercises-12"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">3.3.1</span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise-like" id="exercise-102"><h6 class="heading"><span class="codenumber">1.</span></h6>
-<p id="p-627">Find the gcd via the Euclidean Algorithm and then use back-substitution to write the gcd as a linear combination of those numbers:</p>
+<article class="exercise exercise-like" id="exercise-101"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-669">Find the gcd via the Euclidean Algorithm and then use back-substitution to write the gcd as a linear combination of those numbers:</p>
 <ol class="lower-alpha">
-<li id="li-554">\(\gcd(36, 48) \)</li>
-<li id="li-555">\(\gcd(21, 724) \)</li>
-<li id="li-556">\(\gcd(60, 97) \)</li>
-<li id="li-557">\(\gcd(5, 26) \)</li>
-</ol></article><article class="exercise-like" id="exercise-103"><h6 class="heading"><span class="codenumber">2.</span></h6>
-<p id="p-628">Use any method to find the greatest common divisor of 412 and 32.</p></article><article class="exercise-like" id="exercise-104"><h6 class="heading"><span class="codenumber">3.</span></h6>
-<p id="p-629">Use any method to find the greatest common divisor of 780 and 150.</p></article><article class="exercise-like" id="exercise-105"><h6 class="heading"><span class="codenumber">4.</span></h6>
-<p id="p-630">Find the greatest common divisor of 70, 98, 108.</p></article></section><section class="subsection" id="subsection-33"><h3 class="heading hide-type">
+<li id="li-586">\(\displaystyle \gcd(36, 48) \)</li>
+<li id="li-587">\(\displaystyle \gcd(21, 724) \)</li>
+<li id="li-588">\(\displaystyle \gcd(60, 97) \)</li>
+<li id="li-589">\(\displaystyle \gcd(5, 26) \)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-65" id="solution-65"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-65"><div class="solution solution-like"><ol id="p-670" class="lower-alpha">
+<li id="li-590">\(12=36(-1)+48(\)1)</li>
+<li id="li-591">\(1=21(69)+724(\)-2)</li>
+<li id="li-592">\(1=60(-21)+97(\)13)</li>
+<li id="li-593">\(\displaystyle 1=5(-5)+26(1)\)</li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-102"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-671">Use any method to find the greatest common divisor of 412 and 32.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-66" id="solution-66"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-66"><div class="solution solution-like"><p id="p-672">\(\gcd(412, 32) = 4\text{.}\) We can right it as the linear combination: \(4=412(-1) + 32(13)\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-103"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-673">Use any method to find the greatest common divisor of 780 and 150.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-67" id="solution-67"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-67"><div class="solution solution-like"><p id="p-674">\(\gcd(780, 150) = 30\text{.}\) We can right the gcd as the linear combination \(30=780(1) + 150(-5)\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-104"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-675">Find the greatest common divisor of 70, 98, 108.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-68" id="solution-68"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-68"><div class="solution solution-like"><p id="p-676">\(\gcd(70, 98, 108) = 2\)</p></div></div>
+</div></article></section><section class="subsection" id="subsection-33"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.3.2</span> <span class="title">Forum Posts about this section</span>
 </h3>
 <div xmlns:xi="http://www.w3.org/2001/XInclude" id="discourse-comments"></div>
@@ -337,7 +376,5 @@ r_{n-1} = r_{n}q_{n} + 0
         })();
       </script></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.11/login.js"></script>
 </body>
 </html>

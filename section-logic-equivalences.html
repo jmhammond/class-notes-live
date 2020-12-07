@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-12T17:53:52-05:00    *-->
+<!--*    on 2020-12-06T18:12:53-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Logical Equivalences</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -50,20 +50,17 @@ MathJax.Hub.Config({
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(gcse, s);
 })();
-</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.11;
-</script>
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\def\ds{\displaystyle}
@@ -150,7 +147,7 @@ var js_version = 0.11;
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
@@ -205,36 +202,41 @@ var js_version = 0.11;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="section-logic-equivalences"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">Logical Equivalences</span>
 </h2>
-<a href="section-logic-equivalences.html" class="permalink">¶</a><article class="definition-like" id="definition-25"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">2.1.1</span>.</h6>
-<p id="p-248">An expression involving logical variables that is true for all values is called a <dfn class="terminology">tautology</dfn>.</p></article><article class="definition-like" id="definition-26"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">2.1.2</span>.</h6>
+<article class="definition definition-like" id="definition-25"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span>
+</h6>
+<p id="p-248">An expression involving logical variables that is true for all values is called a <dfn class="terminology">tautology</dfn>.</p></article><article class="definition definition-like" id="definition-26"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span>
+</h6>
 <p id="p-249">An expression involving logical variables that is false for all values is called a <dfn class="terminology">contradiction</dfn>.</p></article><p id="p-250">Statements that are not tautologies or contradictions are called <dfn class="terminology">contingencies</dfn>.</p>
-<article class="definition-like" id="definition-27"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">2.1.3</span>.</h6>
-<p id="p-251">We say two propositions \(p\) and \(q\) are <dfn class="terminology">logically equivalent</dfn> if \(p \leftrightarrow q\) is a tautology. We denote this by \(p \equiv q\text{.}\)</p></article><article class="example-like" id="example-25"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.1.4</span>.</h6>
+<article class="definition definition-like" id="definition-27"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span>
+</h6>
+<p id="p-251">We say two propositions \(p\) and \(q\) are <dfn class="terminology">logically equivalent</dfn> if \(p \leftrightarrow q\) is a tautology. We denote this by \(p \equiv q\text{.}\)</p></article><article class="example example-like" id="example-25"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span>
+</h6>
 <p id="p-252">Prove the following are equivalent using a truth table.</p>
 <ol class="decimal">
-<li id="li-269">\(( \neg p \to (q \wedge \neg q)  ) \equiv p\)</li>
-<li id="li-270">\(p \vee (p \wedge q) \equiv p \)</li>
-<li id="li-271">\(p \vee (q \wedge r) \equiv (p \vee q) \wedge (p \vee r)\)</li>
-<li id="li-272">\(\neg(p \to q) \equiv  p \wedge \neg q\)</li>
-<li id="li-273">\(p \to q \equiv \neg p \vee q\)</li>
+<li id="li-269">\(\displaystyle ( \neg p \to (q \wedge \neg q)  ) \equiv p\)</li>
+<li id="li-270">\(\displaystyle p \vee (p \wedge q) \equiv p \)</li>
+<li id="li-271">\(\displaystyle p \vee (q \wedge r) \equiv (p \vee q) \wedge (p \vee r)\)</li>
+<li id="li-272">\(\displaystyle \neg(p \to q) \equiv  p \wedge \neg q\)</li>
+<li id="li-273">\(\displaystyle p \to q \equiv \neg p \vee q\)</li>
 </ol>
-<p id="p-253"><article class="remark-like" id="note-10"><h6 class="heading">
-<span class="type">Note</span> <span class="codenumber">2.1.5</span>.</h6>
+<p id="p-253"><article class="note remark-like" id="note-10"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">2.1.5</span><span class="period">.</span>
+</h6>
 <p id="p-254">We use \(p \to q \equiv \neg p \vee q\) often enough that this has a name. We'll call it <dfn class="terminology">implication</dfn></p></article></p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-27" id="answer-27"><span class="type">Answer/Video</span></a><div id="hk-answer-27" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-28" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/44izzfqVMNo?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-19" id="solution-19"><span class="type">Solution</span></a><div id="hk-solution-19" class="hidden-content tex2jax_ignore"><div class="solution">Here's the solution for \((\neg p \to (q \wedge \neg q)) \equiv p\text{:}\) <figure class="figure-like" id="table-contradiction-valid"><table>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-27" id="answer-27"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-27"><div class="answer solution-like"><iframe id="video-28" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/44izzfqVMNo?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-19" id="solution-19"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like">Here's the solution for \((\neg p \to (q \wedge \neg q)) \equiv p\text{:}\) <figure class="table table-like" id="table-contradiction-valid"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1.6<span class="period">.</span></span><span class="space"> </span>Showing \(( \neg p \to (q \wedge \neg q)  )\leftrightarrow p\) is a tautology</figcaption><table>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">\(p\)</td>
 <td class="c m b2 r0 l0 t0 lines">\(q\)</td>
 <td class="c m b2 r0 l0 t0 lines">\(\neg p\)</td>
 <td class="c m b2 r0 l0 t0 lines">\(q \wedge \neg q\)</td>
 <td class="c m b2 r0 l0 t0 lines">\(\neg p \to (q \wedge \neg q)\)</td>
-<td class="c m b2 r0 l0 t0 lines">\((\neg p \to (q \wedge \neg q)) \leftrightarrow p\)</td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\((\neg p \to (q \wedge \neg q)) \leftrightarrow p\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">T</td>
@@ -242,7 +244,7 @@ var js_version = 0.11;
 <td class="c m b0 r0 l0 t0 lines">F</td>
 <td class="c m b0 r0 l0 t0 lines">F</td>
 <td class="c m b0 r0 l0 t0 lines">T</td>
-<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">T</td>
@@ -250,7 +252,7 @@ var js_version = 0.11;
 <td class="c m b0 r0 l0 t0 lines">F</td>
 <td class="c m b0 r0 l0 t0 lines">F</td>
 <td class="c m b0 r0 l0 t0 lines">T</td>
-<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">F</td>
@@ -258,7 +260,7 @@ var js_version = 0.11;
 <td class="c m b0 r0 l0 t0 lines">T</td>
 <td class="c m b0 r0 l0 t0 lines">F</td>
 <td class="c m b0 r0 l0 t0 lines">F</td>
-<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">F</td>
@@ -266,151 +268,152 @@ var js_version = 0.11;
 <td class="c m b0 r0 l0 t0 lines">T</td>
 <td class="c m b0 r0 l0 t0 lines">F</td>
 <td class="c m b0 r0 l0 t0 lines">F</td>
-<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
 </tr>
-</table>
-<figcaption><span class="type">Table</span> <span class="codenumber">2.1.6.</span> Showing \(( \neg p \to (q \wedge \neg q)  )\leftrightarrow p\) is a tautology</figcaption></figure>
+</table></figure>
 </div></div>
-</div></article><article class="remark-like" id="note-11"><h6 class="heading">
-<span class="type">Note</span> <span class="codenumber">2.1.7</span>.</h6>
-<p id="p-255">The following is a collection of very useful tautologies. Do you need to memorize them? Absolutely!</p></article><figure class="figure-like" id="table-equivalences"><table>
+</div></article><article class="note remark-like" id="note-11"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">2.1.7</span><span class="period">.</span>
+</h6>
+<p id="p-255">The following is a collection of very useful tautologies. Do you need to memorize them? Absolutely!</p></article><figure class="table table-like" id="table-equivalences"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1.8<span class="period">.</span></span><span class="space"> </span>Logical Equivalences</figcaption><table>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">Commutative Laws</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">\(p \lor  q\equiv q\lor p\)</td>
 <td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">\(p \land q\equiv q \land p\)</td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\(p \land q\equiv q \land p\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">Associative Laws</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">\((p \lor  q) \lor r \equiv  p \lor  (q \lor  r)\)</td>
 <td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">(\(p \land q) \land r\equiv p \land  (q \land  r)\)</td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">(\(p \land q) \land r\equiv p \land  (q \land  r)\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">Distributive Laws</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">\(p \land  (q \lor  r) \equiv  (p \land  q ) \lor  (p \land  r)\)</td>
 <td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">\(p \lor  (q \land  r) \equiv  (p \lor  q) \land (p \lor r)\)</td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\(p \lor  (q \land  r) \equiv  (p \lor  q) \land (p \lor r)\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">Identity Laws</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">\(p \lor  F\equiv p\)</td>
 <td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">\(p \land  T \equiv p\)</td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\(p \land  T \equiv p\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">Negation Laws</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">\(p\land \neg p\equiv F\)</td>
 <td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">\(p\lor \neg p\equiv T\)</td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\(p\lor \neg p\equiv T\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">Idempotent Laws</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">\(p \lor  p \equiv p\)</td>
 <td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">\(p\land p \equiv p\)</td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\(p\land p \equiv p\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">Domination Laws</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">\(p \land F \equiv F\)</td>
 <td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">\(p \lor  T \equiv T\)</td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\(p \lor  T \equiv T\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">Absorption Laws</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">\(p \land (p\lor  q)\equiv p\)</td>
 <td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">\(p \lor  (p \land  q) \equiv  p\)</td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\(p \lor  (p \land  q) \equiv  p\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">DeMorgan's Laws</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">\(\neg (p \lor  q) \equiv  (\neg p) \land  (\neg q)\)</td>
 <td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">\(\neg (p \land  q) \equiv  (\neg p) \lor  (\neg q)\)</td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\(\neg (p \land  q) \equiv  (\neg p) \lor  (\neg q)\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">Double Negation Law</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines">\(\neg (\neg p)\equiv p\)</td>
-<td class="c m b2 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">Implication</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines">\(p \to q \equiv \neg p \lor q\)</td>
-<td class="c m b2 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
-</table>
-<figcaption><span class="type">Table</span> <span class="codenumber">2.1.8.</span> Logical Equivalences</figcaption></figure><article class="example-like" id="example-26"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.1.9</span>.</h6>
-<p id="p-256">Use existing logical equivalences from <a data-knowl="./knowl/table-equivalences.html" title="Table 2.1.8: Logical Equivalences">Table 2.1.8</a> to show the following are equivalent.</p>
+</table></figure><article class="example example-like" id="example-contradiction-logic"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.9</span><span class="period">.</span>
+</h6>
+<p id="p-256">Use existing logical equivalences from <a class="xref" data-knowl="./knowl/table-equivalences.html" title="Table 2.1.8: Logical Equivalences">Table 2.1.8</a> to show the following are equivalent.</p>
 <ol class="decimal">
-<li id="li-274">\(p \wedge q \equiv \neg(p \to \neg q)\)</li>
-<li id="li-275">\((p \to r) \vee (q \to r) \equiv (p \wedge q) \to r\)</li>
-<li id="li-276">\(q \to p \equiv \neg p \to \neg q\)</li>
-<li id="example-contradiction-logic">\(( \neg p \to (q \wedge \neg q)  ) \equiv p\)</li>
+<li id="li-274">\(\displaystyle p \wedge q \equiv \neg(p \to \neg q)\)</li>
+<li id="li-275">\(\displaystyle (p \to r) \vee (q \to r) \equiv (p \wedge q) \to r\)</li>
+<li id="li-276">\(\displaystyle q \to p \equiv \neg p \to \neg q\)</li>
+<li id="li-277">\(\displaystyle ( \neg p \to (q \wedge \neg q)  ) \equiv p\)</li>
 </ol>
-<p id="p-257"><article class="remark-like" id="note-12"><h6 class="heading">
-<span class="type">Note</span> <span class="codenumber">2.1.10</span>.</h6>
+<p id="p-257"><article class="note remark-like" id="note-12"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">2.1.10</span><span class="period">.</span>
+</h6>
 <p id="p-258">This is your first experience with logical proof! It won't be your last. Much of this class is about learning to understand and argue rigorously.</p></article></p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-28" id="answer-28"><span class="type">Answer/Video</span></a><div id="hk-answer-28" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-29" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/gFjfEOKlyEc?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-28" id="answer-28"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-28"><div class="answer solution-like"><iframe id="video-29" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/gFjfEOKlyEc?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
 </div></article><section class="exercises" id="exercises-4"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">2.1.1</span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise-like" id="exercise-47"><h6 class="heading"><span class="codenumber">1.</span></h6>
+<article class="exercise exercise-like" id="exercise-47"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="p-259">Determine whether the following two statements are logically equivalent:  \(\neg(p \to q)\) and \(p \wedge \neg q\text{.}\) Explain how you know you are correct.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-20" id="solution-20"><span class="type">Solution</span></a><div id="hk-solution-20" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-260">Make a truth table for each and compare. The statements are logically equivalent.</p></div></div>
-</div></article><article class="exercise-like" id="exercise-48"><h6 class="heading"><span class="codenumber">2.</span></h6>
-<p id="p-261">Are the statements \(p \to (q\vee r)\) and \((p \to q) \vee (p \to r)\) logically equivalent?</p></article><article class="exercise-like" id="exercise-49"><h6 class="heading"><span class="codenumber">3.</span></h6>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-20" id="solution-20"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-20"><div class="solution solution-like"><p id="p-260">Make a truth table for each and compare. The statements are logically equivalent.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-48"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-261">Are the statements \(p \to (q\vee r)\) and \((p \to q) \vee (p \to r)\) logically equivalent?</p></article><article class="exercise exercise-like" id="exercise-49"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="p-262">Use a truth table to show that \((p \to q) \land (p \to r)\) and \(p \to (q \land r)\) are logically equivalent.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-21" id="solution-21"><span class="type">Solution</span></a><div id="hk-solution-21" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-21" id="solution-21"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-21"><div class="solution solution-like">
 <p id="p-263">Here's an alternative solution using previous equivalences (not a truth table):</p>
 <div class="displaymath">
 \begin{align*}
@@ -420,7 +423,7 @@ var js_version = 0.11;
 \end{align*}
 </div>
 </div></div>
-</div></article><article class="exercise-like" id="exercise-50"><h6 class="heading"><span class="codenumber">4.</span></h6>
+</div></article><article class="exercise exercise-like" id="exercise-50"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="p-264">Simplify the following statements (so that negation only appears right before variables).</p>
 <ol class="lower-alpha">
 <li id="li-278">\(\neg(p \to \neg q)\text{.}\)</li>
@@ -428,18 +431,18 @@ var js_version = 0.11;
 <li id="li-280">\(\neg((p \to \neg q) \vee \neg (r \wedge \neg r))\text{.}\)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-29" id="answer-29"><span class="type">Answer/Video</span></a><div id="hk-answer-29" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-265" class="lower-alpha">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-29" id="answer-29"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-29"><div class="answer solution-like"><ol id="p-265" class="lower-alpha">
 <li id="li-281">\(p \wedge q\text{.}\)</li>
 <li id="li-282">\((\neg p \vee \neg r) \to (q \vee \neg r)\) or, replacing the implication with a disjunction first: \((p \wedge q) \vee (q \vee \neg r)\text{.}\)</li>
 <li id="li-283"><p id="p-266">\((p \wedge q) \wedge (r \wedge \neg r)\text{.}\) This is necessarily false, so it is also equivalent to \(p \wedge \neg p\text{.}\)</p></li>
 <li id="li-284"><p id="p-267">Either Sam is not a man and Chris is not a woman, or Chris is a woman.</p></li>
 </ol></div></div>
-</div></article><article class="exercise-like" id="exercise-51"><h6 class="heading"><span class="codenumber">5.</span></h6>
+</div></article><article class="exercise exercise-like" id="exercise-51"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
 <p id="p-268">Use De Morgan's Laws, and any other logical equivalence facts you know to simplify the following statements. Show all your steps. Your final statements should have negations only appear directly next to the sentence variables or predicates (\(p\text{,}\) \(q\text{,}\) etc.), and no double negations. It would be a good idea to use only conjunctions, disjunctions, and negations.</p>
 <ol class="lower-alpha">
 <li id="li-285">\(\neg((\neg p \wedge q) \vee \neg(r \vee \neg s))\text{.}\)</li>
 <li id="li-286">\(\neg((\neg p \to \neg q) \wedge (\neg q \to k))\) (careful with the implications).</li>
-<li id="li-287">\((p\land q) \to (p \lor q)\)</li>
+<li id="li-287">\(\displaystyle (p\land q) \to (p \lor q)\)</li>
 </ol></article></section><section class="subsection" id="subsection-11"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.1.2</span> <span class="title">Forum Posts about this section</span>
 </h3>
@@ -455,7 +458,5 @@ var js_version = 0.11;
         })();
       </script></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.11/login.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-12T17:53:53-05:00    *-->
+<!--*    on 2020-12-06T18:12:56-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Prime Numbers</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -50,20 +50,17 @@ MathJax.Hub.Config({
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(gcse, s);
 })();
-</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.11;
-</script>
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\def\ds{\displaystyle}
@@ -150,7 +147,7 @@ var js_version = 0.11;
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
@@ -205,51 +202,61 @@ var js_version = 0.11;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="section-primes"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">Prime Numbers</span>
 </h2>
-<a href="section-primes.html" class="permalink">¶</a><article class="definition-like" id="definition-44"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">3.2.1</span>.</h6>
-<p id="p-594">A positive integer \(p\) is called <dfn class="terminology">prime</dfn> if the only positive factors of \(p\) are \(1 \and p\) itself.</p>
-<p id="p-595">A positive integer which is not prime is called \(composite\)</p></article><article class="remark-like" id="note-18"><h6 class="heading">
-<span class="type">Note</span> <span class="codenumber">3.2.2</span>.</h6>
-<p id="p-596">1 is neither prime nor composite. It's called a <dfn class="terminology">unit</dfn>.</p></article><article class="theorem-like" id="theorem-3"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">3.2.3</span>. <span class="title">The Fundamental Theorem of Arithmetic.</span>
+<article class="definition definition-like" id="definition-44"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span>
 </h6>
-<p id="p-597">Every integer greater than 1 can be written as a product of primes, and this product is unique up to the ordering of the prime factors.</p></article><article class="example-like" id="example-67"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.2.4</span>.</h6>
-<p id="p-598">Find the prime factorization of the following:</p>
+<p id="p-625">A positive integer \(p\) is called <dfn class="terminology">prime</dfn> if the only positive factors of \(p\) are \(1 \and p\) itself.</p>
+<p id="p-626">A positive integer which is not prime is called \(composite\)</p></article><article class="note remark-like" id="note-18"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span>
+</h6>
+<p id="p-627">1 is neither prime nor composite. It's called a <dfn class="terminology">unit</dfn>.</p></article><article class="theorem theorem-like" id="theorem-3"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">The Fundamental Theorem of Arithmetic.</span>
+</h6>
+<p id="p-628">Every integer greater than 1 can be written as a product of primes, and this product is unique up to the ordering of the prime factors.</p></article><article class="example example-like" id="example-67"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="period">.</span>
+</h6>
+<p id="p-629">Find the prime factorization of the following:</p>
 <ol class="decimal">
-<li id="li-532">124</li>
-<li id="li-533">81</li>
-<li id="li-534">941</li>
-</ol></article><article class="theorem-like" id="theorem-4"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">3.2.5</span>.</h6>
-<p id="p-599">If \(n\) is a composite number, then \(n\) has a prime divisor less than or equal to \(\sqrt{n}\text{.}\)</p></article><article class="proof" id="proof-14"><h6 class="heading"><span class="type">Proof.</span></h6>
-<p id="p-600">Assume, to the contrary, that every prime divisor of \(n\) is greater than \(\sqrt{n}\text{.}\) Since \(n\) is composite, it has at least two prime factors, \(p_1, p_2\) so that \(n = p_1 p_2 b\) where \(b\) is positive integer. But since \(p_1 \and p_2\) are a prime divisors of \(n\text{,}\) they are necessarily larger than  \(\sqrt{n}\text{.}\) So:</p>
+<li id="li-558">124</li>
+<li id="li-559">81</li>
+<li id="li-560">941</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-62" id="answer-62"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-62"><div class="answer solution-like"><iframe id="video-61" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/qCvMLt-QNd8?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="theorem theorem-like" id="theorem-4"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="period">.</span>
+</h6>
+<p id="p-630">If \(n\) is a composite number, then \(n\) has a prime divisor less than or equal to \(\sqrt{n}\text{.}\)</p></article><article class="proof" id="proof-19"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-631">Assume, to the contrary, that every prime divisor of \(n\) is greater than \(\sqrt{n}\text{.}\) Since \(n\) is composite, it has at least two prime factors, \(p_1, p_2\) so that \(n = p_1 p_2 b\) where \(b\) is positive integer. But since \(p_1 \and p_2\) are a prime divisors of \(n\text{,}\) they are necessarily larger than  \(\sqrt{n}\text{.}\) So:</p>
 <div class="displaymath">
 \begin{equation*}
 n = p_1  p_2  b \gt \sqrt{n} \cdot \sqrt{n} \cdot b = nb
 \end{equation*}
 </div>
-<p>But since \(n\) is composite and \(b\in \Z^+\text{,}\) \(n\gt nb\) is a contradiction.</p></article><article class="example-like" id="example-68"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.2.6</span>. <span class="title">Brute Force Trial Division.</span>
+<p data-braille="continuation">But since \(n\) is composite and \(b\in \Z^+\text{,}\) \(n\gt nb\) is a contradiction.</p></article><article class="example example-like" id="example-68"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Brute Force Trial Division.</span>
 </h6>
-<p id="p-601">To determine if a number \(n\) is prime, one only needs to test all possible prime divisors up to \(\sqrt{n}\text{.}\)</p>
-<p id="p-602">Use trial division to determine that 251 is prime.</p></article><article class="example-like" id="example-69"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.2.7</span>. <span class="title">Sieve of Eratosthenes.</span>
+<p id="p-632">To determine if a number \(n\) is prime, one only needs to test all possible prime divisors up to \(\sqrt{n}\text{.}\)</p>
+<p id="p-633">Use trial division to determine that 251 is prime.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-63" id="answer-63"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-63"><div class="answer solution-like"><iframe id="video-62" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/Hq88K-lSPFI?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-69"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Sieve of Eratosthenes.</span>
 </h6>
-<p id="p-603">In order to generate a list of all prime numbers less than or equal to \(n\text{,}\) start with a tabular listing  of integers from 1 to \(n\text{:}\)</p>
+<p id="p-634">In order to generate a list of all prime numbers less than or equal to \(n\text{,}\) start with a tabular listing  of integers from 1 to \(n\text{:}\)</p>
 <ol class="decimal">
-<li id="li-535">Cross off the number 1.</li>
-<li id="li-536">
-<p id="p-604">Continuing until you reach \(\sqrt{n}\text{:}\)</p>
+<li id="li-561">Cross off the number 1.</li>
+<li id="li-562">
+<p id="p-635">Continuing until you reach \(\sqrt{n}\text{:}\)</p>
 <ol class="lower-alpha">
-<li id="li-537">Circle the next, non-crossed out number. It's prime.</li>
-<li id="li-538">Cross out every multiple of this number.</li>
-<li id="li-539">Repeat.</li>
+<li id="li-563">Circle the next, non-crossed out number. It's prime.</li>
+<li id="li-564">Cross out every multiple of this number.</li>
+<li id="li-565">Repeat.</li>
 </ol>
 </li>
 </ol>
-<p id="p-605">Run the Sieve on this table of integers from 1 to 100.</p>
-<figure class="figure-like" id="table-6"><table>
+<p id="p-636">Run the Sieve on this table of integers from 1 to 100.</p>
+<figure class="table table-like" id="table-6"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.2.8<span class="period">.</span></span><span class="space"> </span>Integers from 1 to 100</figcaption><table>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">1</td>
 <td class="l m b0 r0 l0 t0 lines">2</td>
@@ -260,7 +267,7 @@ n = p_1  p_2  b \gt \sqrt{n} \cdot \sqrt{n} \cdot b = nb
 <td class="l m b0 r0 l0 t0 lines">7</td>
 <td class="l m b0 r0 l0 t0 lines">8</td>
 <td class="l m b0 r0 l0 t0 lines">9</td>
-<td class="l m b0 r0 l0 t0 lines">10</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">10</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">11</td>
@@ -272,7 +279,7 @@ n = p_1  p_2  b \gt \sqrt{n} \cdot \sqrt{n} \cdot b = nb
 <td class="l m b0 r0 l0 t0 lines">17</td>
 <td class="l m b0 r0 l0 t0 lines">18</td>
 <td class="l m b0 r0 l0 t0 lines">19</td>
-<td class="l m b0 r0 l0 t0 lines">20</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">20</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">21</td>
@@ -284,7 +291,7 @@ n = p_1  p_2  b \gt \sqrt{n} \cdot \sqrt{n} \cdot b = nb
 <td class="l m b0 r0 l0 t0 lines">27</td>
 <td class="l m b0 r0 l0 t0 lines">28</td>
 <td class="l m b0 r0 l0 t0 lines">29</td>
-<td class="l m b0 r0 l0 t0 lines">30</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">30</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">31</td>
@@ -296,7 +303,7 @@ n = p_1  p_2  b \gt \sqrt{n} \cdot \sqrt{n} \cdot b = nb
 <td class="l m b0 r0 l0 t0 lines">37</td>
 <td class="l m b0 r0 l0 t0 lines">38</td>
 <td class="l m b0 r0 l0 t0 lines">39</td>
-<td class="l m b0 r0 l0 t0 lines">40</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">40</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">41</td>
@@ -308,7 +315,7 @@ n = p_1  p_2  b \gt \sqrt{n} \cdot \sqrt{n} \cdot b = nb
 <td class="l m b0 r0 l0 t0 lines">47</td>
 <td class="l m b0 r0 l0 t0 lines">48</td>
 <td class="l m b0 r0 l0 t0 lines">49</td>
-<td class="l m b0 r0 l0 t0 lines">50</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">50</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">51</td>
@@ -320,7 +327,7 @@ n = p_1  p_2  b \gt \sqrt{n} \cdot \sqrt{n} \cdot b = nb
 <td class="l m b0 r0 l0 t0 lines">57</td>
 <td class="l m b0 r0 l0 t0 lines">58</td>
 <td class="l m b0 r0 l0 t0 lines">59</td>
-<td class="l m b0 r0 l0 t0 lines">60</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">60</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">61</td>
@@ -332,7 +339,7 @@ n = p_1  p_2  b \gt \sqrt{n} \cdot \sqrt{n} \cdot b = nb
 <td class="l m b0 r0 l0 t0 lines">67</td>
 <td class="l m b0 r0 l0 t0 lines">68</td>
 <td class="l m b0 r0 l0 t0 lines">69</td>
-<td class="l m b0 r0 l0 t0 lines">70</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">70</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">71</td>
@@ -344,7 +351,7 @@ n = p_1  p_2  b \gt \sqrt{n} \cdot \sqrt{n} \cdot b = nb
 <td class="l m b0 r0 l0 t0 lines">77</td>
 <td class="l m b0 r0 l0 t0 lines">78</td>
 <td class="l m b0 r0 l0 t0 lines">79</td>
-<td class="l m b0 r0 l0 t0 lines">80</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">80</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">81</td>
@@ -356,7 +363,7 @@ n = p_1  p_2  b \gt \sqrt{n} \cdot \sqrt{n} \cdot b = nb
 <td class="l m b0 r0 l0 t0 lines">87</td>
 <td class="l m b0 r0 l0 t0 lines">88</td>
 <td class="l m b0 r0 l0 t0 lines">89</td>
-<td class="l m b0 r0 l0 t0 lines">90</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">90</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">91</td>
@@ -368,25 +375,61 @@ n = p_1  p_2  b \gt \sqrt{n} \cdot \sqrt{n} \cdot b = nb
 <td class="l m b0 r0 l0 t0 lines">97</td>
 <td class="l m b0 r0 l0 t0 lines">98</td>
 <td class="l m b0 r0 l0 t0 lines">99</td>
-<td class="l m b0 r0 l0 t0 lines">100</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">100</td>
 </tr>
-</table>
-<figcaption><span class="type">Table</span> <span class="codenumber">3.2.8.</span> Integers from 1 to 100</figcaption></figure></article><article class="theorem-like" id="proposition-4"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">3.2.9</span>.</h6>
-<p id="p-606">There are infinitely many primes.</p></article><section class="exercises" id="exercises-11"><h3 class="heading hide-type">
+</table></figure><div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-64" id="answer-64"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-64"><div class="answer solution-like"><iframe id="video-63" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/GHavZM0uS5w?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="proposition theorem-like" id="proposition-4"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.2.9</span><span class="period">.</span>
+</h6>
+<p id="p-637">There are infinitely many primes.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-65" id="answer-65"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-65"><div class="answer solution-like"><iframe id="video-64" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/Y_9K-BpTdTo?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></article><section class="exercises" id="exercises-11"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">3.2.1</span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise-like" id="exercise-100"><h6 class="heading"><span class="codenumber">1.</span></h6>
-<p id="p-607">Find the prime factorization of each of the following integers:</p>
+<article class="exercise exercise-like" id="exercise-98"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-638">Find the prime factorization of each of the following integers:</p>
 <ol class="lower-alpha">
-<li id="li-540">39</li>
-<li id="li-541">125</li>
-<li id="li-542">101</li>
-<li id="li-543">143</li>
-<li id="li-544">289</li>
-<li id="li-545">899</li>
-</ol></article><article class="exercise-like" id="exercise-101"><h6 class="heading"><span class="codenumber">2.</span></h6>
-<p id="p-608">Find the prime factorization of \(10!\) (10 factorial, not “yay ten!”)</p></article></section><section class="subsection" id="subsection-32"><h3 class="heading hide-type">
+<li id="li-566">39</li>
+<li id="li-567">125</li>
+<li id="li-568">101</li>
+<li id="li-569">143</li>
+<li id="li-570">289</li>
+<li id="li-571">899</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-60" id="solution-60"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-60"><div class="solution solution-like"><ol id="p-639" class="lower-alpha">
+<li id="li-572">\(\displaystyle 39 = 3\cdot 13\)</li>
+<li id="li-573">\(\displaystyle 125 = 5^3 \)</li>
+<li id="li-574">\(101\) is prime - trial divide by 2, 3, 5, 7</li>
+<li id="li-575">\(\displaystyle 143 = 11\cdot 13 \)</li>
+<li id="li-576">\(\displaystyle 289 = 17^2\)</li>
+<li id="li-577">\(\displaystyle 899 = 29 \cdot 31\)</li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-99"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-640">Find the prime factorization of \(10!\) (10 factorial, not “yay ten!”)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-61" id="solution-61"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-61"><div class="solution solution-like">
+<p id="p-641">Recall \(10! = 10 \cdot 9 \cdot 8 \cdot 7 \cdot \dots \cdot 2 \cdot 1\text{.}\) So we can do the following:</p>
+<div class="displaymath">
+\begin{align*}
+10! \amp = 10\cdot 9 \cdot 8 \cdot 7\cdot 6 \cdot 5 \cdot 4 \ cdot 3 \cdot 2 \cdot 1 \\
+\amp = (2\cdot 5)\cdot 3^2 \cdot 2^3 \cdot 7\cdot (2\cdot 3) \cdot 5 \cdot 2^2 \ cdot 3 \cdot 2 \cdot 1 \\
+\amp = 7^1 \cdot 5^2 \cdot 3^4 \cdot 2^8
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-100"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-642">Prove that every prime number greater than 3 is either one more or one less than a multiple of 6.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-13" id="hint-13"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-13"><div class="hint solution-like"><p id="p-643">Prove the contrapositive by cases.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-62" id="solution-62"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-62"><div class="solution solution-like"><p id="p-644">This question is of the form “if \(n\) is a prime number greater than three, then either \(n=6k+1\) or \(n=6k-1\) for some integer \(k\)”. <article class="proof" id="proof-20"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-645">(by contraposition). Assume that \(n\) is not a number of the form \(n=6k+1\) or \(n=6k-1\) for some integer \(k\text{.}\) This gives us four total cases:</p>
+<p id="p-646">Case 1: Assume \(n=6k\) for some integer \(k\text{.}\) Then \(n\) is not a prime number, since \(n\) is divisible by both 2 and 3.</p>
+<p id="p-647">Case 2: Assume \(n = 6k+2 = 2(3k+1)\) for some integer \(k\text{.}\) Then \(n\) is divisible by 2 and is hence not prime.</p>
+<p id="p-648">Case 3: assume \(n = 6k+3 = 3(2k+1)\) for some integer \(k\text{.}\) then \(n\) is divisible by 3 and is hence not prime.</p>
+<p id="p-649">Case 4: assume \(n = 6k+4 = 2(3k+2)\) for some integer \(k\text{.}\) then \(n\) is divisible by 2 and is hence not prime.</p>
+<p id="p-650">Thus if \(n\) is not of the form \(n=6k+1\) or \(n=6k-1\) for some integer \(k\text{,}\) \(n\) is not prime. By contraposition, if \(n\) is a prime greater than three then \(n\) is of the form either \(n=6k+1\) or \(n=6k-1\) for some integer \(k\text{.}\)</p></article></p></div></div>
+</div></article></section><section class="subsection" id="subsection-32"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.2.2</span> <span class="title">Forum Posts about this section</span>
 </h3>
 <div xmlns:xi="http://www.w3.org/2001/XInclude" id="discourse-comments"></div>
@@ -401,7 +444,5 @@ n = p_1  p_2  b \gt \sqrt{n} \cdot \sqrt{n} \cdot b = nb
         })();
       </script></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.11/login.js"></script>
 </body>
 </html>

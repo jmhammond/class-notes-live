@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-12T17:53:52-05:00    *-->
+<!--*    on 2020-12-06T18:12:52-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Sets</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -50,20 +50,17 @@ MathJax.Hub.Config({
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(gcse, s);
 })();
-</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.11;
-</script>
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\def\ds{\displaystyle}
@@ -150,7 +147,7 @@ var js_version = 0.11;
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
@@ -205,14 +202,16 @@ var js_version = 0.11;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_objects_sets"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Sets</span>
 </h2>
-<a href="sec_objects_sets.html" class="permalink">¶</a><section class="introduction" id="introduction-2"></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-2"></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.1</span> <span class="title">Basic terminology</span>
 </h3>
-<article class="definition-like" id="definition-7"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">1.2.1</span>.</h6>
+<article class="definition definition-like" id="definition-7"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
+</h6>
 <p id="p-52">A <dfn class="terminology">set</dfn> is an unordered collection of objects called <dfn class="terminology">elements</dfn> or <dfn class="terminology">members</dfn> of the set.</p>
-<p id="p-53">If \(A\) is a set and \(a\) is an element of \(A\text{,}\) we write \(a \in A\text{.}\) If \(b\) isn't an element of \(A\text{,}\) we write \(b \not\in A\text{.}\)</p></article><article class="example-like" id="example-6"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">1.2.2</span>.</h6>
+<p id="p-53">If \(A\) is a set and \(a\) is an element of \(A\text{,}\) we write \(a \in A\text{.}\) If \(b\) isn't an element of \(A\text{,}\) we write \(b \not\in A\text{.}\)</p></article><article class="example example-like" id="example-6"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
+</h6>
 <p id="p-54">Below are examples of ways of writing sets:</p>
 <dl class="description-list">
 <dt id="li-48"></dt>
@@ -225,15 +224,16 @@ var js_version = 0.11;
 <p id="p-55">We have also seen intervals of real numbers in our previous courses which are the sets:</p>
 <dl class="description-list">
 <dt id="li-50"></dt>
-<dd>\((a,b) = \{x \mid a \lt x \lt b, x\in \R \}\)</dd>
+<dd>\(\displaystyle (a,b) = \{x \mid a \lt x \lt b, x\in \R \}\)</dd>
 <dt id="li-51"></dt>
-<dd>\([a,b) = \{x \mid a \le x \lt b, x\in \R \}\)</dd>
+<dd>\(\displaystyle [a,b) = \{x \mid a \le x \lt b, x\in \R \}\)</dd>
 <dt id="li-52"></dt>
-<dd>\((a,b] = \{x \mid a \lt x \le b, x\in \R \}\)</dd>
+<dd>\(\displaystyle (a,b] = \{x \mid a \lt x \le b, x\in \R \}\)</dd>
 <dt id="li-53"></dt>
-<dd>\([a,b] = \{x \mid a \le x \le b, x\in \R \}\)</dd>
-</dl></article><article class="definition-like" id="definition-8"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">1.2.3</span>.</h6>
+<dd>\(\displaystyle [a,b] = \{x \mid a \le x \le b, x\in \R \}\)</dd>
+</dl></article><article class="definition definition-like" id="definition-8"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
+</h6>
 <p id="p-56">Here are some special sets we will visit often throughout the course and the rest of your mathematical career:</p>
 <dl class="description-list">
 <dt id="li-54"></dt>
@@ -254,8 +254,9 @@ var js_version = 0.11;
 <dd>\(\mathbb{C} = \{a + bi \mid a \in \mathbb{R}, b \in \mathbb{R}, i = \sqrt{-1} \} \) is the set of <dfn class="terminology">complex numbers</dfn>
 </dd>
 </dl>
-<a data-knowl="" class="id-ref" data-refid="hk-answer-7" id="answer-7"><span class="type">Answer/Video</span></a><div id="hk-answer-7" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-7" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/QyDUE4zSIEU?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></article><article class="definition-like" id="definition-9"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">1.2.4</span>.</h6>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-7" id="answer-7"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><iframe id="video-7" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/QyDUE4zSIEU?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></article><article class="definition definition-like" id="definition-9"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
+</h6>
 <p id="p-57">We say that \(A\) is a <dfn class="terminology">subset</dfn> of \(B\text{,}\) and write \(A \subseteq B\) if every element of \(A\) is an element of \(B\text{.}\)  If there is an element of \(B\) which is not also in \(A\text{,}\) we say that \(A\) is a <dfn class="terminology">proper subset</dfn> of \(B\) and write \(A \subset B\text{.}\) </p>
 <p id="p-58">We say that two sets, \(A\) and \(B\) are <dfn class="terminology">equal</dfn>, an write \(A = B\) they have exactly the same elements.</p>
 <div class="displaymath">
@@ -263,66 +264,75 @@ var js_version = 0.11;
 A = B \iff (A \subseteq B \text{ and } B \subseteq A)
 \end{equation*}
 </div>
-<a data-knowl="" class="id-ref" data-refid="hk-answer-8" id="answer-8"><span class="type">Answer/Video</span></a><div id="hk-answer-8" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-8" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/cAh-4Xe7Auc?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></article><article class="theorem-like" id="theorem-1"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">1.2.5</span>.</h6>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-8" id="answer-8"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><iframe id="video-8" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/cAh-4Xe7Auc?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></article><article class="theorem theorem-like" id="theorem-1"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span>
+</h6>
 <p id="p-59">For every set \(S\text{,}\)</p>
 <ul class="disc">
 <li id="li-62">\(\emptyset \subseteq S\) and</li>
 <li id="li-63">\(S \subseteq S\text{.}\)</li>
-</ul></article><article class="definition-like" id="definition-10"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">1.2.6</span>.</h6>
-<p id="p-60">Given any set \(S\text{,}\) the <dfn class="terminology">power set</dfn> of \(S\) is the set of all subsets of the set \(S\text{.}\) We denote the power set of \(S\) by \(\pow(S)\)</p></article><article class="example-like" id="example-7"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">1.2.7</span>.</h6>
+</ul></article><article class="definition definition-like" id="definition-10"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span>
+</h6>
+<p id="p-60">Given any set \(S\text{,}\) the <dfn class="terminology">power set</dfn> of \(S\) is the set of all subsets of the set \(S\text{.}\) We denote the power set of \(S\) by \(\pow(S)\)</p></article><article class="example example-like" id="example-7"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
+</h6>
 <p id="p-61">Find the power set of:</p>
 <ol class="decimal">
-<li id="li-64">\(\{a, b, c\}\)</li>
-<li id="li-65">\(\{1, 2\}\)</li>
-<li id="li-66">\(\emptyset\)</li>
+<li id="li-64">\(\displaystyle \{a, b, c\}\)</li>
+<li id="li-65">\(\displaystyle \{1, 2\}\)</li>
+<li id="li-66">\(\displaystyle \emptyset\)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-9" id="answer-9"><span class="type">Answer/Video</span></a><div id="hk-answer-9" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-9" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/Xqe7xNxH4aE?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
-</div></article><article class="definition-like" id="definition-11"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">1.2.8</span>.</h6>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-9" id="answer-9"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><iframe id="video-9" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/Xqe7xNxH4aE?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="definition definition-like" id="definition-11"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.8</span><span class="period">.</span>
+</h6>
 <p id="p-62">Let \(S\) be a set. If there are exactly \(n\) distinct elements in \(S\) where \(n\) is a nonnegative integer, then we say that \(S\) is a <dfn class="terminology">finite</dfn> set with <dfn class="terminology">cardinality</dfn> of \(n\text{,}\) and write \(|S|=n\text{.}\)</p>
-<p id="p-63">A set is said to be <dfn class="terminology">infinite</dfn> if it is not finite.</p></article><article class="example-like" id="example-8"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">1.2.9</span>.</h6>
+<p id="p-63">A set is said to be <dfn class="terminology">infinite</dfn> if it is not finite.</p></article><article class="example example-like" id="example-8"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.9</span><span class="period">.</span>
+</h6>
 <p id="p-64">Find the cardinality:</p>
 <ol class="decimal">
-<li id="li-67">\(|\{a, b, c\}|\)</li>
-<li id="li-68">\(|\pow(\{a, b, c \})|\)</li>
-<li id="li-69">\(|\emptyset|\)</li>
+<li id="li-67">\(\displaystyle |\{a, b, c\}|\)</li>
+<li id="li-68">\(\displaystyle |\pow(\{a, b, c \})|\)</li>
+<li id="li-69">\(\displaystyle |\emptyset|\)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-10" id="answer-10"><span class="type">Answer/Video</span></a><div id="hk-answer-10" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-10" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/CRqvTn3ncPY?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-10" id="answer-10"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><iframe id="video-10" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/CRqvTn3ncPY?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
 </div></article></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.2</span> <span class="title">Operations on sets</span>
 </h3>
-<article class="definition-like" id="definition-12"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">1.2.10</span>.</h6>
+<article class="definition definition-like" id="definition-12"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.10</span><span class="period">.</span>
+</h6>
 <p id="p-65">We define an <dfn class="terminology">ordered \(n-\)tuple</dfn> to be an ordered collection of the form \((a_1, a_2, \dots, a_n)\text{.}\)</p>
-<p id="p-66">We call the \(2-\)tuple \((a_1, a_2)\) an <dfn class="terminology">ordered pair</dfn>, and the \(3-\)tuple \((a_1, a_2, a_3)\) an <dfn class="terminology">ordered triple</dfn>.</p></article><article class="definition-like" id="definition-13"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">1.2.11</span>.</h6>
+<p id="p-66">We call the \(2-\)tuple \((a_1, a_2)\) an <dfn class="terminology">ordered pair</dfn>, and the \(3-\)tuple \((a_1, a_2, a_3)\) an <dfn class="terminology">ordered triple</dfn>.</p></article><article class="definition definition-like" id="definition-13"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.11</span><span class="period">.</span>
+</h6>
 <p id="p-67">Let \(A\) and \(B\) be sets. The <dfn class="terminology">Cartesian Product</dfn> of \(A\) and \(B\text{,}\) denoted by \(A\times B\text{,}\) is the set of all ordered pairs \((a,b)\) where \(a\in A\) and \(b \in B\text{.}\) That is,</p>
 <div class="displaymath">
 \begin{equation*}
 A \times B = \{ (a,b) \mid a\in A \text{ and } b \in B\}
 \end{equation*}
 </div>
-<p id="p-68">We also denote the Cartesian product of a set with itself by the superscript \(A^2 = A \times A\text{.}\)</p></article><article class="example-like" id="example-9"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">1.2.12</span>.</h6>
+<p id="p-68">We also denote the Cartesian product of a set with itself by the superscript \(A^2 = A \times A\text{.}\)</p></article><article class="example example-like" id="example-9"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.12</span><span class="period">.</span>
+</h6>
 <p id="p-69">Let \(A=\{1, 2\}\) and \(B = \{x, y , z\}\text{,}\) find:</p>
 <ol class="decimal cols2">
-<li id="li-70">\(|A|\)</li>
-<li id="li-71">\(|B|\)</li>
+<li id="li-70">\(\displaystyle |A|\)</li>
+<li id="li-71">\(\displaystyle |B|\)</li>
 <li id="li-72">How many elements do you expect in \(A \times B\text{?}\)</li>
-<li id="li-73">\(A \times B\)</li>
-<li id="li-74">\(B \times A\)</li>
-<li id="li-75">\(A^2\)</li>
+<li id="li-73">\(\displaystyle A \times B\)</li>
+<li id="li-74">\(\displaystyle B \times A\)</li>
+<li id="li-75">\(\displaystyle A^2\)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-11" id="answer-11"><span class="type">Answer/Video</span></a><div id="hk-answer-11" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-11" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/TeCOF_lO5qU?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
-</div></article><article class="definition-like" id="definition-14"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">1.2.13</span>.</h6>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-11" id="answer-11"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><iframe id="video-11" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/TeCOF_lO5qU?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="definition definition-like" id="definition-14"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.13</span><span class="period">.</span>
+</h6>
 <p id="p-70">If \(A\) and \(B\) are two sets, we define the <dfn class="terminology">union</dfn> of \(A\) and \(B\text{,}\) denoted \(A \cup B\text{,}\) to be the set of all elements that are in \(A\) or \(B\text{,}\) or both.</p>
 <div class="displaymath">
 \begin{equation*}
@@ -344,149 +354,155 @@ A \setminus B = \{ x \mid x \in A \text{ and } x \not\in B\}
 \end{equation*}
 </div>
 <p id="p-75">As a Venn diagram: <div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/A-minus-B.svg" style="width: 100%; height: auto;" alt="Venn diagram for set difference \(A \setminus B\)"></div></div></div></p>
-<article class="remark-like" id="note-2"><h6 class="heading">
-<span class="type">Note</span> <span class="codenumber">1.2.14</span>.</h6>
-<p id="p-76">It's worth noting that some authors, Rosen included, use \(A - B\) to denote the difference between two sets \(A\) and \(B\text{.}\) We'll be using the slightly more standard \(A\setminus B\) in this class.</p></article></article><article class="definition-like" id="definition-15"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">1.2.15</span>.</h6>
+<article class="note remark-like" id="note-2"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">1.2.14</span><span class="period">.</span>
+</h6>
+<p id="p-76">It's worth noting that some authors, Rosen included, use \(A - B\) to denote the difference between two sets \(A\) and \(B\text{.}\) We'll be using the slightly more standard \(A\setminus B\) in this class.</p></article></article><article class="definition definition-like" id="definition-15"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.15</span><span class="period">.</span>
+</h6>
 <p id="p-77">Let \(U\) be the <dfn class="terminology">universal set</dfn>, that is the set of all possible objects in consideration. <div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/universal-set.svg" style="width: 100%; height: auto;" alt="Venn diagram for the universal set"></div></div></div></p>
-<p id="p-78">If \(A\) is a set, the <dfn class="terminology">complement</dfn> of \(A\text{,}\) denoted \(\overline{A}\text{,}\) is the set difference \(\overline{A} = U \setminus A\text{.}\) <div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/A-complement.svg" style="width: 100%; height: auto;" alt="Venn diagram for the complement of \(A\)"></div></div></div></p></article><article class="example-like" id="example-10"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">1.2.16</span>.</h6>
+<p id="p-78">If \(A\) is a set, the <dfn class="terminology">complement</dfn> of \(A\text{,}\) denoted \(\overline{A}\text{,}\) is the set difference \(\overline{A} = U \setminus A\text{.}\) <div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/A-complement.svg" style="width: 100%; height: auto;" alt="Venn diagram for the complement of \(A\)"></div></div></div></p></article><article class="example example-like" id="example-10"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.16</span><span class="period">.</span>
+</h6>
 <p id="p-79">Let \(A=\{a,b,c,d,e\}\) and \(B=\{a, b,c,d,e,f,g,h\}\text{,}\) find</p>
 <ol class="decimal cols3">
-<li id="li-76">\(|A|\)</li>
-<li id="li-77">\(|B|\)</li>
-<li id="li-78">\(A\cup B\)</li>
-<li id="li-79">\(A\cap B\)</li>
-<li id="li-80">\(|A\cup B|\)</li>
-<li id="li-81">\(|A\cap B|\)</li>
-<li id="li-82">\(A\setminus B\)</li>
-<li id="li-83">\(B\setminus A\)</li>
+<li id="li-76">\(\displaystyle |A|\)</li>
+<li id="li-77">\(\displaystyle |B|\)</li>
+<li id="li-78">\(\displaystyle A\cup B\)</li>
+<li id="li-79">\(\displaystyle A\cap B\)</li>
+<li id="li-80">\(\displaystyle |A\cup B|\)</li>
+<li id="li-81">\(\displaystyle |A\cap B|\)</li>
+<li id="li-82">\(\displaystyle A\setminus B\)</li>
+<li id="li-83">\(\displaystyle B\setminus A\)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-12" id="answer-12"><span class="type">Answer/Video</span></a><div id="hk-answer-12" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-12" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/aj5UcvPjCoQ?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
-</div></article><article class="remark-like" id="note-3"><h6 class="heading">
-<span class="type">Note</span> <span class="codenumber">1.2.17</span>.</h6>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-12" id="answer-12"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><iframe id="video-12" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/aj5UcvPjCoQ?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="note remark-like" id="note-3"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">1.2.17</span><span class="period">.</span>
+</h6>
 <p id="p-80">What do you observe about some combination of the cardinalities above?</p></article></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.3</span> <span class="title">Verifying Set Identities</span>
 </h3>
-<article class="example-like" id="example-11"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">1.2.18</span>.</h6>
+<article class="example example-like" id="example-11"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.18</span><span class="period">.</span>
+</h6>
 <p id="p-81">Verify the following identities by using a Venn Diagram.</p>
 <ol class="decimal">
-<li id="li-84">\(\overline{A \cap B} = \overline{A} \cup \overline{B}\)</li>
-<li id="li-85">\(A \cup(B \cap C) = (A \cup B) \cap (A \cup C)\)</li>
+<li id="li-84">\(\displaystyle \overline{A \cap B} = \overline{A} \cup \overline{B}\)</li>
+<li id="li-85">\(\displaystyle A \cup(B \cap C) = (A \cup B) \cap (A \cup C)\)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-13" id="answer-13"><span class="type">Answer/Video</span></a><div id="hk-answer-13" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-13" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/VVXEDmYGy2s?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
-</div></article><article class="remark-like" id="note-4"><h6 class="heading">
-<span class="type">Note</span> <span class="codenumber">1.2.19</span>.</h6>
-<p id="p-82">The following is a listing of common identities for set operations. An <dfn class="terminology">identity</dfn> is a statement which is true if we replace the variables with specific sets.</p></article><figure class="figure-like" id="table-setidentities"><table>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-13" id="answer-13"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><iframe id="video-13" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/VVXEDmYGy2s?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="note remark-like" id="note-4"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">1.2.19</span><span class="period">.</span>
+</h6>
+<p id="p-82">The following is a listing of common identities for set operations. An <dfn class="terminology">identity</dfn> is a statement which is true if we replace the variables with specific sets.</p></article><figure class="table table-like" id="table-setidentities"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.2.20<span class="period">.</span></span><span class="space"> </span>Set Identities</figcaption><table>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">Commutative Laws</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">\(A \cup  B= B\cup A\)</td>
 <td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">\(A \cap B= B \cap A\)</td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\(A \cap B= B \cap A\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">Associative Laws</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">\((A \cup  B) \cup C =  A \cup  (B \cup  C)\)</td>
 <td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">(\(A \cap B) \cap C= A \cap  (B \cap  C)\)</td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">(\(A \cap B) \cap C= A \cap  (B \cap  C)\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">Distributive Laws</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">\(A \cap  (B \cup  C) =  (A \cap  B ) \cup  (A \cap  C)\)</td>
 <td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">\(A \cup  (B \cap  C) =  (A \cup  B) \cap (A \cup C)\)</td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\(A \cup  (B \cap  C) =  (A \cup  B) \cap (A \cup C)\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">Identity Laws</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">\(A \cup  \emptyset= A\)</td>
 <td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">\(A \cap  U = A\)</td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\(A \cap  U = A\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">Negation Laws</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">\(A\cap \overline{A}= \emptyset\)</td>
 <td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">\(A\cup \overline{A}= U\)</td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\(A\cup \overline{A}= U\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">Idempotent Laws</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">\(A \cup  A = A\)</td>
 <td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">\(A\cap A = A\)</td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\(A\cap A = A\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">Domination Laws</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">\(A \cap \emptyset = \emptyset\)</td>
 <td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">\(A \cup  U = U\)</td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\(A \cup  U = U\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">Absorption Laws</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">\(A \cap (A\cup  B)= A\)</td>
 <td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">\(A \cup  (A \cap  B) =  A\)</td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\(A \cup  (A \cap  B) =  A\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">DeMorgan's Laws</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">\(\overline{(A \cup  B)} =  \overline{A} \cap  \overline{B}\)</td>
 <td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">\(\overline{(A \cap  B)} =  \overline{A} \cup  \overline{B}\)</td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\(\overline{(A \cap  B)} =  \overline{A} \cup  \overline{B}\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">Double Negation Law</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines">\(\overline{\overline{A}}= A\)</td>
-<td class="c m b2 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
-</table>
-<figcaption><span class="type">Table</span> <span class="codenumber">1.2.20.</span> Set Identities</figcaption></figure><article class="exercise-like" id="exercise-10"><a data-knowl="" class="id-ref" data-refid="hk-exercise-10"><h6 class="heading">
-<span class="type">Checkpoint</span> <span class="codenumber">1.2.21</span>.</h6></a></article><div id="hk-exercise-10" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-83">Confirm for yourself that these identities are true by shading a Venn diagram for each side of the equalities.</p></article></div></section><section class="exercises" id="exercises-2"><h3 class="heading hide-type">
+</table></figure><article class="exercise exercise-like" id="exercise-10"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-10"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.21</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-10"><article class="exercise exercise-like"><p id="p-83">Confirm for yourself that these identities are true by shading a Venn diagram for each side of the equalities.</p></article></div></section><section class="exercises" id="exercises-2"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">1.2.4</span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise-like" id="exercise-11"><h6 class="heading"><span class="codenumber">1.</span></h6>
+<article class="exercise exercise-like" id="exercise-11"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="p-84">Let \(A = \{1, 2, 3, 4, 5, 6\}\text{,}\) \(B = \{2, 4, 6\}\text{,}\) \(C = \{1, 2, 3\}\) and \(D = \{7, 8, 9\}\text{.}\) Determine which of the following are true, false, or meaningless.</p>
 <ol class="lower-alpha cols3">
 <li id="li-86">\(A \subset B\text{.}\)</li>
@@ -500,7 +516,7 @@ A \setminus B = \{ x \mid x \in A \text{ and } x \not\in B\}
 <li id="li-94">\(\{3\} \subset C\text{.}\)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span></a><div id="hk-solution-4" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-85" class="lower-alpha">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like"><ol id="p-85" class="lower-alpha">
 <li id="li-95"><p id="p-86">False. For example, \(1\in A\) but \(1 \notin B\text{.}\)</p></li>
 <li id="li-96"><p id="p-87">True. Every element in \(B\) is an element in \(A\text{.}\)</p></li>
 <li id="li-97"><p id="p-88">False. The elements in \(C\) are 1, 2, and 3. The <em class="emphasis">set</em> \(B\) is not equal to 1, 2, or 3.</p></li>
@@ -511,7 +527,7 @@ A \setminus B = \{ x \mid x \in A \text{ and } x \not\in B\}
 <li id="li-102"><p id="p-93">Meaningless. \(3\) is not a set, so it cannot be a subset of another set.</p></li>
 <li id="li-103"><p id="p-94">True. \(3\) is the only element of the set \(\{3\}\text{,}\) and is an element of \(C\text{,}\) so every element in \(\{3\}\) is an element of \(C\text{.}\)</p></li>
 </ol></div></div>
-</div></article><article class="exercise-like" id="exercise-12"><h6 class="heading"><span class="codenumber">2.</span></h6>
+</div></article><article class="exercise exercise-like" id="exercise-12"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="p-95">Let \(A = \{1, 2, 3, 4, 5, 6\}\text{,}\) \(B = \{2, 4, 6\}\text{,}\) \(C = \{1, 2, 3\}\) and \(D = \{7, 8, 9\}\text{.}\) If the universe is \(U = \{1, 2, \ldots, 10\}\text{,}\) find:</p>
 <ol class="lower-alpha cols3">
 <li id="li-104">\(A \cup B\text{.}\)</li>
@@ -525,7 +541,7 @@ A \setminus B = \{ x \mid x \in A \text{ and } x \not\in B\}
 <li id="li-112">\(\emptyset \cap C\text{.}\)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span></a><div id="hk-solution-5" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-96" class="lower-alpha">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like"><ol id="p-96" class="lower-alpha">
 <li id="li-113">\(A \cup B = \{1, 2, 3, 4, 5, 6\} = A\) since everything in \(B\) is already in \(A\text{.}\)</li>
 <li id="li-114">\(A \cap B = \{2, 4, 6\} = B\) since everything in \(B\) is in \(A\text{.}\)</li>
 <li id="li-115">\(B \cap C = \{2\}\) as the only element of both \(B\) and \(C\) is 2.</li>
@@ -536,7 +552,7 @@ A \setminus B = \{ x \mid x \in A \text{ and } x \not\in B\}
 <li id="li-120">\(\emptyset \cup C = C\) since nothing is added by the empty set.</li>
 <li id="li-121">\(\emptyset \cap C = \emptyset\) since nothing can be both in a set and in the empty set.</li>
 </ol></div></div>
-</div></article><article class="exercise-like" id="exercise-13"><h6 class="heading"><span class="codenumber">3.</span></h6>
+</div></article><article class="exercise exercise-like" id="exercise-13"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="p-97">Let \(A = \{1,2,3,4,5\}\text{,}\) \(B = \{3,4,5,6,7\}\text{,}\) and \(C = \{2,3,5\}\text{.}\)</p>
 <ol class="lower-alpha cols2">
 <li id="li-122"><p id="p-98">Find \(A \cap B\text{.}\)</p></li>
@@ -548,7 +564,7 @@ A \setminus B = \{ x \mid x \in A \text{ and } x \not\in B\}
 <li id="li-128"><p id="p-104">Is \(C \subseteq B\text{?}\) Explain.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-6" id="solution-6"><span class="type">Solution</span></a><div id="hk-solution-6" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-105" class="lower-alpha">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like"><ol id="p-105" class="lower-alpha">
 <li id="li-129">\(A \cap B = \{3,4,5\}\text{.}\)</li>
 <li id="li-130">\(A \cup B = \{1,2,3,4,5,6,7\}\text{.}\)</li>
 <li id="li-131">\(A \setminus B = \{1,2\}\text{.}\)</li>
@@ -557,30 +573,30 @@ A \setminus B = \{ x \mid x \in A \text{ and } x \not\in B\}
 <li id="li-134"><p id="p-106">Yes.  All three elements of \(C\) are also elements of \(A\text{.}\)</p></li>
 <li id="li-135"><p id="p-107">No. There is an element of \(C\text{,}\) namely the element 2, which is not an element of \(B\text{.}\)</p></li>
 </ol></div></div>
-</div></article><article class="exercise-like" id="exercise-14"><h6 class="heading"><span class="codenumber">4.</span></h6>
+</div></article><article class="exercise exercise-like" id="exercise-14"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="p-108">Let \(A = \{x \in \N \st 3 \le x \le 13\}\text{,}\) \(B = \{x \in \N \st x \mbox{ is even} \}\text{,}\) and \({C = \{x \in \N \st x \mbox{ is odd} \}}\text{.}\)</p>
 <ol class="lower-alpha cols2">
 <li id="li-136"><p id="p-109">Find \(A \cap B\text{.}\)</p></li>
 <li id="li-137"><p id="p-110">Find \(A \cup B\text{.}\)</p></li>
 <li id="li-138"><p id="p-111">Find \(B \cap C\text{.}\)</p></li>
 <li id="li-139"><p id="p-112">Find \(B \cup C\text{.}\)</p></li>
-</ol></article><article class="exercise-like" id="exercise-15"><h6 class="heading"><span class="codenumber">5.</span></h6>
-<p id="p-113">Find an example of sets \(A\) and \(B\) such that \(A\cap B = \{3, 5\}\) and \(A \cup B = \{2, 3, 5, 7, 8\}\text{.}\)</p></article><article class="exercise-like" id="exercise-16"><h6 class="heading"><span class="codenumber">6.</span></h6>
+</ol></article><article class="exercise exercise-like" id="exercise-15"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-113">Find an example of sets \(A\) and \(B\) such that \(A\cap B = \{3, 5\}\) and \(A \cup B = \{2, 3, 5, 7, 8\}\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-16"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
 <p id="p-114">Find an example of sets \(A\) and \(B\) such that \(A \subseteq B\) and \(A \in B\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-7" id="solution-7"><span class="type">Solution</span></a><div id="hk-solution-7" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-115">For example, \(A = \{1,2,3\}\) and \(B = \{1,2,3,4,5,\{1,2,3\}\}\)</p></div></div>
-</div></article><article class="exercise-like" id="exercise-17"><h6 class="heading"><span class="codenumber">7.</span></h6>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like"><p id="p-115">For example, \(A = \{1,2,3\}\) and \(B = \{1,2,3,4,5,\{1,2,3\}\}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-17"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
 <p id="p-116">Draw a Venn diagram to represent each of the following:</p>
 <ol class="lower-alpha cols2">
-<li id="li-140">\(A \cup \bar B\)</li>
-<li id="li-141">\(\bar{(A \cup B)}\)</li>
-<li id="li-142">\(A \cap (B \cup C)\)</li>
-<li id="li-143">\((A \cap B) \cup C\)</li>
-<li id="li-144">\(\bar A \cap B \cap \bar C\)</li>
-<li id="li-145">\((A \cup B) \setminus C\)</li>
+<li id="li-140">\(\displaystyle A \cup \bar B\)</li>
+<li id="li-141">\(\displaystyle \bar{(A \cup B)}\)</li>
+<li id="li-142">\(\displaystyle A \cap (B \cup C)\)</li>
+<li id="li-143">\(\displaystyle (A \cap B) \cup C\)</li>
+<li id="li-144">\(\displaystyle \bar A \cap B \cap \bar C\)</li>
+<li id="li-145">\(\displaystyle (A \cup B) \setminus C\)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-8" id="solution-8"><span class="type">Solution</span></a><div id="hk-solution-8" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-117" class="lower-alpha">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like"><ol id="p-117" class="lower-alpha">
 <li id="li-146">
 <p id="p-118">\(A \cup \bar B\text{:}\)</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/A-or-not-B.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
@@ -606,9 +622,9 @@ A \setminus B = \{ x \mid x \in A \text{ and } x \not\in B\}
 <div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/A-or-B-less-C.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 </li>
 </ol></div></div>
-</div></article><article class="exercise-like" id="exercise-18"><h6 class="heading"><span class="codenumber">8.</span></h6>
+</div></article><article class="exercise exercise-like" id="exercise-18"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
 <p id="p-124">Describe a set in terms of \(A\) and \(B\) (using set notation) which has the following Venn diagram:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/not-A-and-B.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like" id="exercise-19"><h6 class="heading"><span class="codenumber">9.</span></h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/not-A-and-B.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise exercise-like" id="exercise-19"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
 <p id="p-125">Find the following cardinalities:</p>
 <ol class="lower-alpha">
 <li id="li-152">\(|A|\) when \(A = \{4,5,6,\ldots,37\}\)</li>
@@ -616,26 +632,26 @@ A \setminus B = \{ x \mid x \in A \text{ and } x \not\in B\}
 <li id="li-154"><p id="p-126">\(|A \cap B|\) when \(A = \{x \in \N \st x \le 20\}\) and \(B = \{x \in \N \st x \mbox{ is prime} \}\text{;}\) note that 1 isn't prime.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-9" id="solution-9"><span class="type">Solution</span></a><div id="hk-solution-9" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-127" class="lower-alpha">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like"><ol id="p-127" class="lower-alpha">
 <li id="li-155"><p id="p-128">34.</p></li>
 <li id="li-156"><p id="p-129">103.</p></li>
 <li id="li-157"><p id="p-130">8.</p></li>
 </ol></div></div>
-</div></article><article class="exercise-like" id="exercise-20"><h6 class="heading"><span class="codenumber">10.</span></h6>
+</div></article><article class="exercise exercise-like" id="exercise-20"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
 <p id="p-131">Let \(A = \{a, b, c, d\}\text{.}\) Find \(\pow(A)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span></a><div id="hk-hint-2" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-132">We are looking for a set containing 16 sets.</p></div></div>
-</div></article><article class="exercise-like" id="exercise-21"><h6 class="heading"><span class="codenumber">11.</span></h6>
-<p id="p-133">Let \(A = \{1,2,3,4,5,6\}\text{.}\) Find all sets \(B \in \pow(A)\) which have the property \(\{2,3,5\} \subseteq B\text{.}\)</p></article><article class="exercise-like" id="exercise-22"><h6 class="heading"><span class="codenumber">12.</span></h6>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-132">We are looking for a set containing 16 sets.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-21"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="p-133">Let \(A = \{1,2,3,4,5,6\}\text{.}\) Find all sets \(B \in \pow(A)\) which have the property \(\{2,3,5\} \subseteq B\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-22"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
 <p id="p-134">Find an example of sets \(A\) and \(B\) such that \(|A| = 4\text{,}\) \(|B| = 5\text{,}\) and \(|A \cup B| = 9\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-10" id="solution-10"><span class="type">Solution</span></a><div id="hk-solution-10" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-135">For example, \(A = \{1,2,3,4\}\) and \(B = \{5,6,7,8,9\}\) gives \(A \cup B = \{1,2,3,4,5,6,7,8,9\}\text{.}\)</p></div></div>
-</div></article><article class="exercise-like" id="exercise-23"><h6 class="heading"><span class="codenumber">13.</span></h6>
-<p id="p-136">Let \(A = \{1,2,\ldots, 10\}\text{.}\) How many subsets of \(A\) contain exactly one element (i.e., how many <dfn class="terminology">singleton</dfn> subsets are there)? How many <dfn class="terminology">doubleton</dfn> subsets (containing exactly two elements) are there?</p></article><article class="exercise-like" id="exercise-24"><h6 class="heading"><span class="codenumber">14.</span></h6>
-<p id="p-137">Find an example of sets \(A\) and \(B\) such that \(|A| = 3\text{,}\) \(|B| = 4\text{,}\) and \(|A \cup B| = 5\text{.}\)</p></article><article class="exercise-like" id="exercise-25"><h6 class="heading"><span class="codenumber">15.</span></h6>
-<p id="p-138">Are there sets \(A\) and \(B\) such that \(|A| = |B|\text{,}\) \(|A\cup B| = 10\text{,}\) and \(|A\cap B| = 5\text{?}\) Explain.</p></article><article class="exercise-like" id="exercise-26"><h6 class="heading"><span class="codenumber">16.</span></h6>
-<p id="p-139">In a regular deck of playing cards there are 26 red cards and 12 face cards. Explain, using sets and what you have learned about cardinalities, why there are only 32 cards which are either red or a face card.</p></article><article class="exercise-like" id="exercise-27"><h6 class="heading"><span class="codenumber">17.</span></h6>
-<p id="p-140">Let \(A_2\) be the set of all multiples of 2 except for \(2\text{.}\) Let \(A_3\) be the set of all multiples of 3 except for 3. And so on, so that \(A_n\) is the set of all multiple of \(n\) except for \(n\text{,}\) for any \(n \ge 2\text{.}\) Describe (in words) the set \(\bar{A_2 \cup A_3 \cup A_4 \cup \cdots}\text{.}\)</p></article><article class="exercise-like" id="exercise-28"><h6 class="heading"><span class="codenumber">18.</span></h6>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like"><p id="p-135">For example, \(A = \{1,2,3,4\}\) and \(B = \{5,6,7,8,9\}\) gives \(A \cup B = \{1,2,3,4,5,6,7,8,9\}\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-23"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
+<p id="p-136">Let \(A = \{1,2,\ldots, 10\}\text{.}\) How many subsets of \(A\) contain exactly one element (i.e., how many <dfn class="terminology">singleton</dfn> subsets are there)? How many <dfn class="terminology">doubleton</dfn> subsets (containing exactly two elements) are there?</p></article><article class="exercise exercise-like" id="exercise-24"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<p id="p-137">Find an example of sets \(A\) and \(B\) such that \(|A| = 3\text{,}\) \(|B| = 4\text{,}\) and \(|A \cup B| = 5\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-25"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
+<p id="p-138">Are there sets \(A\) and \(B\) such that \(|A| = |B|\text{,}\) \(|A\cup B| = 10\text{,}\) and \(|A\cap B| = 5\text{?}\) Explain.</p></article><article class="exercise exercise-like" id="exercise-26"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
+<p id="p-139">In a regular deck of playing cards there are 26 red cards and 12 face cards. Explain, using sets and what you have learned about cardinalities, why there are only 32 cards which are either red or a face card.</p></article><article class="exercise exercise-like" id="exercise-27"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
+<p id="p-140">Let \(A_2\) be the set of all multiples of 2 except for \(2\text{.}\) Let \(A_3\) be the set of all multiples of 3 except for 3. And so on, so that \(A_n\) is the set of all multiple of \(n\) except for \(n\text{,}\) for any \(n \ge 2\text{.}\) Describe (in words) the set \(\bar{A_2 \cup A_3 \cup A_4 \cup \cdots}\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-28"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
 <p id="p-141">Recall \(\Z = \{\ldots,-2,-1,0, 1,2,\ldots\}\) (the integers). Let \(\Z^+ = \{1, 2, 3, \ldots\}\) be the positive integers. Let \(2\Z\) be the even integers, \(3\Z\) be the multiples of 3, and so on.</p>
 <ol class="lower-alpha">
 <li id="li-158"><p id="p-142">Is \(\Z^+ \subseteq 2\Z\text{?}\) Explain.</p></li>
@@ -643,7 +659,7 @@ A \setminus B = \{ x \mid x \in A \text{ and } x \not\in B\}
 <li id="li-160"><p id="p-144">Find \(2\Z \cap 3\Z\text{.}\) Describe the set in words, and using set notation.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-11" id="solution-11"><span class="type">Solution</span></a><div id="hk-solution-11" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-145" class="lower-alpha">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like"><ol id="p-145" class="lower-alpha">
 <li id="li-161"><p id="p-146">No.</p></li>
 <li id="li-162"><p id="p-147">No.</p></li>
 <li id="li-163">\(2\Z \cap 3\Z\) is the set of all integers which are multiples of both 2 and 3 (so multiples of 6). Therefore \(2\Z \cap 3\Z = \{x \in \Z \st \exists y\in \Z(x = 6y)\}\text{.}\)</li>
@@ -664,7 +680,5 @@ A \setminus B = \{ x \mid x \in A \text{ and } x \not\in B\}
         })();
       </script></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.11/login.js"></script>
 </body>
 </html>

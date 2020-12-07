@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-12T17:53:53-05:00    *-->
+<!--*    on 2020-12-06T18:12:57-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Application: Encryption</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -49,14 +49,6 @@ MathJax.Hub.Config({
                            languages: ['sage'],
                            evalButtonText: 'Evaluate (Sage)'});
 });
-</script><script>$(function () {
-    // Make *any* div with class 'sagecell-python' an executable Sage cell
-    // Their results will be linked, only within language type
-    sagecell.makeSagecell({inputLocation: 'div.sagecell-python',
-                           linked: true,
-                           languages: ['python'],
-                           evalButtonText: 'Evaluate (Python)'});
-});
 </script><script>(function() {
   var cx = '015422183392601792159:vae7vvmmczm';
   var gcse = document.createElement('script');
@@ -66,20 +58,17 @@ MathJax.Hub.Config({
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(gcse, s);
 })();
-</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.11;
-</script>
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\def\ds{\displaystyle}
@@ -166,7 +155,7 @@ var js_version = 0.11;
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
@@ -221,10 +210,10 @@ var js_version = 0.11;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="section-numtheory-encryption"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.6</span> <span class="title">Application: Encryption</span>
 </h2>
-<a href="section-numtheory-encryption.html" class="permalink">¶</a><section class="subsection" id="subsection-numtheory-ciphers"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-numtheory-ciphers"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.6.1</span> <span class="title">Basic Cipher Examples</span>
 </h3>
-<a href="section-numtheory-encryption.html#subsection-numtheory-ciphers" class="permalink">¶</a><p id="p-653">Our convention will be to use only capital English letters, A to Z. We will identify each letter with the remainders modulo 26. We won't encrypt punctuation, either.: <figure class="figure-like" id="table-8"><table>
+<p id="p-708">Our convention will be to use only capital English letters, A to Z. We will identify each letter with the remainders modulo 26. We won't encrypt punctuation, either.: <figure class="table table-like" id="table-8"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.6.1<span class="period">.</span></span><span class="space"> </span>List of Alphabet Encoding</figcaption><table>
 <tr>
 <td class="l m b1 r1 l0 t0 lines">A</td>
 <td class="l m b1 r0 l0 t0 lines">0</td>
@@ -239,7 +228,7 @@ var js_version = 0.11;
 <td class="l m b1 r0 l0 t0 lines">18</td>
 <td class="l m b1 r3 l0 t0 lines"></td>
 <td class="l m b1 r1 l0 t0 lines">Y</td>
-<td class="l m b1 r0 l0 t0 lines">24</td>
+<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell">24</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l0 t0 lines">B</td>
@@ -255,7 +244,7 @@ var js_version = 0.11;
 <td class="l m b1 r0 l0 t0 lines">19</td>
 <td class="l m b1 r3 l0 t0 lines"></td>
 <td class="l m b1 r1 l0 t0 lines">Z</td>
-<td class="l m b1 r0 l0 t0 lines">25</td>
+<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell">25</td>
 </tr>
 <tr>
 <td class="l m b1 r1 l0 t0 lines">C</td>
@@ -271,7 +260,7 @@ var js_version = 0.11;
 <td class="l m b1 r0 l0 t0 lines">20</td>
 <td class="l m b1 r3 l0 t0 lines"></td>
 <td class="l m b1 r1 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="l m b1 r1 l0 t0 lines">D</td>
@@ -287,7 +276,7 @@ var js_version = 0.11;
 <td class="l m b1 r0 l0 t0 lines">21</td>
 <td class="l m b1 r3 l0 t0 lines"></td>
 <td class="l m b1 r1 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="l m b1 r1 l0 t0 lines">E</td>
@@ -303,7 +292,7 @@ var js_version = 0.11;
 <td class="l m b1 r0 l0 t0 lines">22</td>
 <td class="l m b1 r3 l0 t0 lines"></td>
 <td class="l m b1 r1 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
 <tr>
 <td class="l m b1 r1 l0 t0 lines">F</td>
@@ -319,74 +308,93 @@ var js_version = 0.11;
 <td class="l m b1 r0 l0 t0 lines">23</td>
 <td class="l m b1 r3 l0 t0 lines"></td>
 <td class="l m b1 r1 l0 t0 lines"></td>
-<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
-</table>
-<figcaption><span class="type">Table</span> <span class="codenumber">3.6.1.</span> List of Alphabet Encoding</figcaption></figure></p>
-<article class="definition-like" id="definition-49"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">3.6.2</span>.</h6>
-<p id="p-654">A <dfn class="terminology">shift cipher</dfn> is one in which the letters of the alphabet have been shifted by some fixed amount.</p></article><article class="example-like" id="example-82"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.6.3</span>.</h6>
-<p id="p-655">The classic example is the so-called <dfn class="terminology">Caesar Cipher</dfn> which shifts the alphabet to the right three letters. A becomes D, B becomes E, etc.</p>
-<p id="p-656">We encrypt letter-by-letter via the function \(e(x) = x + 3 \pmod{26}\) and decrypt via \(d(x) = x-3 \pmod{26}\text{.}\)</p></article><article class="definition-like" id="definition-50"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">3.6.4</span>.</h6>
-<p id="p-657">An <dfn class="terminology">affine cipher</dfn> is one in which letters are transformed via a linear function, \(e(x) = ax+b \pmod{n} \) where \(a, b\in \Z\) and \(n\in \Z^+\text{.}\) If \(a =0\text{,}\) this is a shift cipher.</p></article><article class="remark-like" id="note-20"><h6 class="heading">
-<span class="type">Note</span> <span class="codenumber">3.6.5</span>.</h6>
-<p id="p-658">To be able to decrypt an affine function, we need \(\gcd(a,n)=1\) in order that \(a\) is an invertible element. We can find the inverse via the <a data-knowl="./knowl/euclidean-algorithm.html" title="Theorem 3.3.6: The Euclidean Algorithm">Euclidean Algorithm with back-substitution 3.3.6</a>. Recall, the inverse of an invertible element is its Bézout coefficient.</p></article><article class="example-like" id="example-83"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.6.6</span>.</h6>
-<p id="p-659">The function \(f(x) = 5x + 14 \pmod{26} \) is an example of an affine cipher function.</p>
-<ol class="decimal">
-<li id="li-591">
-<p id="p-660">Encipher the following letters:</p>
-<ol class="lower-alpha">
-<li id="li-592">A</li>
-<li id="li-593">M</li>
-</ol>
-</li>
-<li id="li-594"><p id="p-661">Given that \(5^{-1} \equiv 21\pmod{26}\text{,}\) find the inverse of \(f(x)=5x+14\pmod{26}\text{.}\) Please ensure your coefficients are reduced modulo \(26\text{.}\)</p></li>
-<li id="li-595">Verify your inverse by confirming it deciphers the letters above.</li>
-</ol></article><article class="definition-like" id="definition-51"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">3.6.7</span>. <span class="title">The RSA Algorithm.</span>
+</table></figure></p>
+<article class="definition definition-like" id="definition-50"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.6.2</span><span class="period">.</span>
 </h6>
-<p id="p-662">RSA is an example of a public-key algorithm. Its security is based on the fact that factoring integers is a hard problem. The process is outlined below:</p>
-<p id="p-663">To determine the keys:</p>
+<p id="p-709">A <dfn class="terminology">shift cipher</dfn> is one in which the letters of the alphabet have been shifted by some fixed amount.</p></article><article class="example example-like" id="example-83"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.3</span><span class="period">.</span>
+</h6>
+<p id="p-710">The classic example is the so-called <dfn class="terminology">Caesar Cipher</dfn> which shifts the alphabet to the right three letters. A becomes D, B becomes E, etc.</p>
+<p id="p-711">We encrypt letter-by-letter via the function \(e(x) = x + 3 \pmod{26}\) and decrypt via \(d(x) = x-3 \pmod{26}\text{.}\)</p></article><article class="definition definition-like" id="definition-51"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.6.4</span><span class="period">.</span>
+</h6>
+<p id="p-712">An <dfn class="terminology">affine cipher</dfn> is one in which letters are transformed via a linear function, \(e(x) = ax+b \pmod{n} \) where \(a, b\in \Z\) and \(n\in \Z^+\text{.}\) If \(a =1\text{,}\) this is a shift cipher.</p></article><article class="note remark-like" id="note-20"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">3.6.5</span><span class="period">.</span>
+</h6>
+<p id="p-713">To be able to decrypt an affine function, we need \(\gcd(a,n)=1\) in order that \(a\) is an invertible element. We can find the inverse via the <a class="xref" data-knowl="./knowl/euclidean-algorithm.html" title="Theorem 3.3.6: The Euclidean Algorithm">Euclidean Algorithm with back-substitution 3.3.6</a>. Recall, the inverse of an invertible element is its Bézout coefficient.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-76" id="answer-76"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-76"><div class="answer solution-like"><iframe id="video-75" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/iVWyD0mvxwQ?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></article><article class="example example-like" id="example-84"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.6</span><span class="period">.</span>
+</h6>
+<p id="p-714">The function \(f(x) = 5x + 14 \pmod{26} \) is an example of an affine cipher function.</p>
 <ol class="decimal">
-<li id="li-596">Choose two prime numbers \(p \and q\text{.}\) Let \(n=pq \and {m = (p-1)(q-1)}\text{.}\)</li>
-<li id="li-597">Find any number \(e\) which is relatively prime to \(m\)</li>
-<li id="li-598">Determine \(d\) which is the inverse of \(e\) modulo \(m\)</li>
-<li id="li-599">Your public key is \((e, n)\text{.}\)</li>
-<li id="li-600">Your private key is \((d, n)\text{.}\)</li>
-</ol>
-<p id="p-664">To encrypt/decrypt:</p>
-<ol class="decimal">
-<li id="li-601">Convert our message (plaintext or ciphertext) to numeric values, each letter taking up two digits: A is 00, B is 01, ... Z = 25.</li>
-<li id="li-602">
-<p id="p-665">Using the chosen \(n\) value, we split the message into blocks of even length according to the following scheme:</p>
+<li id="li-637">
+<p id="p-715">Encipher the following letters:</p>
 <ol class="lower-alpha">
-<li id="li-603">If \(2525 \lt n \lt 252525\text{,}\) then the blocks will be length 4</li>
-<li id="li-604">If \(252525 \lt n \lt 25252525\text{,}\) then the blocks will be length 6</li>
-<li id="li-605">If \(25252525 \lt n \lt 2525252525\text{,}\) then the blocks will be length 8</li>
-<li id="li-606">and so on...</li>
+<li id="li-638">A</li>
+<li id="li-639">M</li>
 </ol>
-<p>if the message doesn't fit the appropropriate block size, append a number of 23's at the end. (padding the message with X's).</p>
 </li>
-<li id="li-607">Encryption occurs my taking each numeric message block \(M\) and computing \(M^e\pmod{n}\)</li>
-<li id="li-608">Decryption occurs my taking each numeric cipher block \(C\) and computing \(C^d\pmod{n}\)</li>
+<li id="li-640"><p id="p-716">Given that \(5^{-1} \equiv 21\pmod{26}\text{,}\) find the inverse of \(f(x)=5x+14\pmod{26}\text{.}\) Please ensure your coefficients are reduced modulo \(26\text{.}\)</p></li>
+<li id="li-641">Verify your inverse by confirming it deciphers the letters above.</li>
 </ol>
-<p>This works because \((M^e)^d = M^{ed} = M^1 \pmod{n}\text{.}\) Although we haven't proven this, it's a result of Euler's Totient Theorem which you'll revisit in Number Theory.</p></article><article class="example-like" id="example-84"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.6.8</span>.</h6>
-<p id="p-666">Let \(p = 59, q=83\text{.}\) Choose \(e=15\) Encrypt “WHATS UP” and then decrypt the result to confirm it worked. Do this by hand (with the help of a calculator).</p></article><section class="exercises" id="exercises-15"><h4 class="heading hide-type">
-<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-77" id="answer-77"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-77"><div class="answer solution-like"><iframe id="video-76" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/dRLN1bj6mTI?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="definition definition-like" id="definition-52"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.6.7</span><span class="period">.</span><span class="space"> </span><span class="title">The RSA Algorithm.</span>
+</h6>
+<p id="p-717">RSA is an example of a public-key algorithm. Its security is based on the fact that factoring integers is a hard problem. The process is outlined below:</p>
+<p id="p-718">To determine the keys:</p>
+<ol class="decimal">
+<li id="li-642">Choose two prime numbers \(p \and q\text{.}\) Let \(n=pq \and {m = (p-1)(q-1)}\text{.}\)</li>
+<li id="li-643">Find any number \(e\) which is relatively prime to \(m\)</li>
+<li id="li-644">Determine \(d\) which is the inverse of \(e\) modulo \(m\)</li>
+<li id="li-645">Your public key is \((e, n)\text{.}\)</li>
+<li id="li-646">Your private key is \((d, n)\text{.}\)</li>
+</ol>
+<p id="p-719">To encrypt/decrypt:</p>
+<ol class="decimal">
+<li id="li-647">Convert our message (plaintext or ciphertext) to numeric values, each letter taking up two digits: A is 00, B is 01, ... Z = 25.</li>
+<li id="li-648">
+<p id="p-720">Using the chosen \(n\) value, we split the message into blocks of even length according to the following scheme:</p>
+<ol class="lower-alpha">
+<li id="li-649">If \(2525 \lt n \lt 252525\text{,}\) then the blocks will be length 4</li>
+<li id="li-650">If \(252525 \lt n \lt 25252525\text{,}\) then the blocks will be length 6</li>
+<li id="li-651">If \(25252525 \lt n \lt 2525252525\text{,}\) then the blocks will be length 8</li>
+<li id="li-652">and so on...</li>
+</ol>
+<p data-braille="continuation">if the message doesn't fit the appropropriate block size, append a number of 23's at the end. (padding the message with X's).</p>
+</li>
+<li id="li-653">Encryption occurs my taking each numeric message block \(M\) and computing \(M^e\pmod{n}\)</li>
+<li id="li-654">Decryption occurs my taking each numeric cipher block \(C\) and computing \(C^d\pmod{n}\)</li>
+</ol>
+<p data-braille="continuation">This works because \((M^e)^d = M^{ed} = M^1 \pmod{n}\text{.}\) Although we haven't proven this, it's a result of Euler's Totient Theorem which you'll revisit in Number Theory.</p></article><article class="example example-like" id="example-85"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.8</span><span class="period">.</span>
+</h6>
+<p id="p-721">Let \(p = 59, q=83\text{.}\) Choose \(e=15\) Encrypt “WHATS UP” and then decrypt the result to confirm it worked. Do this by hand (with the help of a calculator).</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-78" id="answer-78"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-78"><div class="answer solution-like"><iframe id="video-77" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/xEf5vBH5x_Y?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><section class="exercises" id="exercises-15"><h4 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">3.6.1.1</span> <span class="title">Exercises</span>
 </h4>
-<article class="exercise-like" id="exercise-110"><h6 class="heading"><span class="codenumber">1.</span></h6>
-<p id="p-667">Decrypt the following message, which was encrypted by the standard Caesar cipher: “L FDQ DOZDBV WUXVW BRX, EUXWXV.”</p></article><article class="exercise-like" id="exercise-111"><h6 class="heading"><span class="codenumber">2.</span></h6>
-<p id="p-668">Apply the affine shift \(e(x) = 7x + 11 \pmod{ 26 }\) to the string, “Encrypt me.”</p></article><article class="exercise-like" id="exercise-112"><h6 class="heading"><span class="codenumber">3.</span></h6>
-<p id="p-669">Decrypt the text which was encrypted via the affine shift \(e(x) = 7x + 11 \pmod{ 26 }\text{:}\) “LJNHFRN”</p></article></section></section><section class="subsection" id="subsection-numtheory-sage"><h3 class="heading hide-type">
+<article class="exercise exercise-like" id="exercise-109"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-722">Decrypt the following message, which was encrypted by the standard Caesar cipher: “L FDQ DOZDBV WUXVW BRX, EUXWXV.”</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-76" id="solution-76"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-76"><div class="solution solution-like"><p id="p-723">“I can always trust you, Brutus.”</p></div></div></article><article class="exercise exercise-like" id="exercise-110"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-724">Apply the affine shift \(e(x) = 7x + 11 \pmod{ 26 }\) to the string, “Encrypt me.”</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-77" id="solution-77"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-77"><div class="solution solution-like"><p id="p-725">Removing spaces from the words and capitalizing everything: “NYZAXMOORN”. The integer values are 13, 24, 25, 0, 23, 12, 14, 14, 17, 13.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-111"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-726">Decrypt the text which was encrypted via the affine shift \(e(x) = 7x + 11 \pmod{ 26 }\text{:}\) “LJNHFRN”</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-78" id="solution-78"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-78"><div class="solution solution-like"><p id="p-727">“Awesome”.</p></div></div>
+</div></article></section></section><section class="subsection" id="subsection-numtheory-sage"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.6.2</span> <span class="title">Number Theory Using Sage</span>
 </h3>
-<a href="section-numtheory-encryption.html#subsection-numtheory-sage" class="permalink">¶</a><p id="p-670">Sage has a convenient way of determining if a number is prime by asking if the number is in a set primes: <div class="sagecell-sage" id="sage-2"><script type="text/x-sage">37 in Primes()
+<p id="p-728">Sage has a convenient way of determining if a number is prime by asking if the number is in a set primes: <div class="sagecell-sage" id="sage-2"><script type="text/x-sage">37 in Primes()
 </script></div> Try testing any number in the cell above.</p>
-<p id="p-671">If you want to just want to get a prime number of some particular size (as we want with our <a href="section-numtheory-encryption.html#rsa-activity" class="internal" title="Subsection 3.6.3: The RSA Activity">RSA activity 3.6.3</a>), we ask sage for the next_prime: <div class="sagecell-sage" id="sage-3"><script type="text/x-sage">next_prime(123456)
+<p id="p-729">If you want to just want to get a prime number of some particular size (as we want with our <a href="section-numtheory-encryption.html#rsa-activity" class="internal" title="Subsection 3.6.3: The RSA Activity">RSA activity 3.6.3</a>), we ask sage for the next_prime: <div class="sagecell-sage" id="sage-3"><script type="text/x-sage">next_prime(123456)
 </script></div></p>
 <p id="bezout-gcd">The following Sage code allows us to find the GCD and Bézout coefficients via the xgcd command: <div class="sagecell-sage" id="sage-4"><script type="text/x-sage"># Change a and b to be any positive integers, then press Evaluate
 a=2345
@@ -394,34 +402,37 @@ b = 234
 l = a.xgcd(b)
 pretty_print(str(l[0]) + "=" + str(a) + "*(" + str(l[1]) + ") + " + str(b) + "*(" + str(l[2]) + ")")
 </script></div> The xgcd command returns a list of the form (gcd, first Bézout coefficient, second Bézout coefficient), and the code above pretty-prints this in a readable format.</p>
-<p id="p-673">In order to do modular exponentiation, we use the powermod function. For example, to compute \(2019^{2019} \pmod{1000}\text{:}\) <div class="sagecell-sage" id="sage-5"><script type="text/x-sage">2019.powermod(2019,1000)
+<p id="p-731">In order to do modular exponentiation, we use the powermod function. For example, to compute \(2019^{2019} \pmod{1000}\text{:}\) <div class="sagecell-sage" id="sage-5"><script type="text/x-sage">2019.powermod(2019,1000)
 </script></div></p></section><section class="subsection" id="rsa-activity"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.6.3</span> <span class="title">The RSA Activity</span>
 </h3>
-<a href="section-numtheory-encryption.html#rsa-activity" class="permalink">¶</a><section class="exercises" id="exercises-16"><h4 class="heading hide-type">
-<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+<section class="exercises" id="exercises-16"><h4 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">3.6.3.1</span> <span class="title">Exercises</span>
 </h4>
-<article class="exercise-like" id="exercise-113"><h6 class="heading"><span class="codenumber">1.</span></h6>
-<p id="p-674">In this activity, you will generate a public/private key-pair. You will send me the public key and keep your private key secret (but don't lose it! If you lose your private key, you won't be able to complete the assignment and will receive no credit).</p>
+<article class="exercise exercise-like" id="exercise-112"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-732">In this activity, you will generate a public/private key-pair. You will send me the public key and keep your private key secret (but don't lose it! If you lose your private key, you won't be able to complete the assignment and will receive no credit).</p>
 <ol class="lower-alpha">
-<li id="li-609">Pick two prime numbers \(p \and q\) of some interesting side. Make them at least six or seven digits long (use Sage's <code class="code-inline tex2jax_ignore">next_prime</code>).</li>
-<li id="li-610">Let \(m=(p-1)(q-1)\text{,}\) and pick any number \(e\) relatively prime to \(m\text{.}\)</li>
-<li id="li-611">Find the multiplicative inverse of \(d\) of \(e\) modulo \(m\text{.}\)</li>
-<li id="li-612">Let \(n = pq\text{.}\)</li>
-<li id="li-613">Record your numbers \((n, p, q, m, e, d)\) somewhere safe (but much of this is private! Keep it secret!).</li>
-<li id="li-614">
-<p id="p-675">Send me your public key on Slack as:</p>
+<li id="li-655">Pick two prime numbers \(p \and q\) of some interesting size. Make them at least six or seven digits long (use Sage's <code class="code-inline tex2jax_ignore">next_prime</code>).</li>
+<li id="li-656">Let \(m=(p-1)(q-1)\text{,}\) and pick any number \(e\) relatively prime to \(m\text{.}\)</li>
+<li id="li-657">Find the multiplicative inverse, \(d\text{,}\) of \(e\) modulo \(m\text{.}\)</li>
+<li id="li-658">Let \(n = pq\text{.}\)</li>
+<li id="li-659">Record your numbers \((n, p, q, m, e, d)\) somewhere safe (but much of this is private! Keep it secret!).</li>
+<li id="li-660">
+<p id="p-733">Send me your public key on via <a class="external" href="mailto:hammond@math.wichita.edu?subject=My%20RSA%20Key" target="_blank">email (you can click this link!)</a> as:</p>
 <pre class="code-block tex2jax_ignore">
                     n = 15244346903
                     e = 751 
                   </pre>
 </li>
-<li id="li-615"><p id="p-676">I'll send you an encrypted message which will look like: <code class="code-inline tex2jax_ignore">
-                    [971896385L, 3249912096L, 4079022731L, 8771096382L, 10148198704L]   
-                  </code> (ignore the ‘L’ at the end of each number, it's python2 saying it's a “long” integer)</p></li>
-<li id="li-616">Enter this information into the Sage cell below to decrypt it (using your \(n, d, \and c\)), change <code class="code-inline tex2jax_ignore">what_to_do</code> to “decrypt”, and then press Evaluate(Python).</li>
-<li id="li-617">Send me the decrypted message to confirm you decrypted it correctly (remove the padded X's if relevant, and put appropriate spaces to make it a normal English statement. For example “KEEPITSECRETKEEPITSAFEXX” will not receive full credit.</li>
-</ol></article></section><p id="rsa-code"><div class="sagecell-python" id="sage-6"><script type="text/x-sage">##### ENTER YOUR INFORMATION IN THE VARIABLES BELOW: ######
+<li id="li-661"><p id="p-734">I'll send you an encrypted message which will look like: <code class="code-inline tex2jax_ignore">
+                    [971896385, 3249912096L, 4079022731L, 8771096382L, 10148198704L]
+                  </code></p></li>
+<li id="li-662">Enter this information into the Sage cell below to decrypt it (using your \(n, d, \and c\)), change <code class="code-inline tex2jax_ignore">what_to_do</code> to “decrypt”, and then press Evaluate(Python).</li>
+<li id="li-663">Send me the decrypted message to confirm you decrypted it correctly (remove the padded X's if relevant, and put appropriate spaces to make it a normal English statement. For example “KEEPITSECRETKEEPITSAFEXX” will not receive full credit.</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-79" id="answer-79"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-79"><div class="answer solution-like"><iframe id="video-78" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/GyzmNNCsdWE?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article></section><p id="rsa-code"><div class="sagecell-sage" id="sage-6"><script type="text/x-sage">##### ENTER YOUR INFORMATION IN THE VARIABLES BELOW: ######
 
 # If encrypting, set values for m, n, and e.
 # If decrypting, set values for c, n, and d.
@@ -431,18 +442,18 @@ m = "KEEP IT SECRET KEEP IT SAFE"   # A message to encrypt
 n = 15244346903    # Value of n = p*q
 e = 751 # Public encryption exponent
 d = 8545627279 # Private decryption exponent 
-c = [971896385L, 3249912096L, 4079022731L, 8771096382L, 10148198704L]   # The ciphertext as a comma separated list (formatting matters)
+c = [971896385, 3249912096, 4079022731, 8771096382, 10148198704]   # The ciphertext as a comma separated list (formatting matters)
 
 ##### LEAVE EVERYTHING ELSE BELOW ALONE  ######
 #####... unless you want to tinker with it. Please do!
 
 import re, string, math
 
-from itertools import izip_longest
+from itertools import zip_longest
 
 def grouper(iterable, n, fillvalue=None):
     args = [iter(iterable)] * n
-    return izip_longest(*args, fillvalue=fillvalue)
+    return zip_longest(*args, fillvalue=fillvalue)
 
 def encrypt():
     stripped_string = re.sub(r"\W|\d","", m.strip()).upper()
@@ -467,7 +478,7 @@ def encrypt():
 
     cipher_blocks = []
     for block in blocks:
-        cipher_blocks.append(pow(long(block), e, n))
+        cipher_blocks.append(pow(int(block), e, n))
 
     print(cipher_blocks)
 
@@ -477,7 +488,7 @@ def decrypt():
 
     plain_blocks = []
     for block in c:
-        plain_block = pow(long(block), d, n) 
+        plain_block = pow(int(block), d, n)
         plain_blocks.append(("0"*(block_size - len(str(plain_block))))+ str(plain_block))
 
     plaintext_message="".join(plain_blocks)
@@ -497,6 +508,9 @@ try:
     which_function[what_to_do]()
 except KeyError:
     print("Please set the variable what_to_do to either 'encrypt' or 'decrypt'.")
+except IndexError:
+    print("There's a problem: I can't decrypt your message.")
+    print("You probably have the value of d wrong... \\nDouble check your computations of d, n, m, etc (d needs to be positive, for example)")
 </script></div></p></section><section class="subsection" id="subsection-39"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.6.4</span> <span class="title">Forum Posts about this section</span>
 </h3>
@@ -512,7 +526,5 @@ except KeyError:
         })();
       </script></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.11/login.js"></script>
 </body>
 </html>

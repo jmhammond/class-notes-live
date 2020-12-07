@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-12T17:53:54-05:00    *-->
+<!--*    on 2020-12-06T18:12:57-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Solving Recurrence Relations</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -58,20 +58,17 @@ MathJax.Hub.Config({
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(gcse, s);
 })();
-</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.11;
-</script>
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\def\ds{\displaystyle}
@@ -158,7 +155,7 @@ var js_version = 0.11;
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
@@ -213,15 +210,15 @@ var js_version = 0.11;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="section-solvingrecurrences"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.2</span> <span class="title">Solving Recurrence Relations</span>
 </h2>
-<a href="section-solvingrecurrences.html" class="permalink">¶</a><section class="subsection" id="subsection-41"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-41"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.2.1</span> <span class="title">Motivation, or, why do I care?</span>
 </h3>
-<p id="p-706">Let's imagine that we wanted to find the 10,000th term of the sequence \(a_n = a_{n-2}\) with \(a_0 =1, a_1 = 3\text{.}\) The sequence is very simple: \(\{1, 3, 1, 3, 1, 3, \dots\}\text{.}\)</p>
-<p id="p-707">It turns out that the solution to this recurrence is \(a_n = 2+(-1)^{n+1}\text{.}\) We can directly compute the value, and it takes SageMath about 150 microseconds to give us the answer: <div class="sagecell-sage" id="sage-8"><script type="text/x-sage">%%time
+<p id="p-773">Let's imagine that we wanted to find the 10,000th term of the sequence \({ a_n = a_{n-2} }\) with \({ a_0 =1, a_1 = 3 }\text{.}\) The sequence is very simple: \({ \{1, 3, 1, 3, 1, 3, \dots\} }\text{.}\)</p>
+<p id="p-774">It turns out that the solution to this recurrence is \(a_n = 2+(-1)^{n+1}\text{.}\) We can directly compute the value, and it takes SageMath about 150 microseconds to give us the answer: <div class="sagecell-sage" id="sage-8"><script type="text/x-sage">%%time
 def nonrec(x): return 2 + pow(-1, x+1);
 print(nonrec(10000))
 </script></div></p>
-<p id="p-708">But if we wanted to actually have the computer find the 10,000th value via the recursive definition, Sage (computing via Python) can't even do it: <div class="sagecell-sage" id="sage-9"><script type="text/x-sage">%%time
+<p id="p-775">But if we wanted to actually have the computer find the 10,000th value via the recursive definition, Sage (computing via Python) can't even do it: <div class="sagecell-sage" id="sage-9"><script type="text/x-sage">%%time
 def recursive(x):
     if x == 0:
         return 1;
@@ -232,49 +229,62 @@ def recursive(x):
     
 print(recursive(10000))
 </script></div></p>
-<p id="p-709">Explicit solutions are better when we want to be able to actually determine specific values of a recurrence.</p></section><section class="subsection" id="subsection-42"><h3 class="heading hide-type">
+<p id="p-776">Explicit solutions are better when we want to be able to actually determine specific values of a recurrence.</p></section><section class="subsection" id="subsection-42"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.2.2</span> <span class="title">Solving recurrence relations</span>
 </h3>
-<article class="example-like" id="example-94"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.2.1</span>.</h6>
-<p id="p-710">The Towers of Hanoi is a puzzle with the goal of moving all disks from one peg to another peg. The puzzle has the following rules:</p>
+<article class="example example-like" id="example-95"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
+</h6>
+<p id="p-777">The Towers of Hanoi is a puzzle with the goal of moving all disks from one peg to another peg. The puzzle has the following rules:</p>
 <ol class="decimal">
-<li id="li-659">Place all the disks on the first peg in order of size with the largest on bottom.</li>
-<li id="li-660">Move one disk at a time to any other peg. A move is valid only if a smaller disk is placed on top a larger one.</li>
+<li id="li-722">Place all the disks on the first peg in order of size with the largest on bottom.</li>
+<li id="li-723">Move one disk at a time to any other peg. A move is valid only if a smaller disk is placed on top a larger one.</li>
 </ol>
-<p><figure class="figure-like" id="figure-1"><div style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="./images/Tower_of_Hanoi_4.png" style="width: 100%; height: auto;" alt="The Animation of the Towers of Hanoi puzzle by André Karwath aka Aka - Own work, CC BY-SA 2.5, https://commons.wikimedia.org/w/index.php?curid=85401 The static image is public domain, CC-0."></div>
-<figcaption><span class="type">Figure</span> <span class="codenumber">4.2.2.</span> Animation of the Towers of Hanoi puzzle with 4 disks</figcaption></figure></p>
-<p id="p-711">Let \(H_n\) denote the number of moves to solve the puzzle with \(n\) disks. Our goal is to find a solution to the sequence \(\{H_n\}\text{.}\)</p>
+<p data-braille="continuation"><figure class="figure figure-like" id="figure-1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="./images/Tower_of_Hanoi_4.png" style="width: 100%; height: auto;" alt="The Animation of the Towers of Hanoi puzzle by André Karwath aka Aka - Own work, CC BY-SA 2.5, https://commons.wikimedia.org/w/index.php?curid=85401 The static image is public domain, CC-0."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.2<span class="period">.</span></span><span class="space"> </span>Animation of the Towers of Hanoi puzzle with 4 disks</figcaption></figure></p>
+<p id="p-778">Let \(H_n\) denote the number of moves to solve the puzzle with \(n\) disks. Our goal is to find a solution to the sequence \(\{H_n\}\text{.}\)</p>
 <ol class="decimal">
-<li id="li-661">What is the recurrence relation that describes \(H_n\) in terms of previous values?</li>
-<li id="li-662">Solve the recurrence relation.</li>
-<li id="li-663">The story accompanying the puzzle says that monks are currently solving the puzzle with 64 golden disks, and that the world will end when they finally solve the puzzle. Should we be concerned? Why or why not?</li>
-</ol></article><article class="example-like" id="example-95"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.2.3</span>.</h6>
-<p id="p-712">Recall that a bitstring is a string containing only 0's and 1's. How many bitstrings of length \(n\) do not contain three consecutive 0's?</p></article><article class="example-like" id="example-fifth-degree-recurrence"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.2.4</span>.</h6>
-<p id="p-713">A vending machine dispensing books of stamps accepts $1 coins, $1 bills, and 5 bills. Find a recurrence relation for the number of ways to deposit \(n\) dollars in the vending machine, where the order in which the bills are deposited matters.</p></article></section><section class="subsection" id="subsection-43"><h3 class="heading hide-type">
+<li id="li-724">What is the recurrence relation that describes \(H_n\) in terms of previous values?</li>
+<li id="li-725">Solve the recurrence relation.</li>
+<li id="li-726">The story accompanying the puzzle says that monks are currently solving the puzzle with 64 golden disks, and that the world will end when they finally solve the puzzle. Should we be concerned? Why or why not?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-88" id="answer-88"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-88"><div class="answer solution-like"><iframe id="video-88" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/aFZJ5XArC-s?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-96"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
+</h6>
+<p id="p-779">Recall that a bitstring is a string containing only 0's and 1's. How many bitstrings of length \(n\) do not contain three consecutive 0's?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-89" id="answer-89"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-89"><div class="answer solution-like"><iframe id="video-89" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/4ENaXarcKzM?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-fifth-degree-recurrence"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span>
+</h6>
+<p id="p-780">A vending machine dispensing books of stamps accepts $1 coins, $1 bills, and 5 bills. Find a recurrence relation for the number of ways to deposit \(n\) dollars in the vending machine, where the order in which the bills are deposited matters.</p></article><a data-knowl="" class="id-ref original" data-refid="hk-answer-90" id="answer-90"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-90"><div class="answer solution-like"><iframe id="video-90" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/oigH5x633sI?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></section><section class="subsection" id="subsection-43"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.2.3</span> <span class="title">Solving particularly nice recurrence relations</span>
 </h3>
-<article class="definition-like" id="definition-56"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">4.2.5</span>.</h6>
-<p id="p-714">A <dfn class="terminology">linear homogeneous recurrence relation of degree \(k\) with constant coefficients</dfn> is a recurrence relation of the form</p>
+<article class="definition definition-like" id="definition-57"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.5</span><span class="period">.</span>
+</h6>
+<p id="p-781">A <dfn class="terminology">linear homogeneous recurrence relation of degree \(k\) with constant coefficients</dfn> is a recurrence relation of the form</p>
 <div class="displaymath">
 \begin{equation*}
 a_n = c_1 a_{n-1} + c_2a_{n-2} + \dots + c_k a_{n-k}
 \end{equation*}
 </div>
-<p>where \(c_1, c_2, \dots , c_k\) are real numbers with \(c_k \not=0\text{.}\)</p>
-<article class="example-like" id="example-97"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.2.6</span>.</h6>
-<ol id="p-715" class="decimal">
-<li id="li-664">The Fibonacci sequence: \(F_n = F_{n-1} + F_{n-2}\) is linear, and its coefficients are 1 and 1. The degree is 2.</li>
-<li id="li-665">\(D_n = 2D_{n-1} + D_{n-5}\) is linear, and it coefficients are 2, 0, 0, 0, 1. Its degree is 5.</li>
-</ol></article></article><article class="remark-like" id="note-23"><h6 class="heading">
-<span class="type">Note</span> <span class="codenumber">4.2.7</span>.</h6>
-<p id="p-716">For the purposes of this learning the concept, we will restrict ourselves to degree two recurrences. This means the characteristic equations are quadratic and can be easily solved. The same process would apply if the characteristic equation were of higher degree - it's just that solving those equations isn't straightforward and takes away from focusing on the new material.</p></article><article class="remark-like" id="note-24"><h6 class="heading">
-<span class="type">Note</span> <span class="codenumber">4.2.8</span>.</h6>
-<p id="p-717">If \(a_n = r^n\) is a solution to the (degree two) recurrence relation \(a_n = c_1 a_{n-1} + c_2 a_{n-2}\text{,}\) then we we can plug it in:</p>
+<p data-braille="continuation">where \(c_1, c_2, \dots , c_k\) are real numbers with \(c_k \not=0\text{.}\)</p>
+<article class="example example-like" id="example-98"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.6</span><span class="period">.</span>
+</h6>
+<ol id="p-782" class="decimal">
+<li id="li-727">The Fibonacci sequence: \(F_n = F_{n-1} + F_{n-2}\) is linear, and its coefficients are 1 and 1. The degree is 2.</li>
+<li id="li-728">\(D_n = 2D_{n-1} + D_{n-5}\) is linear, and it coefficients are 2, 0, 0, 0, 1. Its degree is 5.</li>
+</ol></article></article><article class="note remark-like" id="note-23"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">4.2.7</span><span class="period">.</span>
+</h6>
+<p id="p-783">For the purposes of this learning the concept, we will restrict ourselves to degree two recurrences. This means the characteristic equations are quadratic and can be easily solved. The same process would apply if the characteristic equation were of higher degree - it's just that solving those equations isn't straightforward and takes away from focusing on the new material.</p></article><article class="note remark-like" id="note-24"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">4.2.8</span><span class="period">.</span>
+</h6>
+<p id="p-784">If \(a_n = r^n\) is a solution to the (degree two) recurrence relation \(a_n = c_1 a_{n-1} + c_2 a_{n-2}\text{,}\) then we we can plug it in:</p>
 <div class="displaymath">
 \begin{align*}
 \displaystyle a_n &amp;= c_1 a_{n-1} + c_2a_{n-2} \\
@@ -283,33 +293,37 @@ a_n = c_1 a_{n-1} + c_2a_{n-2} + \dots + c_k a_{n-k}
 \displaystyle r^2 &amp;= c_1 r + c_2 \\
 \displaystyle r^2 - c_1 r - c_2 &amp;= 0
 \end{align*}
-</div></article><article class="definition-like" id="definition-57"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">4.2.9</span>.</h6>
-<p id="p-718">We call the equation \(\displaystyle r^2 - c_1 r - c_2= 0\) the <dfn class="terminology">characteristic equation</dfn> of the recurrence relation. The solutions to this equation are the <dfn class="terminology">characteristic roots</dfn>.</p></article><article class="theorem-like" id="theorem-7"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">4.2.10</span>.</h6>
-<p id="p-719">Let \(c_1\) and \(c_2\) be real numbers. Suppose that the characteristic equation</p>
+</div></article><article class="definition definition-like" id="definition-58"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.9</span><span class="period">.</span>
+</h6>
+<p id="p-785">We call the equation \(\displaystyle r^2 - c_1 r - c_2= 0\) the <dfn class="terminology">characteristic equation</dfn> of the recurrence relation. The solutions to this equation are the <dfn class="terminology">characteristic roots</dfn>.</p></article><article class="theorem theorem-like" id="theorem-7"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.10</span><span class="period">.</span>
+</h6>
+<p id="p-786">Let \(c_1\) and \(c_2\) be real numbers. Suppose that the characteristic equation</p>
 <div class="displaymath">
 \begin{equation*}
 r^2 - c_1 r - c_2 = 0
 \end{equation*}
 </div>
-<p>has two distinct roots \(r_1\) and \(r_2\text{.}\) Then the sequence \(\{a_n\}\) is a solution to the recurrence relation</p>
+<p data-braille="continuation">has two distinct roots \(r_1\) and \(r_2\text{.}\) Then the sequence \(\{a_n\}\) is a solution to the recurrence relation</p>
 <div class="displaymath">
 \begin{equation*}
 a_n = c_1 a_{n-1} + c_2 a_{n-2}
 \end{equation*}
 </div>
-<p>if, and only if</p>
+<p data-braille="continuation">if, and only if</p>
 <div class="displaymath">
 \begin{equation*}
 a_n = \alpha_1 r_1^n + \alpha_2 r_2^n
 \end{equation*}
 </div>
-<p>for \(n = 0, 1, 2, \dots\) and \(\alpha_1\) and \(\alpha_2\) are constants.</p></article><article class="example-like" id="example-98"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.2.11</span>.</h6>
-<p id="p-720">Solve \(a_n = a_{n-1} + 2a_{n-2}\) where \(a_0=2\) and \(a_1=7\text{.}\)</p>
+<p data-braille="continuation">for \(n = 0, 1, 2, \dots\) and \(\alpha_1\) and \(\alpha_2\) are constants.</p></article><article class="example example-like" id="example-99"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.11</span><span class="period">.</span>
+</h6>
+<p id="p-787">Solve \(a_n = a_{n-1} + 2a_{n-2}\) where \(a_0=2\) and \(a_1=7\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-53" id="solution-53"><span class="type">Solution</span></a><div id="hk-solution-53" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-721"><div class="sagecell-sage" id="sage-10"><script type="text/x-sage">v=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-91" id="answer-91"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-91"><div class="answer solution-like"><iframe id="video-91" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/JicG-l7ohfA?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-85" id="solution-85"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-85"><div class="solution solution-like"><p id="p-788"><div class="sagecell-sage" id="sage-10"><script type="text/x-sage">v=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 def f(n):
     return 3*pow(2,n)+pow(-1, n+1)
@@ -326,43 +340,57 @@ print("Explicit solution: " + str(map(f,v)))
 print("\n")
 print("Recursive sequence: " + str(map(recur,v)))
 </script></div></p></div></div>
-</div></article><article class="theorem-like" id="theorem-8"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">4.2.12</span>.</h6>
-<p id="p-722">Let \(c_1\) and \(c_2\) be real numbers. Suppose that the characteristic equation</p>
+</div></article><article class="theorem theorem-like" id="theorem-8"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.12</span><span class="period">.</span>
+</h6>
+<p id="p-789">Let \(c_1\) and \(c_2\) be real numbers. Suppose that the characteristic equation</p>
 <div class="displaymath">
 \begin{equation*}
 r^2 - c_1 r - c_2 = 0
 \end{equation*}
 </div>
-<p>has one and only one root \(r_1\text{.}\) Then the sequence \(\{a_n\}\) is a solution to the recurrence relation</p>
+<p data-braille="continuation">has one and only one root \(r_1\text{.}\) Then the sequence \(\{a_n\}\) is a solution to the recurrence relation</p>
 <div class="displaymath">
 \begin{equation*}
 a_n = c_1 a_{n-1} + c_2 a_{n-2}
 \end{equation*}
 </div>
-<p>if, and only if</p>
+<p data-braille="continuation">if, and only if</p>
 <div class="displaymath">
 \begin{equation*}
 a_n = \alpha_1 r_1^n + \alpha_2 n r_1^n
 \end{equation*}
 </div>
-<p>for \(n = 0, 1, 2, \dots\) and \(\alpha_1\) and \(\alpha_2\) are constants.</p></article><article class="remark-like" id="note-25"><h6 class="heading">
-<span class="type">Note</span> <span class="codenumber">4.2.13</span>.</h6>
-<p id="p-723">Note the small differences between these statements. It is significant with respect to how you solve the sequence.</p></article><article class="example-like" id="example-99"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.2.14</span>.</h6>
-<p id="p-724">Solve \(a_n = 4a_{n-1} - 4a_{n-2}\) where \(a_0=6\) and \(a_1=8\text{.}\)</p></article><article class="example-like" id="example-100"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.2.15</span>.</h6>
-<p id="p-725">Find an explicit formula for the Fibonacci numbers, \(F_n = F_{n-1} + F_{n-2}\) with \(F_0 = 0\) and \(F_1 = 1\text{.}\)</p></article><article class="example-like" id="example-101"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.2.16</span>.</h6>
-<p id="p-726">Solve \(a_n = 7a_{n-1} - 12a_{n-2}\) with \(a_0 = 12\) and \(a_1 = 48\)</p></article></section><section class="exercises" id="exercises-18"><h3 class="heading hide-type">
+<p data-braille="continuation">for \(n = 0, 1, 2, \dots\) and \(\alpha_1\) and \(\alpha_2\) are constants.</p></article><article class="note remark-like" id="note-25"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">4.2.13</span><span class="period">.</span>
+</h6>
+<p id="p-790">Note the small differences between these statements. It is significant with respect to how you solve the sequence.</p></article><article class="example example-like" id="example-100"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.14</span><span class="period">.</span>
+</h6>
+<p id="p-791">Solve \(a_n = 4a_{n-1} - 4a_{n-2}\) where \(a_0=6\) and \(a_1=8\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-92" id="answer-92"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-92"><div class="answer solution-like"><iframe id="video-92" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/Xj2WqRX4Qb0?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-101"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.15</span><span class="period">.</span>
+</h6>
+<p id="p-792">Find an explicit formula for the Fibonacci numbers, \(F_n = F_{n-1} + F_{n-2}\) with \(F_0 = 0\) and \(F_1 = 1\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-93" id="answer-93"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-93"><div class="answer solution-like"><iframe id="video-93" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/d3WhI-QaqBE?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-102"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.16</span><span class="period">.</span>
+</h6>
+<p id="p-793">Solve \(a_n = 7a_{n-1} - 12a_{n-2}\) with \(a_0 = 12\) and \(a_1 = 48\)</p></article><a data-knowl="" class="id-ref original" data-refid="hk-answer-94" id="answer-94"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-94"><div class="answer solution-like"><iframe id="video-94" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/WiTOTycl1dg?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></section><section class="exercises" id="exercises-18"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">4.2.4</span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise-like" id="exercise-120"><h6 class="heading"><span class="codenumber">1.</span></h6>
-<p id="p-727">Find a recurrence relation for the number of ways to give someone \(n\) dollars if you have 1 dollar coins, 2 dollar coins, 2 dollar bills, and 4 dollar bills where the order in which the coins and bills are paid matters.</p></article><article class="exercise-like" id="exercise-121"><h6 class="heading"><span class="codenumber">2.</span></h6>
-<p id="p-728">Solve the recurrence relation \(a_n = a_{n-1} + 2^n\) with \(a_0 = 5\text{.}\)</p>
+<article class="exercise exercise-like" id="exercise-119"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-794">Find a recurrence relation for the number of ways to give someone \(n\) dollars if you have 1 dollar coins, 2 dollar coins, 2 dollar bills, and 4 dollar bills where the order in which the coins and bills are paid matters.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-54" id="solution-54"><span class="type">Solution</span></a><div id="hk-solution-54" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-729">\(a_n = 3 + 2^{n+1}\text{.}\)  We should use telescoping or iteration here.  For example, telescoping gives</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-86" id="solution-86"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-86"><div class="solution solution-like"><p id="p-795">\(a_n = a_{n-1} + 2a_{n-2} + a_{n-4}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-120"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-796">Solve the recurrence relation \(a_n = a_{n-1} + 2^n\) with \(a_0 = 5\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-87" id="solution-87"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-87"><div class="solution solution-like">
+<p id="p-797">\(a_n = 3 + 2^{n+1}\text{.}\)  We should use telescoping or iteration here.  For example, telescoping gives</p>
 <div class="displaymath">
 \begin{align*}
 a_1 - a_0 \amp = 2^1\\
@@ -372,21 +400,33 @@ a_3 - a_2 \amp = 2^3\\
 a_n - a_{n-1} \amp = 2^n
 \end{align*}
 </div>
-<p>which “telescopes” to \(a_n - a_0 = 2^{n+1} - 2\text{.}\)  Substituting \(a_0 = 5\) and solving for \(a_n\) completes the solution.</p>
+<p data-braille="continuation">which “telescopes” to \(a_n - a_0 = 2^{n+1} - 2\text{.}\)  Substituting \(a_0 = 5\) and solving for \(a_n\) completes the solution.</p>
 </div></div>
-</div></article><article class="exercise-like" id="exercise-122"><h6 class="heading"><span class="codenumber">3.</span></h6>
-<p id="p-730">Show that \(4^n\) is a solution to the recurrence relation \(a_n = 3a_{n-1} + 4a_{n-2}\text{.}\)</p>
+</div></article><article class="exercise exercise-like" id="exercise-121"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-798">Show that \(4^n\) is a solution to the recurrence relation \(a_n = 3a_{n-1} + 4a_{n-2}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-55" id="solution-55"><span class="type">Solution</span></a><div id="hk-solution-55" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-731">We claim \(a_n = 4^n\) works. Plug it in: \(4^n = 3(4^{n-1}) + 4(4^{n-2})\text{.}\) This works - just simplify the right-hand side.</p></div></div>
-</div></article><article class="exercise-like" id="exercise-123"><h6 class="heading"><span class="codenumber">4.</span></h6>
-<p id="p-732">Find the solution to the recurrence relation \(a_n = 3a_{n-1} + 4a_{n-2}\) with initial terms \(a_0 = 2\) and \(a_1 = 3\text{.}\)</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-88" id="solution-88"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-88"><div class="solution solution-like"><p id="p-799">We claim \(a_n = 4^n\) works. Plug it in: \(4^n = 3(4^{n-1}) + 4(4^{n-2})\text{.}\) This works - just simplify the right-hand side.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-122"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-800">Find the solution to the recurrence relation \(a_n = 3a_{n-1} + 4a_{n-2}\) with initial terms \(a_0 = 2\) and \(a_1 = 3\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-56" id="solution-56"><span class="type">Solution</span></a><div id="hk-solution-56" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-733">By the Characteristic Root Technique. \(a_n = 4^n + (-1)^n\text{.}\)</p></div></div>
-</div></article><article class="exercise-like" id="exercise-124"><h6 class="heading"><span class="codenumber">5.</span></h6>
-<p id="p-734">Find the solution to the recurrence relation \(a_n = 3a_{n-1} + 4a_{n-2}\) with initial terms \(a_0 = 5\) and \(a_1 = 8\) using the characteristic root method..</p></article><article class="exercise-like" id="exercise-125"><h6 class="heading"><span class="codenumber">6.</span></h6>
-<p id="p-735">While walking up stairs you notice that you have a habit of using 3 ways of taking one step and 4 ways of taking two steps at a time. Find a recurrence relation for the number of ways to go up \(n\) steps. Solve the recurrence relation given the initial conditions of \(a_0 = 1\) and \(a_1 = 3\) using the characteristic root method.</p></article><article class="exercise-like" id="exercise-126"><h6 class="heading"><span class="codenumber">7.</span></h6>
-<p id="p-736">Solve the recurrence \(a_n = 3a_{n-1} + 40a_{n-2}\) where \(a_0 = 5\) and \(a_1 = 14\) using the characteristic root method.</p></article><article class="exercise-like" id="exercise-127"><h6 class="heading"><span class="codenumber">8.</span></h6>
-<p id="p-737">Solve the recurrence \(a_n = 4a_{n-1} + 21a_{n-2}\) where \(a_0 = 18\) and \(a_1 = 366\) using the characteristic root method.</p></article></section><section class="subsection" id="subsection-44"><h3 class="heading hide-type">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-89" id="solution-89"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-89"><div class="solution solution-like"><p id="p-801">By the Characteristic Root Technique. \(a_n = 4^n + (-1)^n\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-123"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-802">Find the solution to the recurrence relation \(a_n = 3a_{n-1} + 4a_{n-2}\) with initial terms \(a_0 = 5\) and \(a_1 = 8\) using the characteristic root method..</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-90" id="solution-90"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-90"><div class="solution solution-like"><p id="p-803">\(a_n = \frac{13}{5}(4)^n + \frac{12}{5}(-1)^n\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-124"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-804">While walking up stairs you notice that you have a habit of using 3 ways of taking one step and 4 ways of taking two steps at a time. Find a recurrence relation for the number of ways to go up \(n\) steps. Solve the recurrence relation given the initial conditions of \(a_0 = 1\) and \(a_1 = 3\) using the characteristic root method.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-91" id="solution-91"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-91"><div class="solution solution-like"><p id="p-805">The recurrence is \(a_n = 3a_{n-1} + 4a_{n-2}\text{.}\) The solution with the given initial conditions is \(a_n = \frac{4^{n+1}}{5} + \frac{(-1)^n}{5}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-125"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-806">Solve the recurrence \(a_n = 3a_{n-1} + 40a_{n-2}\) where \(a_0 = 5\) and \(a_1 = 14\) using the characteristic root method.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-92" id="solution-92"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-92"><div class="solution solution-like"><p id="p-807">\(a_n = 3(8)^n + 2(-5)^n\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-126"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-808">Solve the recurrence \(a_n = 4a_{n-1} + 21a_{n-2}\) where \(a_0 = 18\) and \(a_1 = 366\) using the characteristic root method.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-93" id="solution-93"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-93"><div class="solution solution-like"><p id="p-809">\(a_n = 42 (7)^n - 24(-3)^n\) you could write \(a_n = 6(7)^{n+1} + 8(-3)^{n+1}\)</p></div></div>
+</div></article></section><section class="subsection" id="subsection-44"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.2.5</span> <span class="title">Forum Posts about this section</span>
 </h3>
 <div xmlns:xi="http://www.w3.org/2001/XInclude" id="discourse-comments"></div>
@@ -401,7 +441,5 @@ a_n - a_{n-1} \amp = 2^n
         })();
       </script></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.11/login.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-12T17:53:53-05:00    *-->
+<!--*    on 2020-12-06T18:12:53-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Predicates and Logical Quantifiers</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -50,20 +50,17 @@ MathJax.Hub.Config({
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(gcse, s);
 })();
-</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.11;
-</script>
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\def\ds{\displaystyle}
@@ -150,7 +147,7 @@ var js_version = 0.11;
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
@@ -205,7 +202,7 @@ var js_version = 0.11;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="section-logic-quantifiers"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Predicates and Logical Quantifiers</span>
 </h2>
-<a href="section-logic-quantifiers.html" class="permalink">¶</a><section class="subsection" id="subsection-13"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-13"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.3.1</span> <span class="title">Predicates</span>
 </h3>
 <p id="p-279">Consider this mathematical sentence: “\(x \lt 5 \)”.</p>
@@ -221,11 +218,13 @@ var js_version = 0.11;
 </ul>
 </li>
 </ul>
-<article class="definition-like" id="definition-29"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">2.3.1</span>.</h6>
+<article class="definition definition-like" id="definition-29"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
+</h6>
 <p id="p-281">The <dfn class="terminology">domain of discourse</dfn> (or <dfn class="terminology">universe of discourse</dfn>) is the collection from which variables can take values.</p>
-<p id="p-282">For example, if my predicate function is “\(x\) is sharp”, the function has a different meaning if my universe of discourse is “all college students” versus “all tools.”</p></article><article class="example-like" id="example-29"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.3.2</span>.</h6>
+<p id="p-282">For example, if my predicate function is “\(x\) is sharp”, the function has a different meaning if my universe of discourse is “all college students” versus “all tools.”</p></article><article class="example example-like" id="example-29"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
+</h6>
 <p id="p-283">Determine the truth values of the following:</p>
 <ol class="decimal">
 <li id="li-314">
@@ -240,60 +239,66 @@ var js_version = 0.11;
 <li id="li-319">
 <p id="p-285">If \(Q(x,y):=\) “\(x^2 + y^2 = 25\)”.</p>
 <ol class="lower-alpha">
-<li id="li-320">\(Q(4,5)\)</li>
-<li id="li-321">\(Q(3,4)\)</li>
+<li id="li-320">\(\displaystyle Q(4,5)\)</li>
+<li id="li-321">\(\displaystyle Q(3,4)\)</li>
 </ol>
 </li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-32" id="answer-32"><span class="type">Answer/Video</span></a><div id="hk-answer-32" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-32" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/BUP1k8Yy0X4?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-32" id="answer-32"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-32"><div class="answer solution-like"><iframe id="video-32" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/BUP1k8Yy0X4?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
 </div></article></section><section class="subsection" id="subsection-14"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.3.2</span> <span class="title">Logical Quantifiers</span>
 </h3>
-<article class="definition-like" id="definition-30"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">2.3.3</span>.</h6>
+<article class="definition definition-like" id="definition-30"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
+</h6>
 <p id="p-286">The <dfn class="terminology">universal quantification</dfn> of \(P(x)\) is the statement that \(P(x)\) is true for all values of \(x\) in the domain of discourse. We write \(\forall x P(x)\)</p>
 <p id="p-287">A <dfn class="terminology">counterexample</dfn> is an \(x\) value for which \(P(x)\) is false.</p>
-<a data-knowl="" class="id-ref" data-refid="hk-answer-33" id="answer-33"><span class="type">Answer/Video</span></a><div id="hk-answer-33" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-33" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/Z7wornF1Euw?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></article><article class="definition-like" id="definition-31"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">2.3.4</span>.</h6>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-33" id="answer-33"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-33"><div class="answer solution-like"><iframe id="video-33" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/Z7wornF1Euw?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></article><article class="definition definition-like" id="definition-31"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span>
+</h6>
 <p id="p-288">The <dfn class="terminology">existential quantification</dfn> of \(P(x)\) is the statement that there is some value \(x\) in the universe of discourse for which \(P(x)\) is true. We write \(\exists x P(x)\)</p>
-<a data-knowl="" class="id-ref" data-refid="hk-answer-34" id="answer-34"><span class="type">Answer/Video</span></a><div id="hk-answer-34" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-34" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/H_tA2tyGDdQ?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></article><article class="example-like" id="example-30"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.3.5</span>.</h6>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-34" id="answer-34"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-34"><div class="answer solution-like"><iframe id="video-34" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/H_tA2tyGDdQ?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></article><article class="example example-like" id="example-30"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span>
+</h6>
 <p id="p-289">Let \(P(x)\) be “\(x^2 \ge 0\)”. What is the truth value of \(\forall x P(x)\) if the domain is:</p>
 <ol class="decimal">
 <li id="li-322">All real numbers</li>
 <li id="li-323">All complex numbers</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-35" id="answer-35"><span class="type">Answer/Video</span></a><div id="hk-answer-35" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-35" id="answer-35"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-35"><div class="answer solution-like">
 <ol class="decimal">
 <li id="li-324">Since \(x^2 \ge 0\) for all real numbers (what you learned in Algebra is true), this statement is true.</li>
 <li id="li-325">This is false. Let \(x = \sqrt{-1}\text{.}\) Then \((\sqrt{-1})^2 = -1 \not\ge 0\text{.}\)</li>
 </ol>
 <p id="p-290">We showed that \(\sqrt{-1}\) is a counterexample to the universal quanfication.</p>
 </div></div>
-</div></article><article class="example-like" id="example-31"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.3.6</span>.</h6>
+</div></article><article class="example example-like" id="example-31"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span>
+</h6>
 <p id="p-291">Let the domain be all real numbers. Find a counterexample to the following statements:</p>
 <ol class="decimal">
-<li id="li-326">\(\forall x (x^2 \not= x)\)</li>
-<li id="li-327">\(\forall x (|x| \gt 0)\)</li>
-<li id="li-328">\(\forall x (x \gt 3 \vee x \lt 2)\)</li>
+<li id="li-326">\(\displaystyle \forall x (x^2 \not= x)\)</li>
+<li id="li-327">\(\displaystyle \forall x (|x| \gt 0)\)</li>
+<li id="li-328">\(\displaystyle \forall x (x \gt 3 \vee x \lt 2)\)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-36" id="answer-36"><span class="type">Answer/Video</span></a><div id="hk-answer-36" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-35" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/n9jfIFqiVnU?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
-</div></article><article class="example-like" id="example-32"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.3.7</span>.</h6>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-36" id="answer-36"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-36"><div class="answer solution-like"><iframe id="video-35" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/n9jfIFqiVnU?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-32"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.7</span><span class="period">.</span>
+</h6>
 <p id="p-292">We can combine quantifers, where each variable might come from a different domain. Precedence of quantifiers is left to right.</p>
 <p id="p-293">What is the truth value of the following expressions where the domain is all real numbers:</p>
 <ol class="decimal">
-<li id="li-329">\(\forall x \exists y ( xy = 5)\)</li>
-<li id="li-330">\(\exists x \forall y ( xy = 5)\)</li>
+<li id="li-329">\(\displaystyle \forall x \exists y ( xy = 5)\)</li>
+<li id="li-330">\(\displaystyle \exists x \forall y ( xy = 5)\)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-37" id="answer-37"><span class="type">Answer/Video</span></a><div id="hk-answer-37" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-36" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/8kb1Krhw6Ks?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
-</div></article><article class="definition-like" id="definition-32"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">2.3.8</span>.</h6>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-37" id="answer-37"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-37"><div class="answer solution-like"><iframe id="video-36" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/8kb1Krhw6Ks?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="definition definition-like" id="definition-32"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.8</span><span class="period">.</span>
+</h6>
 <p id="p-294">The negation of quantifiers is found as follows:</p>
 <div class="displaymath">
 \begin{align*}
@@ -301,74 +306,78 @@ var js_version = 0.11;
 \neg \exists x P(x) \amp\equiv \forall x \neg P(x)  
 \end{align*}
 </div>
-<p id="p-295">It might help to think “not all...” is equivalent to “some... do”. While “there isn't one who...” is the same as “no one does...”.</p>
-<a data-knowl="" class="id-ref" data-refid="hk-answer-38" id="answer-38"><span class="type">Answer/Video</span></a><div id="hk-answer-38" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-37" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/wgjXIN8csMs?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></article><article class="remark-like" id="note-13"><h6 class="heading">
-<span class="type">Note</span> <span class="codenumber">2.3.9</span>.</h6>
-<p id="p-296">Counterexamples to universal statements work because if \(\exists x \neg P(x)\) is true, then \(\neg \forall x P(x)\) is also true, that is, \(\forall x P(x)\) is false!</p></article><article class="example-like" id="example-33"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.3.10</span>.</h6>
+<p id="p-295">It might help to think “not all...” is equivalent to “some... do not”. While “there isn't one who...” is the same as “no one does...”.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-38" id="answer-38"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-38"><div class="answer solution-like"><iframe id="video-37" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/wgjXIN8csMs?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></article><article class="note remark-like" id="note-13"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">2.3.9</span><span class="period">.</span>
+</h6>
+<p id="p-296">Counterexamples to universal statements work because if \(\exists x \neg P(x)\) is true, then \(\neg \forall x P(x)\) is also true, that is, \(\forall x P(x)\) is false!</p></article><article class="example example-like" id="example-33"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.10</span><span class="period">.</span>
+</h6>
 <p id="p-297">For each negation below, write the statement using quantifiers to confirm each is correct.</p>
 <ol class="decimal">
-<li id="li-331">The negation of “There exists a green horse” is “No horse is green”.</li>
+<li id="li-331">The negation of “There exists a green horse” is “No horse is green.”</li>
 <li id="li-332">The negation of “All people wear hats” is the statement “Some person doesn't wear hats”.</li>
 <li id="li-333">The negation of “Nobody loves math” is “Someone does love math”.</li>
 <li id="li-334">Find the negation of “some drivers don't obey the speed limit.”.</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-39" id="answer-39"><span class="type">Answer/Video</span></a><div id="hk-answer-39" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-38" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/DQEKqe7ZYro?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
-</div></article><article class="example-like" id="example-34"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.3.11</span>.</h6>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-39" id="answer-39"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-39"><div class="answer solution-like"><iframe id="video-38" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/DQEKqe7ZYro?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-34"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.11</span><span class="period">.</span>
+</h6>
 <p id="p-298">If the universe of discourse is all people at the university, and \(P(x)\) is the statement “\(x\) loves to drink coffee,” express each statement in plain English:</p>
 <ol class="decimal">
-<li id="li-335">\(\forall x P(x)\)</li>
-<li id="li-336">\(\exists x P(x)\)</li>
-<li id="li-337">\(\forall x \neg P(x)\)</li>
+<li id="li-335">\(\displaystyle \forall x P(x)\)</li>
+<li id="li-336">\(\displaystyle \exists x P(x)\)</li>
+<li id="li-337">\(\displaystyle \forall x \neg P(x)\)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-40" id="answer-40"><span class="type">Answer/Video</span></a><div id="hk-answer-40" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-39" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/9qVRwljEnu4?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
-</div></article><article class="example-like" id="example-35"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.3.12</span>.</h6>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-40" id="answer-40"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-40"><div class="answer solution-like"><iframe id="video-39" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/9qVRwljEnu4?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-35"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.12</span><span class="period">.</span>
+</h6>
 <p id="p-299">Translate the statement into logical expressions using predicates, quantifiers, and logical connectives.</p>
 <ol class="decimal">
 <li id="li-338">All of your friends are perfect.</li>
 <li id="li-339">Not everybody is your friend or someone is not perfect.</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-41" id="answer-41"><span class="type">Answer/Video</span></a><div id="hk-answer-41" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-40" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/ao3a6VF4xUU?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-41" id="answer-41"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-41"><div class="answer solution-like"><iframe id="video-40" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/ao3a6VF4xUU?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
 </div></article></section><section class="exercises" id="exercises-6"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">2.3.3</span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise-like" id="exercise-53"><h6 class="heading"><span class="codenumber">1.</span></h6>
+<article class="exercise exercise-like" id="exercise-53"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="p-300">Determine the truth value of the each of these statements if the domain consists of all integers</p>
 <ol class="lower-alpha cols2">
-<li id="li-340">\(\forall n (n+1 &gt; n)\)</li>
-<li id="li-341">\(\exists n (n^3 = -1)\)</li>
-<li id="li-342">\(\exists n (2n = 5n)\)</li>
-<li id="li-343">\(\forall n (3n \le 4n)\)</li>
-<li id="li-344">\(\forall x \forall y ((x^2 = y^2) \to (x = y))\)</li>
-</ol></article><article class="exercise-like" id="exercise-54"><h6 class="heading"><span class="codenumber">2.</span></h6>
+<li id="li-340">\(\displaystyle \forall n (n+1 &gt; n)\)</li>
+<li id="li-341">\(\displaystyle \exists n (n^3 = -1)\)</li>
+<li id="li-342">\(\displaystyle \exists n (2n = 5n)\)</li>
+<li id="li-343">\(\displaystyle \forall n (3n \le 4n)\)</li>
+<li id="li-344">\(\displaystyle \forall x \forall y ((x^2 = y^2) \to (x = y))\)</li>
+</ol></article><article class="exercise exercise-like" id="exercise-54"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="p-301">Determine the truth value of each of the following statements if the domain consists of all real numbers.</p>
 <ol class="lower-alpha cols2">
-<li id="li-345">\(\exists x(x^2 = 2)\)</li>
-<li id="li-346">\(\exists x (x^2 = -1)\)</li>
-<li id="li-347">\(\forall x (x^2 + 2 \ge 1)\)</li>
-<li id="li-348">\(\forall x (2x &gt; 2)\)</li>
-<li id="li-349">\(\forall x (x+4)^2 = x^2 + 16\)</li>
-</ol></article><article class="exercise-like" id="exercise-55"><h6 class="heading"><span class="codenumber">3.</span></h6>
+<li id="li-345">\(\displaystyle \exists x(x^2 = 2)\)</li>
+<li id="li-346">\(\displaystyle \exists x (x^2 = -1)\)</li>
+<li id="li-347">\(\displaystyle \forall x (x^2 + 2 \ge 1)\)</li>
+<li id="li-348">\(\displaystyle \forall x (2x &gt; 2)\)</li>
+<li id="li-349">\(\displaystyle \forall x (x+4)^2 = x^2 + 16\)</li>
+</ol></article><article class="exercise exercise-like" id="exercise-55"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="p-302">Consider the statement, “There is a building on the campus of some college in the United States in which every room is painted white.”</p>
 <ol class="lower-alpha">
 <li id="li-350">Express the statement using quantifiers. Be sure to define your predicate function and specify the domain of each of the three variables.</li>
 <li id="li-351">Express the negation of the above logical quantified statement so that no negation is to the left of a quantifier.</li>
 <li id="li-352">Write the negation of the statement in plain English.</li>
-</ol></article><article class="exercise-like" id="exercise-56"><h6 class="heading"><span class="codenumber">4.</span></h6>
+</ol></article><article class="exercise exercise-like" id="exercise-56"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="p-303">Translate these statements into English where \(F(x)\) is “\(x\) is fast” and \(A(x)\) is “\(x\) is an athlete”, here the domain is the set of people.</p>
 <ol class="lower-alpha cols2">
-<li id="li-353">\(\forall x (A(x) \to F(x))\)</li>
-<li id="li-354">\(\forall x (F(x) \land A(x))\)</li>
-<li id="li-355">\(\exists x (F(x) \to A(x))\)</li>
-<li id="li-356">\(\exists x (A(x) \land \neg F(x))\)</li>
+<li id="li-353">\(\displaystyle \forall x (A(x) \to F(x))\)</li>
+<li id="li-354">\(\displaystyle \forall x (F(x) \land A(x))\)</li>
+<li id="li-355">\(\displaystyle \exists x (F(x) \to A(x))\)</li>
+<li id="li-356">\(\displaystyle \exists x (A(x) \land \neg F(x))\)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-24" id="solution-24"><span class="type">Solution</span></a><div id="hk-solution-24" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-24" id="solution-24"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-24"><div class="solution solution-like">
 <p id="p-304">Your answer shouldn't have \(x\) in it anywhere! Regular people don't say “For all x if x is fast, then...” Here some some ideas (your answer may very)</p>
 <ol class="lower-alpha cols2">
 <li id="li-357">All athletes are fast.</li>
@@ -377,13 +386,13 @@ var js_version = 0.11;
 <li id="li-360">There is a slow athlete.</li>
 </ol>
 </div></div>
-</div></article><article class="exercise-like" id="exercise-57"><h6 class="heading"><span class="codenumber">5.</span></h6>
+</div></article><article class="exercise exercise-like" id="exercise-57"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
 <p id="p-305">Let \(C(x)\) denote the predicate “\(x\) is in the correct place”, let \(E(x)\) denote “\(x\) is in excellent condition”, and let \(T(x)\) denote “\(x\) is a tool” where the domain of each predicate is the set of objects in a garage. Translate each into plain English:</p>
 <ol class="lower-alpha">
-<li id="li-361">\(\exists x \neg C(x)\)</li>
-<li id="li-362">\(\exists x (T(x) \land \neg C(x))\)</li>
-<li id="li-363">\(\forall x (T(x) \to (C(x) \land E(x)))\)</li>
-</ol></article><article class="exercise-like" id="exercise-58"><h6 class="heading"><span class="codenumber">6.</span></h6>
+<li id="li-361">\(\displaystyle \exists x \neg C(x)\)</li>
+<li id="li-362">\(\displaystyle \exists x (T(x) \land \neg C(x))\)</li>
+<li id="li-363">\(\displaystyle \forall x (T(x) \to (C(x) \land E(x)))\)</li>
+</ol></article><article class="exercise exercise-like" id="exercise-58"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
 <p id="p-306">Simplify the statements below so that negations are only directly next to the predicates.</p>
 <ol class="lower-alpha">
 <li id="li-364">\(\neg \exists x \forall y (\neg O(x) \vee E(y))\text{.}\)</li>
@@ -405,7 +414,5 @@ var js_version = 0.11;
         })();
       </script></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.11/login.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-12T17:53:52-05:00    *-->
+<!--*    on 2020-12-06T18:12:51-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Propositional Logic</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -50,20 +50,17 @@ MathJax.Hub.Config({
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(gcse, s);
 })();
-</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.11;
-</script>
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\def\ds{\displaystyle}
@@ -150,7 +147,7 @@ var js_version = 0.11;
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
@@ -205,57 +202,65 @@ var js_version = 0.11;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="section-prop-logic"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Propositional Logic</span>
 </h2>
-<a href="section-prop-logic.html" class="permalink">¶</a><section class="introduction" id="introduction-1"></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-1"></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.1.1</span> <span class="title">The Basics</span>
 </h3>
-<article class="definition-like" id="definition-1"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">1.1.1</span>.</h6>
-<p id="p-9">A <dfn class="terminology">logical proposition</dfn> is a sentence which is either true of false, but not both.</p></article><article class="example-like" id="example-1"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">1.1.2</span>.</h6>
+<article class="definition definition-like" id="definition-1"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span>
+</h6>
+<p id="p-9">A <dfn class="terminology">logical proposition</dfn> is a sentence which is either true of false, but not both.</p></article><article class="example example-like" id="example-1"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span>
+</h6>
 <p id="p-10">Which of the following are logical propositions?</p>
 <ol class="decimal">
 <li id="li-1">This is a course in discrete mathematics</li>
 <li id="li-2">Chocolate cupcakes are the best</li>
-<li id="li-3">\(1 - 3 = 4\)</li>
+<li id="li-3">\(\displaystyle 1 - 3 = 4\)</li>
 <li id="li-4">Wichita is the capitol of Kansas</li>
 <li id="li-5">What are you doing?</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-1" id="answer-1"><span class="type">Answer/Video</span></a><div id="hk-answer-1" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-1" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/zNYCHy8KUdM?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
-</div></article><article class="definition-like" id="definition-2"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">1.1.3</span>.</h6>
-<p id="p-11">Let \(p\) be a logical proposition. The <dfn class="terminology">negation</dfn> of \(p\text{,}\) denoted by \(\neg p\) has the opposite truth value of \(p\text{.}\)</p></article><article class="example-like" id="example-2"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">1.1.4</span>.</h6>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-1" id="answer-1"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><iframe id="video-1" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/zNYCHy8KUdM?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="definition definition-like" id="definition-2"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span>
+</h6>
+<p id="p-11">Let \(p\) be a logical proposition. The <dfn class="terminology">negation</dfn> of \(p\text{,}\) denoted by \(\neg p\) has the opposite truth value of \(p\text{.}\)</p></article><article class="example example-like" id="example-2"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span>
+</h6>
 <p id="p-12">What are the logical negations of each of the following?</p>
 <ol class="decimal">
 <li id="li-6">This is a course in discrete mathematics</li>
-<li id="li-7">\(1- 3 = 4\)</li>
+<li id="li-7">\(\displaystyle 1- 3 = 4\)</li>
 <li id="li-8">Wichita is the capitol of Kansas</li>
 </ol>
-<p>      </p>
+<p data-braille="continuation">      </p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-2" id="answer-2"><span class="type">Answer/Video</span></a><div id="hk-answer-2" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-2" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/tyb4raOZwd4?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
-</div></article><article class="definition-like" id="definition-3"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">1.1.5</span>.</h6>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-2" id="answer-2"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><iframe id="video-2" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/tyb4raOZwd4?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="definition definition-like" id="definition-3"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span>
+</h6>
 <p id="p-13">Let \(p\) and \(q\) be propositions. The <dfn class="terminology">conjunction</dfn> of \(p\) and \(q\text{,}\) denoted \(p \wedge q\text{,}\) is the proposition “\(p\) and \(q\)”.</p>
 <p id="p-14">The <dfn class="terminology">disjunction</dfn> of \(p\) and \(q\text{,}\) denoted \(p \vee q\text{,}\) is the proposition “\(p\) or \(q\)  (or both)”.</p>
-<p id="p-15">The logical disjunction is an “inclusive or”. On the other hand, we define the “exclusive or” of \(p\) and \(q\) to be the proposition “\(p\) or \(q\) but not both”. We won't be using it in Discrete 1, so we won't give it a special symbol.</p></article><article class="definition-like" id="definition-4"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">1.1.6</span>.</h6>
+<p id="p-15">The logical disjunction is an “inclusive or”. On the other hand, we define the “exclusive or” of \(p\) and \(q\) to be the proposition “\(p\) or \(q\) but not both”. We won't be using it in Discrete 1, so we won't give it a special symbol.</p></article><article class="definition definition-like" id="definition-4"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.6</span><span class="period">.</span>
+</h6>
 <p id="p-16">Let \(p\) and \(q\) be propositions. The <dfn class="terminology">conditional statement</dfn> is the compound proposition “if \(p\) then \(q\)”. The conditional is denoted by \(p \to q\text{.}\)</p>
-<p id="p-17">We call \(p\) the <dfn class="terminology">hypothesis</dfn> or antecedent or premise, and \(q\) is the <dfn class="terminology">conclusion</dfn> or consequence.</p></article><article class="example-like" id="example-3"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">1.1.7</span>.</h6>
+<p id="p-17">We call \(p\) the <dfn class="terminology">hypothesis</dfn> or antecedent or premise, and \(q\) is the <dfn class="terminology">conclusion</dfn> or consequence.</p></article><article class="example example-like" id="example-3"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.7</span><span class="period">.</span>
+</h6>
 <p id="p-18">Write the following as a simple English expression, letting \(p\) be the statement “it rains” and \(q\) be the statement “I complain about the weather”.</p>
 <ol class="decimal">
-<li id="li-9">\(p\to q\)</li>
-<li id="li-10">\(p \vee q\)</li>
-<li id="li-11">\(q \to p\)</li>
-<li id="li-12">\(\neg q \to \neg p \)</li>
+<li id="li-9">\(\displaystyle p\to q\)</li>
+<li id="li-10">\(\displaystyle p \vee q\)</li>
+<li id="li-11">\(\displaystyle q \to p\)</li>
+<li id="li-12">\(\displaystyle \neg q \to \neg p \)</li>
 </ol>
 <p id="p-19">What is the logical negation of \(p \to q\) in simple English?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-3" id="answer-3"><span class="type">Answer/Video</span></a><div id="hk-answer-3" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-3" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/M-FfG0Per7U?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
-</div></article><article class="remark-like" id="conditional-phrases"><h6 class="heading">
-<span class="type">Note</span> <span class="codenumber">1.1.8</span>.</h6>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-3" id="answer-3"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><iframe id="video-3" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/M-FfG0Per7U?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="note remark-like" id="conditional-phrases"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">1.1.8</span><span class="period">.</span>
+</h6>
 <p id="p-20">There are many ways to phrase the conditional statement \(p \to q\text{.}\) Here are just a few common ones:</p>
 <ul class="disc cols2">
 <li id="li-13">If \(p\text{,}\) then \(q\text{.}\)</li>
@@ -266,16 +271,18 @@ var js_version = 0.11;
 <li id="li-18">\(q\) if \(p\text{.}\)</li>
 <li id="li-19">\(q\) whenever \(p\text{.}\)</li>
 <li id="li-20">\(q\) unless \(\neg p\text{.}\)</li>
-</ul></article><article class="definition-like" id="definition-5"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">1.1.9</span>.</h6>
+</ul></article><article class="definition definition-like" id="definition-5"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.9</span><span class="period">.</span>
+</h6>
 <p id="p-21">Let \(p\) and \(q\) be propositions. For the conditional \(p \to q\text{,}\) we define:</p>
 <ul class="disc">
 <li id="li-21">The <dfn class="terminology">converse</dfn> is \(q \to p\)</li>
 <li id="li-22">The <dfn class="terminology">inverse</dfn> is \(\neg p \to \neg q\)</li>
 <li id="li-23">The <dfn class="terminology">contrapositive</dfn> is \(\neg q \to \neg p\)</li>
 </ul>
-<p><a data-knowl="" class="id-ref" data-refid="hk-answer-4" id="answer-4"><span class="type">Answer/Video</span></a><div id="hk-answer-4" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-4" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/hHfbI1fPIME?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></p></article><article class="definition-like" id="definition-6"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">1.1.10</span>.</h6>
+<p data-braille="continuation"><a data-knowl="" class="id-ref original" data-refid="hk-answer-4" id="answer-4"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><iframe id="video-4" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/hHfbI1fPIME?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></p></article><article class="definition definition-like" id="definition-6"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.10</span><span class="period">.</span>
+</h6>
 <p id="p-22">Let \(p\) and \(q\) be propositions. The <dfn class="terminology">biconditional</dfn> of \(p\) and \(q\text{,}\) is the  statement “\(p\) if and only if \(q\)”, denoted \(p \leftrightarrow q\text{.}\)</p>
 <p id="p-23">Other ways to phrase an “if and only if” statement:</p>
 <ul class="disc">
@@ -286,19 +293,19 @@ var js_version = 0.11;
 <div class="sbspanel fixed-width" style="width:50%;justify-content:flex-start;"><table>
 <tr>
 <td class="l m b1 r1 l0 t0 lines">Operator</td>
-<td class="l m b1 r2 l0 t0 lines">Precedence</td>
+<td class="l m b1 r2 l0 t0 lines" data-braille="last-cell">Precedence</td>
 </tr>
 <tr>
 <td class="l m b0 r1 l0 t0 lines">\(\neg\)</td>
-<td class="l m b0 r2 l0 t0 lines">highest</td>
+<td class="l m b0 r2 l0 t0 lines" data-braille="last-cell">highest</td>
 </tr>
 <tr>
 <td class="l m b0 r1 l0 t0 lines">\(\wedge, \vee \)</td>
-<td class="l m b0 r2 l0 t0 lines">next, from left to right</td>
+<td class="l m b0 r2 l0 t0 lines" data-braille="last-cell">next, from left to right</td>
 </tr>
 <tr>
 <td class="l m b0 r1 l0 t0 lines">\(\to, \leftrightarrow \)</td>
-<td class="l m b0 r2 l0 t0 lines">lowest, left to right</td>
+<td class="l m b0 r2 l0 t0 lines" data-braille="last-cell">lowest, left to right</td>
 </tr>
 </table></div>
 <div class="sbspanel" style="width:50%;justify-content:flex-start;">
@@ -313,86 +320,86 @@ var js_version = 0.11;
 </div></div> Though for clarity, we will generally write grouping symbols.</p></section><section class="subsection" id="subsec-truthtables"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.1.2</span> <span class="title">Truth Tables for Logical Connectives</span>
 </h3>
-<a href="section-prop-logic.html#subsec-truthtables" class="permalink">¶</a><p id="p-26"><dfn class="terminology">Truth tables</dfn> allow us to uniquely determine the truth value of a compound proposition, based on the truth values of the simple statements from which it is made. Below are the truth tables for conjunction \(\wedge\text{,}\) disjunction \(\lor\text{,}\) conditional \(\to\text{,}\) biconditional \(\leftrightarrow\text{,}\) exclusive or \(\oplus\text{,}\) and negation \(\neg\text{.}\) <div class="sidebyside"><div class="sbsrow" style="margin-left:6.666666666666667%;margin-right:6.666666666666667%;">
+<p id="p-26"><dfn class="terminology">Truth tables</dfn> allow us to uniquely determine the truth value of a compound proposition, based on the truth values of the simple statements from which it is made. Below are the truth tables for conjunction \(\wedge\text{,}\) disjunction \(\lor\text{,}\) conditional \(\to\text{,}\) biconditional \(\leftrightarrow\text{,}\) exclusive or \(\oplus\text{,}\) and negation \(\neg\text{.}\) <div class="sidebyside"><div class="sbsrow" style="margin-left:6.666666666666667%;margin-right:6.666666666666667%;">
 <div class="sbspanel fixed-width" style="width:23.0769230769231%;justify-content:flex-start;"><table>
 <tr>
 <td class="c m b1 r1 l0 t0 lines">\(p\)</td>
 <td class="c m b1 r2 l0 t0 lines">\(q\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(p\wedge q\)</td>
+<td class="c m b1 r0 l0 t0 lines" data-braille="last-cell">\(p\wedge q\)</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">T</td>
 <td class="c m b0 r2 l0 t0 lines">T</td>
-<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">T</td>
 <td class="c m b0 r2 l0 t0 lines">F</td>
-<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">F</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">F</td>
 <td class="c m b0 r2 l0 t0 lines">T</td>
-<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">F</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">F</td>
 <td class="c m b0 r2 l0 t0 lines">F</td>
-<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">F</td>
 </tr>
 </table></div>
 <div class="sbspanel fixed-width" style="width:23.0769230769231%;justify-content:flex-start;"><table>
 <tr>
 <td class="c m b1 r1 l0 t0 lines">\(p\)</td>
 <td class="c m b1 r2 l0 t0 lines">\(q\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(p\vee q\)</td>
+<td class="c m b1 r0 l0 t0 lines" data-braille="last-cell">\(p\vee q\)</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">T</td>
 <td class="c m b0 r2 l0 t0 lines">T</td>
-<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">T</td>
 <td class="c m b0 r2 l0 t0 lines">F</td>
-<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">F</td>
 <td class="c m b0 r2 l0 t0 lines">T</td>
-<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">F</td>
 <td class="c m b0 r2 l0 t0 lines">F</td>
-<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">F</td>
 </tr>
 </table></div>
 <div class="sbspanel fixed-width" style="width:23.0769230769231%;justify-content:flex-start;"><table>
 <tr>
 <td class="c m b1 r1 l0 t0 lines">\(p\)</td>
 <td class="c m b1 r2 l0 t0 lines">\(q\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(p\to q\)</td>
+<td class="c m b1 r0 l0 t0 lines" data-braille="last-cell">\(p\to q\)</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">T</td>
 <td class="c m b0 r2 l0 t0 lines">T</td>
-<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">T</td>
 <td class="c m b0 r2 l0 t0 lines">F</td>
-<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">F</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">F</td>
 <td class="c m b0 r2 l0 t0 lines">T</td>
-<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">F</td>
 <td class="c m b0 r2 l0 t0 lines">F</td>
-<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
 </tr>
 </table></div>
 </div></div><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
@@ -400,70 +407,72 @@ var js_version = 0.11;
 <tr>
 <td class="c m b1 r1 l0 t0 lines">\(p\)</td>
 <td class="c m b1 r2 l0 t0 lines">\(q\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(p\leftrightarrow q\)</td>
+<td class="c m b1 r0 l0 t0 lines" data-braille="last-cell">\(p\leftrightarrow q\)</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">T</td>
 <td class="c m b0 r2 l0 t0 lines">T</td>
-<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">T</td>
 <td class="c m b0 r2 l0 t0 lines">F</td>
-<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">F</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">F</td>
 <td class="c m b0 r2 l0 t0 lines">T</td>
-<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">F</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">F</td>
 <td class="c m b0 r2 l0 t0 lines">F</td>
-<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
 </tr>
 </table></div>
 <div class="sbspanel fixed-width" style="width:50%;justify-content:flex-start;"><table>
 <tr>
 <td class="c m b1 r2 l0 t0 lines">\(p\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(\neg p\)</td>
+<td class="c m b1 r0 l0 t0 lines" data-braille="last-cell">\(\neg p\)</td>
 </tr>
 <tr>
 <td class="c m b0 r2 l0 t0 lines">T</td>
-<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">F</td>
 </tr>
 <tr>
 <td class="c m b0 r2 l0 t0 lines">F</td>
-<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
 </tr>
-<tr><td class="c m b0 r2 l0 t0 lines"></td></tr>
+<tr><td class="c m b0 r2 l0 t0 lines" data-braille="last-cell"></td></tr>
 </table></div>
 </div></div></p>
-<article class="example-like" id="example-4"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">1.1.11</span>.</h6>
+<article class="example example-like" id="example-4"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.11</span><span class="period">.</span>
+</h6>
 <p id="p-27">Construct a truth table for each of the following statements:</p>
 <ol class="decimal">
-<li id="li-27">\(p \to (\neg q \vee r)\)</li>
-<li id="li-28">\(p \wedge \neg q\)</li>
-<li id="li-29">\((p \to q) \wedge (\neg p \to q)\)</li>
-<li id="li-30">\((p\wedge r) \vee (q \wedge r)\)</li>
+<li id="li-27">\(\displaystyle p \to (\neg q \vee r)\)</li>
+<li id="li-28">\(\displaystyle p \wedge \neg q\)</li>
+<li id="li-29">\(\displaystyle (p \to q) \wedge (\neg p \to q)\)</li>
+<li id="li-30">\(\displaystyle (p\wedge r) \vee (q \wedge r)\)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-5" id="answer-5"><span class="type">Answer/Video</span></a><div id="hk-answer-5" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-5" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/EG531mTSNRQ?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
-</div></article><article class="example-like" id="example-5"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">1.1.12</span>.</h6>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-5" id="answer-5"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><iframe id="video-5" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/EG531mTSNRQ?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-5"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.12</span><span class="period">.</span>
+</h6>
 <p id="p-28">Imagine your teacher makes the following (unethical) statement, “if you are a cat lover, then I'll give you an A in this class.”</p>
 <ul class="disc">
 <li id="li-31">Do you not love cats? If so, it doesn't matter whether you get an A or not, what your teacher said was not a lie.</li>
 <li id="li-32">Are you a cat lover? Then the only way the teacher lied to you is if you didn't get an A.</li>
 </ul>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-6" id="answer-6"><span class="type">Answer/Video</span></a><div id="hk-answer-6" class="hidden-content tex2jax_ignore"><div class="solution"><iframe id="video-6" width="600" height="337" allowfullscreen="" src="https://www.youtube.com/embed/wVrgQ0vN9Ho?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-6" id="answer-6"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><iframe id="video-6" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/wVrgQ0vN9Ho?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
 </div></article></section><section class="exercises" id="exercises-1"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">1.1.3</span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise-like" id="exercise-1"><h6 class="heading"><span class="codenumber">1.</span></h6>
-<p id="p-29">Construct a truth table for the compound statement \(((p \to q) \land \neg p) \to \neg q\)</p></article><article class="exercise-like" id="exercise-2"><h6 class="heading"><span class="codenumber">2.</span></h6>
+<article class="exercise exercise-like" id="exercise-1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-29">Construct a truth table for the compound statement \(((p \to q) \land \neg p) \to \neg q\)</p></article><article class="exercise exercise-like" id="exercise-2"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="p-30">Consider the statement about a party, “If it's your birthday or there will be cake, then there will be cake.”</p>
 <ol class="lower-alpha">
 <li id="li-33"><p id="p-31">Translate the above statement into symbols. Clearly state which statement is \(P\) and which is \(Q\text{.}\)</p></li>
@@ -473,95 +482,95 @@ var js_version = 0.11;
 <li id="li-37"><p id="p-35">Suppose you found out that the statement was a lie. What can you conclude?</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span></a><div id="hk-solution-1" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-36" class="lower-alpha">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like"><ol id="p-36" class="lower-alpha">
 <li id="li-38">\(P\text{:}\) it's your birthday; \(Q\text{:}\) there will be cake. \((P \vee Q) \to Q\)</li>
 <li id="li-39"><p id="p-37">Hint: you should get three T's and one F.</p></li>
 <li id="li-40"><p id="p-38">Only that there will be cake.</p></li>
 <li id="li-41"><p id="p-39">It's NOT your birthday!</p></li>
 <li id="li-42"><p id="p-40">It's your birthday, but the cake is a lie.</p></li>
 </ol></div></div>
-</div></article><article class="exercise-like" id="exercise-3"><h6 class="heading"><span class="codenumber">3.</span></h6>
+</div></article><article class="exercise exercise-like" id="exercise-3"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="p-41">Make a truth table for the statement \((p \vee q) \to (p \wedge q)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span></a><div id="hk-solution-2" class="hidden-content tex2jax_ignore"><div class="solution"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>
 <td class="c m b1 r1 l0 t0 lines">\(p\)</td>
 <td class="c m b1 r2 l0 t0 lines">\(q\)</td>
-<td class="c m b1 r0 l0 t0 lines">\((p \vee q) \to (p \wedge q)\)</td>
+<td class="c m b1 r0 l0 t0 lines" data-braille="last-cell">\((p \vee q) \to (p \wedge q)\)</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">T</td>
 <td class="c m b0 r2 l0 t0 lines">T</td>
-<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">T</td>
 <td class="c m b0 r2 l0 t0 lines">F</td>
-<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">F</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">F</td>
 <td class="c m b0 r2 l0 t0 lines">T</td>
-<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">F</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">F</td>
 <td class="c m b0 r2 l0 t0 lines">F</td>
-<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
 </tr>
 </table></div></div></div></div></div>
-</div></article><article class="exercise-like" id="exercise-4"><h6 class="heading"><span class="codenumber">4.</span></h6>
+</div></article><article class="exercise exercise-like" id="exercise-4"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="p-42">Make a truth table for the statement \(\neg p \wedge (q \to p)\text{.}\) What can you conclude about \(p\) and \(q\) if you know the statement is true?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span></a><div id="hk-solution-3" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>
 <td class="c m b1 r1 l0 t0 lines">\(p\)</td>
 <td class="c m b1 r2 l0 t0 lines">\(q\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(\neg p \wedge (q \to p)\)</td>
+<td class="c m b1 r0 l0 t0 lines" data-braille="last-cell">\(\neg p \wedge (q \to p)\)</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">T</td>
 <td class="c m b0 r2 l0 t0 lines">T</td>
-<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">F</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">T</td>
 <td class="c m b0 r2 l0 t0 lines">F</td>
-<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">F</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">F</td>
 <td class="c m b0 r2 l0 t0 lines">T</td>
-<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">F</td>
 </tr>
 <tr>
 <td class="c m b0 r1 l0 t0 lines">F</td>
 <td class="c m b0 r2 l0 t0 lines">F</td>
-<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
 </tr>
 </table></div></div></div>
 <p id="p-43">If the statement is true, then both \(p\) and \(q\) are false.</p>
 </div></div>
-</div></article><article class="exercise-like" id="exercise-5"><h6 class="heading"><span class="codenumber">5.</span></h6>
+</div></article><article class="exercise exercise-like" id="exercise-5"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
 <p id="p-44">Make a truth table for the statement \(\neg p \to (q \wedge r)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span></a><div id="hk-hint-1" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-45">Like above, only now you will need 8 rows instead of just 4.</p></div></div>
-</div></article><article class="exercise-like" id="exercise-6"><h6 class="heading"><span class="codenumber">6.</span></h6>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-45">Like above, only now you will need 8 rows instead of just 4.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-6"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
 <p id="p-46">State the converse, inverse, and contrapositive of each of the following conditional statements:</p>
 <ol class="lower-alpha">
 <li id="li-43">If it rains today, then I will bring an umbrella.</li>
 <li id="li-44">Whenever I drive my car, I do not use my phone.</li>
 <li id="li-45">When I stay up too late, it's necessary that I sleep until noon.</li>
-</ol></article><article class="exercise-like" id="exercise-7"><h6 class="heading"><span class="codenumber">7.</span></h6>
+</ol></article><article class="exercise exercise-like" id="exercise-7"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
 <p id="p-47">A classic example is that we're on the island of knights and knaves. Knights always tell the truth. Knaves always lie.</p>
 <p id="p-48">We encounter two people A and B.</p>
 <ul class="disc">
 <li id="li-46">A says: “B is a knight.”</li>
 <li id="li-47">B says: “The two of us are opposite types.”</li>
 </ul>
-<p>What is the conclusion?</p></article><article class="exercise-like" id="exercise-8"><h6 class="heading"><span class="codenumber">8.</span></h6>
-<p id="p-49">This time you encounter two people, A, and B, and A says “I am a knave or B is a knight,” and B says nothing. What can you conclude?</p></article><article class="exercise-like" id="exercise-9"><h6 class="heading"><span class="codenumber">9.</span></h6>
+<p data-braille="continuation">What is the conclusion?</p></article><article class="exercise exercise-like" id="exercise-8"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-49">This time you encounter two people, A, and B, and A says “I am a knave or B is a knight,” and B says nothing. What can you conclude?</p></article><article class="exercise exercise-like" id="exercise-9"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
 <p id="p-50">This is a favorite of my daughter. You encounter a guard standing at a fork in the road. It is not known whether the guard is a knight or a knave, that is, that they will (always) tell the truth or (always) lie. One of the paths leads to great treasure, the other leads to a violent and scary death. You are allowed to ask one and only one question to the guard.</p>
 <p id="p-51">What can you ask the guard in order to ensure you go on the path towards the treasure?</p></article></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.1.4</span> <span class="title">Forum Posts about this section</span>
@@ -578,7 +587,5 @@ var js_version = 0.11;
         })();
       </script></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.11/login.js"></script>
 </body>
 </html>

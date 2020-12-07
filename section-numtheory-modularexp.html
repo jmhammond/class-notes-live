@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-12T17:53:53-05:00    *-->
+<!--*    on 2020-12-06T18:12:56-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Modular exponentiation</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -50,20 +50,17 @@ MathJax.Hub.Config({
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(gcse, s);
 })();
-</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.11;
-</script>
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\def\ds{\displaystyle}
@@ -150,7 +147,7 @@ var js_version = 0.11;
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
@@ -205,46 +202,73 @@ var js_version = 0.11;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="section-numtheory-modularexp"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.5</span> <span class="title">Modular exponentiation</span>
 </h2>
-<a href="section-numtheory-modularexp.html" class="permalink">¶</a><p id="p-642">We begin by finding the binary, base-2, representation of a number.</p>
-<article class="example-like" id="example-80"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.5.1</span>.</h6>
-<p id="p-643">Find the binary representation of each of the following numbers:</p>
+<p id="p-695">We begin by finding the binary, base-2, representation of a number.</p>
+<article class="example example-like" id="example-81"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.1</span><span class="period">.</span>
+</h6>
+<p id="p-696">Find the binary representation of each of the following numbers:</p>
 <ol class="decimal">
-<li id="li-572">24</li>
-<li id="li-573">255</li>
-<li id="li-574">2019</li>
-</ol></article><p id="p-644">Now recall how exponents work. \((a^m)^n = a^{mn}\) and \(a^m \cdot a^n = a^{m+n}\text{.}\)</p>
-<article class="definition-like" id="definition-48"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">3.5.2</span>.</h6>
-<p id="p-645"><dfn class="terminology">Modular exponentiation</dfn> is the process of repeatedly squaring and reducing a number modulo some integer, and then combining the results to find the required answer.</p></article><article class="example-like" id="example-81"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.5.3</span>.</h6>
-<p id="p-646">Here's a simple, typed example. We'll find \(37^{82} \pmod{52}\)</p>
+<li id="li-615">24</li>
+<li id="li-616">255</li>
+<li id="li-617">2019</li>
+</ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-51" id="solution-51"><span class="type">Solution</span></a><div id="hk-solution-51" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-73" id="solution-73"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-73"><div class="solution solution-like"><ol id="p-697" class="decimal">
+<li id="li-618">\(\displaystyle 24 = 16 + 8 = 2^4 + 2^3\)</li>
+<li id="li-619"><div class="displaymath">
+\begin{align*}
+255 \amp= 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1\\
+\amp = 2^7 + 2^6 + 2^5 + 2^4 + 2^3 + 2^2 + 2^1 + 2^0
+\end{align*}
+</div></li>
+<li id="li-620">
+<p id="p-698">This one is a little more work, so I'm including my thinking as we break it down:</p>
+<div class="displaymath">
+\begin{align*}
+2019 \amp= 1024 + 995\\
+\amp= 1024 + 512 + 483 \\
+\amp= 1024 + 512 + 256 + 227   \\
+\amp= 1024 + 512 + 256 + 128 + 99   \\
+\amp= 1024 + 512 + 256 + 128 + 64 + 35  \\
+\amp= 1024 + 512 + 256 + 128 + 64 + 32 + 2 + 1   
+\end{align*}
+</div>
+</li>
+</ol></div></div>
+</div></article><p id="p-699">Now recall how exponents work. \((a^m)^n = a^{mn}\) and \(a^m \cdot a^n = a^{m+n}\text{.}\)</p>
+<article class="definition definition-like" id="definition-49"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.5.2</span><span class="period">.</span>
+</h6>
+<p id="p-700"><dfn class="terminology">Modular exponentiation</dfn> is the process of repeatedly squaring and reducing a number modulo some integer, and then combining the results to find the required answer.</p></article><article class="example example-like" id="example-82"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.3</span><span class="period">.</span>
+</h6>
+<p id="p-701">Here's a simple, typed example. We'll find \(37^{82} \pmod{52}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-74" id="solution-74"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-74"><div class="solution solution-like">
 <ol class="decimal">
-<li id="li-575">
-<p id="p-647">Find the binary representation of \(82\text{.}\)</p>
+<li id="li-621">
+<p id="p-702">Find the binary representation of \(82\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 82 = 64 + 16 + 2
 \end{equation*}
 </div>
 </li>
-<li id="li-576">
-<p id="p-648">Repeatedly square and reduce \(37 \pmod{52}\) six times. This works since \(2^{64}\text{,}\) the highest power of \(2\) in the binary representation of 82.</p>
+<li id="li-622">
+<p id="p-703">Repeatedly square and reduce \(37 \pmod{52}\) six times. This works since \(2^{64}\text{,}\) the highest power of \(2\) in the binary representation of 82.</p>
 <ul class="disc">
-<li id="li-577">\(37^1 = 37^1 = 37 \equiv 37\pmod{52}\)</li>
-<li id="li-578">\(37^2 = 37^2 = 1369 \equiv 17\pmod{52}\)</li>
-<li id="li-579">\(37^4 = 17^2 = 289 \equiv 29 \pmod{52}\)</li>
-<li id="li-580">\(37^8 = 29^2 = 841 \equiv 9 \pmod{52}\)</li>
-<li id="li-581">\(37^{16} = 9^2 = 81 \equiv 29 \pmod{52}\)</li>
-<li id="li-582">\(37^{32} = 29^2 = 841 \equiv 9 \pmod{52}\)</li>
-<li id="li-583">\(37^{64} = 9^2 = 81 \equiv 29 \pmod{52}\)</li>
+<li id="li-623">\(\displaystyle 37^1 = 37^1 = 37 \equiv 37\pmod{52}\)</li>
+<li id="li-624">\(\displaystyle 37^2 = 37^2 = 1369 \equiv 17\pmod{52}\)</li>
+<li id="li-625">\(\displaystyle 37^4 = 17^2 = 289 \equiv 29 \pmod{52}\)</li>
+<li id="li-626">\(\displaystyle 37^8 = 29^2 = 841 \equiv 9 \pmod{52}\)</li>
+<li id="li-627">\(\displaystyle 37^{16} = 9^2 = 81 \equiv 29 \pmod{52}\)</li>
+<li id="li-628">\(\displaystyle 37^{32} = 29^2 = 841 \equiv 9 \pmod{52}\)</li>
+<li id="li-629">\(\displaystyle 37^{64} = 9^2 = 81 \equiv 29 \pmod{52}\)</li>
 </ul>
-<p>Note that it was a coincidence that we got into a loop of 29, 9, 29, ... But this will happen sometimes!</p>
+<p data-braille="continuation">Note that it was a coincidence that we got into a loop of 29, 9, 29, ... But this will happen sometimes!</p>
 </li>
-<li id="li-584">
-<p id="p-649">Now pick from the values above those entries which correspond to the binary representation of our desired power, 82:</p>
+<li id="li-630">
+<p id="p-704">Now pick from the values above those entries which correspond to the binary representation of our desired power, 82:</p>
 <div class="displaymath">
 \begin{align*}
 37^{82}  \pmod{52} &amp;= 37^{2 + 16 + 64} \pmod{52}\\
@@ -253,28 +277,28 @@ var js_version = 0.11;
 &amp;\equiv 49 \pmod{52}
 \end{align*}
 </div>
-<p>Take note of the equivalence symbols used above. We write \(=\) when the numbers represent equality and \(\equiv\) when we have reduced modulo 52.</p>
+<p data-braille="continuation">Take note of the equivalence symbols used above. We write \(=\) when the numbers represent equality and \(\equiv\) when we have reduced modulo 52.</p>
 </li>
 </ol>
-<p id="p-650">That's it!</p>
+<p id="p-705">That's it!</p>
 </div></div>
 </div></article><section class="exercises" id="exercises-14"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">3.5.1</span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise-like" id="exercise-109"><h6 class="heading"><span class="codenumber">1.</span></h6>
-<p id="p-651">Find the following:</p>
+<article class="exercise exercise-like" id="exercise-108"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-706">Find the following:</p>
 <ol class="lower-alpha">
-<li id="li-585">\(3^{2019} \pmod{99} \)</li>
-<li id="li-586">\(7^{644} \pmod{645} \)</li>
-<li id="li-587">\(123^{1001} \pmod{101} \)</li>
+<li id="li-631">\(\displaystyle 3^{2019} \pmod{99} \)</li>
+<li id="li-632">\(\displaystyle 7^{644} \pmod{645} \)</li>
+<li id="li-633">\(\displaystyle 123^{1001} \pmod{101} \)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-50" id="answer-50"><span class="type">Answer/Video</span></a><div id="hk-answer-50" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-652">Here are the numeric answers - but be sure you can do the process!</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-75" id="solution-75"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-75"><div class="solution solution-like">
+<p id="p-707">Here are the numeric answers - but be sure you can do the process!</p>
 <ol class="lower-alpha">
-<li id="li-588">81</li>
-<li id="li-589">436</li>
-<li id="li-590">22</li>
+<li id="li-634">81</li>
+<li id="li-635">436</li>
+<li id="li-636">22</li>
 </ol>
 </div></div>
 </div></article></section><section class="subsection" id="subsection-35"><h3 class="heading hide-type">
@@ -292,7 +316,5 @@ var js_version = 0.11;
         })();
       </script></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.11/login.js"></script>
 </body>
 </html>

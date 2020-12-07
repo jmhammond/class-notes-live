@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-12T17:53:53-05:00    *-->
+<!--*    on 2020-12-06T18:12:55-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Divisibility and Congruences</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -50,20 +50,17 @@ MathJax.Hub.Config({
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(gcse, s);
 })();
-</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.11;
-</script>
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\def\ds{\displaystyle}
@@ -150,7 +147,7 @@ var js_version = 0.11;
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
@@ -205,152 +202,208 @@ var js_version = 0.11;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="section-numtheory-divcong"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">Divisibility and Congruences</span>
 </h2>
-<a href="section-numtheory-divcong.html" class="permalink">¶</a><article class="remark-like" id="note-16"><h6 class="heading">
-<span class="type">Note</span> <span class="codenumber">3.1.1</span>.</h6>
-<p id="p-562">Any time we say “number” in the context of divides, congruence, or number theory we mean integer.</p></article><section class="subsection" id="section-numtheory-div"><h3 class="heading hide-type">
+<article class="note remark-like" id="note-16"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span>
+</h6>
+<p id="p-588">Any time we say “number” in the context of divides, congruence, or number theory we mean integer.</p></article><section class="subsection" id="section-numtheory-div"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1.1</span> <span class="title">The Divides Relation</span>
 </h3>
-<a href="section-numtheory-divcong.html#section-numtheory-div" class="permalink">¶</a><p id="p-563">In <a data-knowl="./knowl/ex_divides_relation.html" title="Example 1.3.3">Example 1.3.3</a>, we saw the divides relation. Because we're going to use this relation frequently, we will introduce its own notation.</p>
-<article class="definition-like" id="definition-41"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">3.1.2</span>.</h6>
-<p id="p-564">Let \(a \and b\) be two integers with \(a \not= 0\text{.}\) We say <dfn class="terminology">\(a\) divides \(b\)</dfn> and write \(a \divides b\) if there exists an integer \(m\) such that \(b = am\text{.}\)</p>
-<p id="p-565">We say that \(a\) is a <dfn class="terminology">factor</dfn> of \(b\text{,}\) and \(b\) is a <dfn class="terminology">multiple</dfn> of \(a\text{.}\)</p></article><article class="example-like" id="example-62"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.1.3</span>.</h6>
-<p id="p-566">The following are examples of the divides relation:</p>
+<p id="p-589">In <a class="xref" data-knowl="./knowl/ex_divides_relation.html" title="Example 1.3.3">Example 1.3.3</a>, we saw the divides relation. Because we're going to use this relation frequently, we will introduce its own notation.</p>
+<article class="definition definition-like" id="definition-41"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span>
+</h6>
+<p id="p-590">Let \(a \and b\) be two integers with \(a \not= 0\text{.}\) We say <dfn class="terminology">\(a\) divides \(b\)</dfn> and write \(a \divides b\) if there exists an integer \(m\) such that \(b = am\text{.}\)</p>
+<p id="p-591">We say that \(a\) is a <dfn class="terminology">factor</dfn> of \(b\text{,}\) and \(b\) is a <dfn class="terminology">multiple</dfn> of \(a\text{.}\)</p></article><article class="example example-like" id="example-62"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span>
+</h6>
+<p id="p-592">The following are examples of the divides relation:</p>
 <ol class="decimal">
-<li id="li-497">\(3 \divides 6\) since \(6 = 3\cdot 2\)</li>
-<li id="li-498">\(4 \divides 100\) since \(100 = 4 \cdot 25\)</li>
+<li id="li-507">\(3 \divides 6\) since \(6 = 3\cdot 2\)</li>
+<li id="li-508">\(4 \divides 100\) since \(100 = 4 \cdot 25\)</li>
 </ol>
-<p id="p-567">Here are some non-examples:</p>
+<p id="p-593">Here are some non-examples:</p>
 <ol class="decimal">
-<li id="li-499">\(4 \nmid 10\) since there is no integer \(m\) for which \(10 = 4m\text{.}\)</li>
-<li id="li-500">\(6 \nmid 3 \text{.}\) Order matters.</li>
-</ol></article><article class="theorem-like" id="proposition-1"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">3.1.4</span>. <span class="title">Properties of divisibility.</span>
+<li id="li-509">\(4 \nmid 10\) since there is no integer \(m\) for which \(10 = 4m\text{.}\)</li>
+<li id="li-510">\(6 \nmid 3 \text{.}\) Order matters.</li>
+</ol></article><article class="proposition theorem-like" id="proposition-1"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of divisibility.</span>
 </h6>
-<p id="p-568">Let \(a, b, c \in \Z\) with \(a \not= 0\text{.}\) Then:</p>
+<p id="p-594">Let \(a, b, c \in \Z\) with \(a \not= 0\text{.}\) Then:</p>
 <ol class="decimal">
-<li id="li-501">If \(a \divides b\) and \(a \divides c\) then \(a \divides ( b + c ) \text{.}\)</li>
-<li id="li-502">If \(a \divides b\) then \(a \divides bc\) for all \(c\in \Z\text{.}\)</li>
-<li id="li-503">If \(a \divides b\) and \(b \divides c\) then \(a \divides c \text{.}\)</li>
-</ol></article><article class="theorem-like" id="corollary-1"><h6 class="heading">
-<span class="type">Corollary</span> <span class="codenumber">3.1.5</span>.</h6>
-<p id="p-569">If \(a, b, c\in \Z\) with \(a\not= 0\) such that \(a\divides b\) and \(a \divides c\text{,}\) then \({ a\divides (bm+cn)}\) where \(m \and n\) are some integers.</p></article><article class="theorem-like" id="theorem-2"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">3.1.6</span>. <span class="title">The Division Algorithm.</span>
+<li id="li-511">If \(a \divides b\) and \(a \divides c\) then \(a \divides ( b + c ) \text{.}\)</li>
+<li id="li-512">If \(a \divides b\) then \(a \divides bc\) for all \(c\in \Z\text{.}\)</li>
+<li id="li-513">If \(a \divides b\) and \(b \divides c\) then \(a \divides c \text{.}\)</li>
+</ol>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-55" id="answer-55"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-55"><div class="answer solution-like"><iframe id="video-54" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/eBcg74rjW1c?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></article><article class="corollary theorem-like" id="corollary-1"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span>
 </h6>
-<p id="p-570">Let \(n\) be an integer and \(d\) be a positive integer.  Then there exist unique integers \(q \and r\) such that</p>
+<p id="p-595">If \(a, b, c\in \Z\) with \(a\not= 0\) such that \(a\divides b\) and \(a \divides c\text{,}\) then \({ a\divides (bm+cn)}\) where \(m \and n\) are some integers.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-56" id="answer-56"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-56"><div class="answer solution-like"><iframe id="video-55" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/-fY3pUCbnRg?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></article><article class="theorem theorem-like" id="theorem-2"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">The Division Algorithm.</span>
+</h6>
+<p id="p-596">Let \(n\) be an integer and \(d\) be a positive integer.  Then there exist unique integers \(q \and r\) such that</p>
 <div class="displaymath">
 \begin{equation*}
 n = dq + r \hspace{1em} \text{with} \hspace{1em} 0\le r \lt d
 \end{equation*}
-</div></article><article class="example-like" id="example-63"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.1.7</span>.</h6>
-<p id="p-571">Use the Division Algorithm to write each division as \(n = dq +r\) with \(0 \le r \lt d\text{,}\) with the variables defined in the statement above.</p>
+</div></article><article class="example example-like" id="example-63"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="period">.</span>
+</h6>
+<p id="p-597">Use the Division Algorithm to write each division as \(n = dq +r\) with \(0 \le r \lt d\text{,}\) with the variables defined in the statement above.</p>
 <ol class="decimal">
-<li id="li-504">\(543 \div 7\)</li>
-<li id="li-505">\(-42 \div 13\)</li>
-</ol></article></section><section class="subsection" id="section-numtheory-cong"><h3 class="heading hide-type">
+<li id="li-514">\(\displaystyle 543 \div 7\)</li>
+<li id="li-515">\(\displaystyle -42 \div 13\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-57" id="answer-57"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-57"><div class="answer solution-like"><iframe id="video-56" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/CPIzNeiOipI?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article></section><section class="subsection" id="section-numtheory-cong"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1.2</span> <span class="title">The Congruence Relation</span>
 </h3>
-<a href="section-numtheory-divcong.html#section-numtheory-cong" class="permalink">¶</a><article class="definition-like" id="definition-42"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">3.1.8</span>.</h6>
-<p id="p-572">Let \(a \and b\) be two integers and \(m\) be a positive integer. We say that <dfn class="terminology">\(a\) is congruent to \(b\) modulo \(m\)</dfn> if</p>
+<article class="definition definition-like" id="definition-42"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.8</span><span class="period">.</span>
+</h6>
+<p id="p-598">Let \(a \and b\) be two integers and \(m\) be a positive integer. We say that <dfn class="terminology">\(a\) is congruent to \(b\) modulo \(m\)</dfn> if</p>
 <div class="displaymath">
 \begin{equation*}
 m \divides (b-a)
 \end{equation*}
 </div>
-<p id="p-573">We write \(a \equiv b \pmod m\)</p>
-<p id="p-574">We call \(m\) the <dfn class="terminology">modulus</dfn>.</p></article><article class="example-like" id="example-64"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.1.9</span>.</h6>
-<ol id="p-575" class="decimal">
-<li id="li-506">\(13 \equiv 6 \pmod 7 \)</li>
-<li id="li-507">\(-8 \equiv 6 \pmod 7 \)</li>
-<li id="li-508">\(7 \equiv 0 \pmod 7\)</li>
-</ol></article><article class="definition-like" id="definition-43"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">3.1.10</span>.</h6>
-<p id="p-576">If \(a\) is an integer and \(m\) is a positive integer, we define the <dfn class="terminology">congruence class of \(a\) modulo \(m\)</dfn> to be the set of all integers congruent to \(a\) modulo \(m\text{.}\)</p>
+<p id="p-599">We write \(a \equiv b \pmod m\)</p>
+<p id="p-600">We call \(m\) the <dfn class="terminology">modulus</dfn>.</p></article><article class="example example-like" id="example-64"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.9</span><span class="period">.</span>
+</h6>
+<ol id="p-601" class="decimal">
+<li id="li-516">\(\displaystyle 13 \equiv 6 \pmod 7 \)</li>
+<li id="li-517">\(\displaystyle -8 \equiv 6 \pmod 7 \)</li>
+<li id="li-518">\(\displaystyle 7 \equiv 0 \pmod 7\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-58" id="answer-58"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-58"><div class="answer solution-like"><iframe id="video-57" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/P9NKnDxdUCw?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="definition definition-like" id="definition-43"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.10</span><span class="period">.</span>
+</h6>
+<p id="p-602">If \(a\) is an integer and \(m\) is a positive integer, we define the <dfn class="terminology">congruence class of \(a\) modulo \(m\)</dfn> to be the set of all integers congruent to \(a\) modulo \(m\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \left[ a \right]_m = \left\{ b \mid b \equiv a\pmod{m} \right\}
 \end{equation*}
-</div></article><article class="example-like" id="example-65"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.1.11</span>.</h6>
-<p id="p-577">What congruence class is indicated by the set:</p>
+</div></article><article class="example example-like" id="example-65"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.11</span><span class="period">.</span>
+</h6>
+<p id="p-603">What congruence class is indicated by the set:</p>
 <ol class="decimal">
-<li id="li-509">\(\left\{\dots, -6, -1, 4, 9, 14, \dots\right\}\)</li>
-<li id="li-510">\(\left\{\dots, -13, 20, 53, 86, \dots \right\}\)</li>
-</ol></article><article class="example-like" id="example-66"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.1.12</span>.</h6>
-<p id="p-578">Find all congruence classes modulo 5.</p></article><article class="theorem-like" id="proposition-2"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">3.1.13</span>.</h6>
-<p id="p-579">Let \(m\) be a positive integer. Then integers \(a \and b\) are congruent modulo \(m\) if and only if there exists and integer \(k\) such that \({a = b + km}\text{.}\)</p></article><article class="theorem-like" id="proposition-3"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">3.1.14</span>.</h6>
-<p id="p-580">Let \(m\) be a positive integer. If \({ a \equiv b \pmod m}\) and \({c \equiv d \pmod m }\) then</p>
+<li id="li-519">\(\displaystyle \left\{\dots, -6, -1, 4, 9, 14, \dots\right\}\)</li>
+<li id="li-520">\(\displaystyle \left\{\dots, -13, 20, 53, 86, \dots \right\}\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-59" id="answer-59"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-59"><div class="answer solution-like"><iframe id="video-58" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/5DoLEOmW3bY?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-66"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.12</span><span class="period">.</span>
+</h6>
+<p id="p-604">Find all congruence classes modulo 5.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-12" id="hint-12"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-12"><div class="hint solution-like"><p id="p-605">To what numbers is 0 congruent modulo 5? 1? 2? 3? 4? 5? 6? 7?... Have we covered everything?</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-53" id="solution-53"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-53"><div class="solution solution-like">
+<p id="p-606">There are a total of five congruence classes modulo 5:</p>
+<ol class="decimal">
+<li id="li-521">\(\displaystyle [0]_5 = \{ \dots, -5, 0, 5, 10, \dots \}\)</li>
+<li id="li-522">\(\displaystyle [1]_5 = \{ \dots, -4, 1, 6, 11, \dots \}\)</li>
+<li id="li-523">\(\displaystyle [2]_5 = \{ \dots, -3, 2, 7, 12, \dots \}\)</li>
+<li id="li-524">\(\displaystyle [3]_5 = \{ \dots, -2, 3, 8, 13, \dots \}\)</li>
+<li id="li-525">\(\displaystyle [4]_5 = \{ \dots, -1, 4, 9, 14, \dots \}\)</li>
+</ol>
+<p data-braille="continuation">In general, there will always be \(m\) distinct congruence classes modulo \(m\text{.}\)</p>
+</div></div>
+</div></article><article class="proposition theorem-like" id="proposition-2"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.1.13</span><span class="period">.</span>
+</h6>
+<p id="p-607">Let \(m\) be a positive integer. Then integers \(a \and b\) are congruent modulo \(m\) if and only if there exists and integer \(k\) such that \({a = b + km}\text{.}\)</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-60" id="answer-60"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-60"><div class="answer solution-like"><iframe id="video-59" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/mRgZaNUB_tw?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></article><article class="proposition theorem-like" id="proposition-3"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.1.14</span><span class="period">.</span>
+</h6>
+<p id="p-608">Let \(m\) be a positive integer. If \({ a \equiv b \pmod m}\) and \({c \equiv d \pmod m }\) then</p>
 <div class="displaymath">
 \begin{equation*}
 a + c \equiv b + d \pmod m  \hspace{1em} \and \hspace{1em} ac \equiv bd \pmod m
 \end{equation*}
-</div></article><article class="remark-like" id="note-17"><h6 class="heading">
-<span class="type">Note</span> <span class="codenumber">3.1.15</span>.</h6>
-<p id="p-581">For modular arithmetic, we have addition and multiplication. Subtraction is done via additive inverses, but division is not a thing! We'll discuss multiplicative inverses in a future section.  </p></article></section><section class="exercises" id="exercises-10"><h3 class="heading hide-type">
+</div>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-61" id="answer-61"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-61"><div class="answer solution-like"><iframe id="video-60" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/vkifZzmBHgE?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></article><article class="note remark-like" id="note-17"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">3.1.15</span><span class="period">.</span>
+</h6>
+<p id="p-609">For modular arithmetic, we have addition and multiplication. Subtraction is done via additive inverses, but division is not a thing! We'll discuss multiplicative inverses in a future section.  </p></article></section><section class="exercises" id="exercises-10"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">3.1.3</span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise-like" id="exercise-93"><h6 class="heading"><span class="codenumber">1.</span></h6>
-<p id="p-582">Show that if \(a, b, \and c\) are integers with \(a\not=0 \and c \not= 0\) such that \(ac \divides bc\) then \(a\divides b\text{.}\)</p></article><article class="exercise-like" id="exercise-94"><h6 class="heading"><span class="codenumber">2.</span></h6>
-<p id="p-583">Use the division algorithm to write the following divisions as \(n = dq + r\) with the variables defined in the theorem:</p>
+<article class="exercise exercise-like" id="exercise-92"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-610">Show that if \(a, b, \and c\) are integers with \(a\not=0 \and c \not= 0\) such that \(ac \divides bc\) then \(a\divides b\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-54" id="solution-54"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-54"><div class="solution solution-like"><p id="p-611"><article class="proof" id="proof-18"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-612">Assume that \(a, b, c\) are integers with \(a \ne 0\) and \(c\ne 0\) such that \(ac \divides bc\text{.}\) Then there exists an integer \(m\) such \(bc = acm\)</p>
+<p id="p-613">Since \(c \ne 0\text{,}\) we can divide both sides of the equation by \(c\text{,}\) yieleding the equality \(b = am\text{.}\) Thus \(a \divides b\text{.}\)</p></article></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-93"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-614">Use the division algorithm to write the following divisions as \(n = dq + r\) with the variables defined in the theorem:</p>
 <ol class="lower-alpha">
-<li id="li-511">17 is divided by 9</li>
-<li id="li-512">1234 is divided by 23</li>
-<li id="li-513">0 is divided by 13</li>
-<li id="li-514">8 is divided by 1</li>
-</ol></article><article class="exercise-like" id="exercise-95"><h6 class="heading"><span class="codenumber">3.</span></h6>
-<p id="p-584">Determine whether the following integers are congruent to 3 modulo 7:</p>
-<ol class="lower-alpha">
-<li id="li-515">37</li>
-<li id="li-516">66</li>
-<li id="li-517">-17</li>
-<li id="li-518">-67</li>
-<li id="li-519">80</li>
-</ol></article><article class="exercise-like" id="exercise-96"><h6 class="heading"><span class="codenumber">4.</span></h6>
-<p id="p-585">List all integers between -100 and 100 that are congruent to -1 modulo 25</p></article><article class="exercise-like" id="exercise-97"><h6 class="heading"><span class="codenumber">5.</span></h6>
-<p id="p-586">Suppose that \(a \and b\) are integers, \(a \equiv 4 \pmod{13}\) and \(b \equiv 9\pmod{13}\text{.}\) Find the integer \(c\) with \(0 \le c \le 12\) such that:</p>
-<ol class="lower-alpha">
-<li id="li-520">\(c \equiv 9a \pmod{13} \)</li>
-<li id="li-521">\(c \equiv 11b \pmod{13} \)</li>
-<li id="li-522">\(c \equiv a+b \pmod{13} \)</li>
-<li id="li-523">\(c \equiv a^2 + b^2 \pmod{13} \)</li>
-<li id="li-524">\(c \equiv a^2 - b^2 \pmod{13} \)</li>
+<li id="li-526">17 is divided by 9</li>
+<li id="li-527">1234 is divided by 23</li>
+<li id="li-528">0 is divided by 13</li>
+<li id="li-529">8 is divided by 1</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-46" id="solution-46"><span class="type">Solution</span></a><div id="hk-solution-46" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-587" class="lower-alpha">
-<li id="li-525">10</li>
-<li id="li-526">8</li>
-<li id="li-527">0</li>
-<li id="li-528">6</li>
-<li id="li-529">0</li>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-55" id="solution-55"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-55"><div class="solution solution-like"><ol id="p-615" class="lower-alpha">
+<li id="li-530">\(\displaystyle 17 = 9\cdot 1 + 8 \)</li>
+<li id="li-531">\(\displaystyle 1234 = 23 \cdot 53 + 15\)</li>
+<li id="li-532">\(\displaystyle 0 = 13 \cdot 0 + 0\)</li>
+<li id="li-533">\(\displaystyle 8 = 1 \cdot 8 + 0\)</li>
 </ol></div></div>
-</div></article><article class="exercise-like" id="exercise-98"><h6 class="heading"><span class="codenumber">6.</span></h6>
-<p id="p-588">Find counterexamples to the following statements:</p>
+</div></article><article class="exercise exercise-like" id="exercise-94"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-616">Determine whether the following integers are congruent to 3 modulo 7:</p>
 <ol class="lower-alpha">
-<li id="li-530">If \(ac \equiv bc \pmod m\) where \(a, b, c, m \in \Z\) with \(m \ge 2\text{,}\) then \(a \equiv b \pmod m\text{.}\)</li>
-<li id="li-531">If \(a \equiv b \pmod m\) and \(c \equiv d \pmod m\) where \(a, b, c, m \in \Z\) with \(m \ge 2\text{,}\) then \(a^c \equiv b^d \pmod m\text{.}\)</li>
+<li id="li-534">37</li>
+<li id="li-535">66</li>
+<li id="li-536">-17</li>
+<li id="li-537">-67</li>
+<li id="li-538">80</li>
 </ol>
-<p id="p-589">The first part of this exercise should convince you: you cannot “divide” both sides by \(c\) in modular arithmetic!</p></article><article class="exercise-like" id="exercise-99"><h6 class="heading"><span class="codenumber">7.</span></h6>
-<p id="p-590">Prove that 6 divides \(7^n - 1\) for all \(n \in \N\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-9" id="hint-9"><span class="type">Hint</span></a><div id="hk-hint-9" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-591">(Alternative idea to the below proof) In the inductive step add and subtract \(7^k\text{.}\) That is, you'll have \(7\cdot 7^{k} - 1 - 7^k + 7^k\text{.}\) Now algebra.</p></div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-47" id="solution-47"><span class="type">Solution</span></a><div id="hk-solution-47" class="hidden-content tex2jax_ignore"><div class="solution"><article class="proof" id="proof-13"><h6 class="heading"><span class="type">Proof.</span></h6>
-<p id="p-592">Let \(P(n)\) be the statement “6 divides \(7^n - 1\text{.}\)” We will show \(P(n)\) is true for all \(n \in \N\text{.}\) First we establish the base case, \(P(0)\text{.}\) Since \(7^0 - 1 = 0\text{,}\) and \(0\) is a multiple of 6, \(P(0)\) is true. Now for the inductive case. Assume \(P(k)\) holds for an arbitrary \(k \in \N\text{.}\) That is, 6 divides \(7^k - 1\text{,}\) or in other words, \(7^k - 1 = 6j\) for some integer \(j\text{.}\) Now consider \(7^{k+1} - 1\text{:}\)</p>
-<div class="displaymath">
-\begin{align*}
-7^{k+1} - 1 ~ \amp = 7^{k+1} - 7 + 6 \amp \text{by cleverness:} -1 = -7 + 6\\
-\amp = 7(7^k - 1) + 6 \amp \text{factor out a 7 from the first two terms}\\
-\amp = 7(6j) + 6 \amp \text{by the inductive hypothesis}\\
-\amp = 6(7j + 1) \amp \text{factor out a 6}
-\end{align*}
-</div>
-<p id="p-593">Therefore 6 divides \(7^{k+1} - 1\text{,}\) or in other words, \(P(k+1)\) is true. Therefore by the principle of mathematical induction, \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-56" id="solution-56"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-56"><div class="solution solution-like"><ol id="p-617" class="lower-alpha">
+<li id="li-539">Since \(37 - 3 = 34\) is not divisible by 7, we conclude \(37 \not\equiv 3\pmod 7\)</li>
+<li id="li-540">Since \(66 - 3 = 63\) is divisible by 7, we conclude \(66 \equiv  3\pmod 7\)</li>
+<li id="li-541">Since \(-17 - 3 = -20\) is not divisible by 7, we conclude \(-17 \not \equiv  3\pmod 7\)</li>
+<li id="li-542">Since \(-67 - 3 = -70\) is  divisible by 7, we conclude \(-67  \equiv  3\pmod 7\)</li>
+<li id="li-543">Since \(80 - 3 = 77\) is  divisible by 7, we conclude \(80 \equiv 3\pmod 7\)</li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-95"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-618">List all integers between -100 and 100 that are congruent to -1 modulo 25</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-57" id="solution-57"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-57"><div class="solution solution-like"><p id="p-619">These numbers are \(-1, -26, -51, -76, 24, 49, 74, 99,\) all numbers that are of the form \(-1 + 25 \cdot k\) for integers \(k\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-96"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-620">Suppose that \(a \and b\) are integers, \(a \equiv 4 \pmod{13}\) and \(b \equiv 9\pmod{13}\text{.}\) Find the integer \(c\) with \(0 \le c \le 12\) such that:</p>
+<ol class="lower-alpha">
+<li id="li-544">\(\displaystyle c \equiv 9a \pmod{13} \)</li>
+<li id="li-545">\(\displaystyle c \equiv 11b \pmod{13} \)</li>
+<li id="li-546">\(\displaystyle c \equiv a+b \pmod{13} \)</li>
+<li id="li-547">\(\displaystyle c \equiv a^2 + b^2 \pmod{13} \)</li>
+<li id="li-548">\(\displaystyle c \equiv a^2 - b^2 \pmod{13} \)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-58" id="solution-58"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-58"><div class="solution solution-like"><ol id="p-621" class="lower-alpha">
+<li id="li-549">10</li>
+<li id="li-550">8</li>
+<li id="li-551">0</li>
+<li id="li-552">6</li>
+<li id="li-553">0</li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-97"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-622">Find counterexamples to the following statements:</p>
+<ol class="lower-alpha">
+<li id="li-554">If \(ac \equiv bc \pmod m\) where \(a, b, c, m \in \Z\) with \(m \ge 2\text{,}\) then \(a \equiv b \pmod m\text{.}\)</li>
+<li id="li-555">If \(a \equiv b \pmod m\) and \(c \equiv d \pmod m\) where \(a, b, c, m \in \Z\) with \(m \ge 2\text{,}\) then \(a^c \equiv b^d \pmod m\text{.}\)</li>
+</ol>
+<p id="p-623">The first part of this exercise should convince you: you cannot “divide” both sides by \(c\) in modular arithmetic!</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-59" id="solution-59"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-59"><div class="solution solution-like"><ol id="p-624" class="lower-alpha">
+<li id="li-556">One possible counterexample is \(a = 2, b=4, c=4, and m=6\text{.}\) Certainly \(2\cdot 3 \equiv 4 \cdot 3 \pmod 6\) but \(2 \not \equiv 4 \pmod 6\text{.}\)</li>
+<li id="li-557">One possible counterexample here is \(a = 2, b=7, c=7, b=2, m=5\text{.}\) Then we can see \(2\equiv 7\pmod 5\) satifies both parts of the hypothesis, but \(2^7 \equiv 3 \pmod 5\) while \(7^2 \equiv 4 \pmod 5\text{.}\)</li>
+</ol></div></div>
 </div></article></section><section class="subsection" id="subsection-31"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1.4</span> <span class="title">Forum Posts about this section</span>
 </h3>
@@ -366,7 +419,5 @@ a + c \equiv b + d \pmod m  \hspace{1em} \and \hspace{1em} ac \equiv bd \pmod m
         })();
       </script></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.11/login.js"></script>
 </body>
 </html>

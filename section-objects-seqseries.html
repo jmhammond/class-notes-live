@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-12T17:53:54-05:00    *-->
+<!--*    on 2020-12-06T18:12:57-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Sequences and Series</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -58,20 +58,17 @@ MathJax.Hub.Config({
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(gcse, s);
 })();
-</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.11;
-</script>
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\def\ds{\displaystyle}
@@ -158,7 +155,7 @@ var js_version = 0.11;
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
@@ -213,155 +210,261 @@ var js_version = 0.11;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="section-objects-seqseries"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.1</span> <span class="title">Sequences and Series</span>
 </h2>
-<a href="section-objects-seqseries.html" class="permalink">¶</a><article class="definition-like" id="definition-52"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">4.1.1</span>.</h6>
-<p id="p-678">A <dfn class="terminology">sequence</dfn> is a function from a subset of the integers (usually \(\{0, 1,2,3 \dots\}\)) to a set \(S\text{.}\) We use the notation \(a_n\) to denote the image of the integer \(n\text{,}\) and we call \(a_n\) the <dfn class="terminology">\(n\)-th term</dfn> of the sequence.</p>
-<p id="p-679">We will often write the shorthand \(\{a_n\}\) to denote the complete sequence where \(n\in \mathbb{N}\text{.}\)</p></article><article class="example-like" id="example-85"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.1.2</span>.</h6>
-<p id="p-680">Find \(a_1, a_2, a_3, a_4\) for the sequences:</p>
+<article class="definition definition-like" id="definition-53"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span>
+</h6>
+<p id="p-736">A <dfn class="terminology">sequence</dfn> is a function from a subset of the integers (usually \(\{0, 1,2,3 \dots\}\)) to a set \(S\text{.}\) We use the notation \(a_n\) to denote the image of the integer \(n\text{,}\) and we call \(a_n\) the <dfn class="terminology">\(n\)-th term</dfn> of the sequence.</p>
+<p id="p-737">We will often write the shorthand \(\{a_n\}\) to denote the complete sequence where \(n\in \mathbb{N}\text{.}\)</p></article><article class="example example-like" id="example-86"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.2</span><span class="period">.</span>
+</h6>
+<p id="p-738">Find \(a_1, a_2, a_3, a_4\) for the sequences:</p>
 <ol class="decimal">
-<li id="li-618">\(a_n = \frac{1}{n^2}\)</li>
-<li id="li-619">\(a_n = 3\cdot 2^n\)</li>
-<li id="li-620">\(a_n = -5 + 3n\)</li>
-</ol></article><article class="definition-like" id="definition-53"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">4.1.3</span>.</h6>
-<p id="p-681">A <dfn class="terminology">geometric progression</dfn> is a sequence of the form:</p>
+<li id="li-664">\(\displaystyle a_n = \frac{1}{n^2}\)</li>
+<li id="li-665">\(\displaystyle a_n = 3\cdot 2^n\)</li>
+<li id="li-666">\(\displaystyle a_n = -5 + 3n\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-80" id="answer-80"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-80"><div class="answer solution-like"><iframe id="video-79" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/ZNgKw-fIzLk?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="definition definition-like" id="definition-54"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.3</span><span class="period">.</span>
+</h6>
+<p id="p-739">A <dfn class="terminology">geometric progression</dfn> is a sequence of the form:</p>
 <div class="displaymath">
 \begin{equation*}
 a, ar, ar^2, ar^3, \dots, ar^n, \dots 
 \end{equation*}
 </div>
-<p>with the <dfn class="terminology">initial term</dfn> \(a\) and the <dfn class="terminology">common ratio</dfn> \(r\text{.}\)</p>
-<p id="p-682">A <dfn class="terminology">arithmetic progression</dfn> is a sequence of the form:</p>
+<p data-braille="continuation">with the <dfn class="terminology">initial term</dfn> \(a\) and the <dfn class="terminology">common ratio</dfn> \(r\text{.}\)</p>
+<p id="p-740">A <dfn class="terminology">arithmetic progression</dfn> is a sequence of the form:</p>
 <div class="displaymath">
 \begin{equation*}
 a, a+d, a+2d, a+3d, \dots, a+nd, \dots 
 \end{equation*}
 </div>
-<p>with the <dfn class="terminology">initial term</dfn> \(a\) and the <dfn class="terminology">common difference</dfn> \(d\text{.}\)</p></article><article class="definition-like" id="definition-54"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">4.1.4</span>.</h6>
-<p id="p-683">A <dfn class="terminology">recurrence relation</dfn> for a sequence \(\{a_n\}\) is an equation that expressions \(a_n\) in terms of previous terms.</p>
-<p id="p-684">A sequence is called a <dfn class="terminology">solution</dfn> of a recurrence relation if its terms satisfy the recurrence relation.</p></article><article class="example-like" id="fib-def"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.1.5</span>.</h6>
-<p id="p-685">The <dfn class="terminology">Fibonacci sequence</dfn> \(F_0, F_1, F_2, \dots\) is defined by the recurrence:</p>
+<p data-braille="continuation">with the <dfn class="terminology">initial term</dfn> \(a\) and the <dfn class="terminology">common difference</dfn> \(d\text{.}\)</p></article><article class="definition definition-like" id="definition-55"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.4</span><span class="period">.</span>
+</h6>
+<p id="p-741">A <dfn class="terminology">recurrence relation</dfn> for a sequence \(\{a_n\}\) is an equation that expressions \(a_n\) in terms of previous terms.</p>
+<p id="p-742">A sequence is called a <dfn class="terminology">solution</dfn> of a recurrence relation if its terms satisfy the recurrence relation.</p></article><article class="example example-like" id="fib-def"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.5</span><span class="period">.</span>
+</h6>
+<p id="p-743">The <dfn class="terminology">Fibonacci sequence</dfn> \(F_0, F_1, F_2, \dots\) is defined by the recurrence:</p>
 <div class="displaymath">
 \begin{equation*}
 F_n = F_{n-1} + F_{n-2} \text{ For } n \ge 2, \text{ where } F_0 = 0, F_1 = 1 
 \end{equation*}
-</div></article><article class="example-like" id="example-87"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.1.6</span>.</h6>
-<p id="p-686">Consider the recurrence \(a_n = -3 a_{n-1} + 4 a_{n-2}\text{.}\) Are the following sequences solutions to the recurrence?</p>
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-81" id="answer-81"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-81"><div class="answer solution-like"><iframe id="video-80" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/zo_GYIP61i8?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-88"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.6</span><span class="period">.</span>
+</h6>
+<p id="p-744">Consider the recurrence \(a_n = -3 a_{n-1} + 4 a_{n-2}\text{.}\) Are the following sequences solutions to the recurrence?</p>
 <ol class="decimal cols2">
-<li id="li-621">\(a_n = 0\)</li>
-<li id="li-622">\(a_n = 1\)</li>
-<li id="li-623">\(a_n = 2^n\)</li>
-<li id="li-624">\(a_n = (-4)^n\)</li>
-</ol></article><article class="remark-like" id="note-21"><h6 class="heading">
-<span class="type">Note</span> <span class="codenumber">4.1.7</span>.</h6>
-<p id="p-687">A recurrence has a unique solution if it has initial data.</p></article><article class="example-like" id="example-88"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.1.8</span>.</h6>
-<p id="p-688">Find the unique solution to each recurrence:</p>
-<ol class="decimal">
-<li id="li-625">\(a_n = 2a_{n-1} - 3\) with \(a_0 = -1\)</li>
-<li id="li-626">\(a_n = 2n a_{n-1}\) with \(a_0 = 3\)</li>
-</ol></article><article class="remark-like" id="note-22"><h6 class="heading">
-<span class="type">Note</span> <span class="codenumber">4.1.9</span>.</h6>
-<p id="p-689">When finding the general form of a sequence, creativity is required.</p>
-<p id="p-690">Look for patterns within the sequence</p>
-<ul class="disc">
-<li id="li-627">Look for a common difference (arithmetic)</li>
-<li id="li-628">Look for a common ratio (geometric)</li>
-<li id="li-629">Do later terms depend on previous terms in a recursive way?</li>
-<li id="li-630">Are there cycles among the terms?</li>
-<li id="li-631">...</li>
-</ul></article><article class="example-like" id="example-89"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.1.10</span>.</h6>
-<p id="p-691">Find a simple formula or rule that generates the terms of the sequence, and give the next three terms of the sequence.</p>
-<ol class="decimal">
-<li id="li-632">\(7, 11, 15, 19, 23, 27, 31, \dots\)</li>
-<li id="li-633">\(1, 10, 11, 100, 101, 110, 111, 1000, \dots\)</li>
-<li id="li-634">\(1, 3, 15, 105, 945, 10395, 135135, \dots\)</li>
-<li id="li-635">\(2,2,2,3,3,3,3,3, 5,5,5,5,5,5,5,\dots\)</li>
-<li id="li-636">\(2,4,16,256,65536, 4294957296, \dots\)</li>
+<li id="li-667">\(\displaystyle a_n = 0\)</li>
+<li id="li-668">\(\displaystyle a_n = 1\)</li>
+<li id="li-669">\(\displaystyle a_n = 2^n\)</li>
+<li id="li-670">\(\displaystyle a_n = (-4)^n\)</li>
 </ol>
-<p id="p-692">For this last example, the numbers are huge. If you're reading on the web-based version of this book, this is an interactive calulator. You can type what you want to compute and press 'Evaluate (Sage).' For more information, refer to the <a href="sec_sage_howto.html" class="internal" title="Section 6.1">Sage appendix 6.1</a></p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-82" id="answer-82"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-82"><div class="answer solution-like"><iframe id="video-81" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/4HTdTrMp9sY?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="note remark-like" id="note-21"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">4.1.7</span><span class="period">.</span>
+</h6>
+<p id="p-745">A recurrence has a unique solution if it has initial data.</p></article><article class="example example-like" id="example-89"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.8</span><span class="period">.</span>
+</h6>
+<p id="p-746">Find the unique solution to each recurrence:</p>
+<ol class="decimal">
+<li id="li-671">\(a_n = 2a_{n-1} - 3\) with \(a_0 = -1\)</li>
+<li id="li-672">\(a_n = 2n a_{n-1}\) with \(a_0 = 3\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-83" id="answer-83"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-83"><div class="answer solution-like">
+<iframe id="video-82" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/e3bMOe2fbKg?&amp;modestbranding=1&amp;rel=0"></iframe><iframe id="video-83" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/gBSNZsWxRZ8?&amp;modestbranding=1&amp;rel=0"></iframe>
+</div></div>
+</div></article><article class="note remark-like" id="note-22"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">4.1.9</span><span class="period">.</span>
+</h6>
+<p id="p-747">When finding the general form of a sequence, creativity is required.</p>
+<p id="p-748">Look for patterns within the sequence</p>
+<ul class="disc">
+<li id="li-673">Look for a common difference (arithmetic)</li>
+<li id="li-674">Look for a common ratio (geometric)</li>
+<li id="li-675">Do later terms depend on previous terms in a recursive way?</li>
+<li id="li-676">Are there cycles among the terms?</li>
+<li id="li-677">...</li>
+</ul></article><article class="example example-like" id="example-90"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.10</span><span class="period">.</span>
+</h6>
+<p id="p-749">Find a simple formula or rule that generates the terms of the sequence, and give the next three terms of the sequence.</p>
+<ol class="decimal">
+<li id="li-678">\(\displaystyle 7, 11, 15, 19, 23, 27, 31, \dots\)</li>
+<li id="li-679">\(\displaystyle 1, 10, 11, 100, 101, 110, 111, 1000, \dots\)</li>
+<li id="li-680">\(\displaystyle 1, 3, 15, 105, 945, 10395, 135135, \dots\)</li>
+<li id="li-681">\(\displaystyle 2,2,2,3,3,3,3,3, 5,5,5,5,5,5,5,\dots\)</li>
+<li id="li-682">\(\displaystyle 2,4,16,256,65536, 4294957296, \dots\)</li>
+</ol>
+<p id="p-750">For this last example, the numbers are huge. If you're reading on the web-based version of this book, this is an interactive calulator. You can type what you want to compute and press 'Evaluate (Sage).' For more information, refer to the <a href="sec_sage_howto.html" class="internal" title="Section 6.1">Sage appendix 6.1</a></p>
 <div class="sagecell-sage" id="sage-7"><script type="text/x-sage">16^2
-</script></div></article><article class="definition-like" id="definition-55"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">4.1.11</span>.</h6>
-<p id="p-693">Let \(\{a_n\}\) be a sequence. We define a <dfn class="terminology">series</dfn> of the sequence to be the summation of some subset of the terms of the sequence. We denote the sum by a capital sigma with sub- and superscript information in the following conventional way:</p>
+</script></div></article><article class="definition definition-like" id="definition-56"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.11</span><span class="period">.</span>
+</h6>
+<p id="p-751">Let \(\{a_n\}\) be a sequence. We define a <dfn class="terminology">series</dfn> of the sequence to be the summation of some subset of the terms of the sequence. We denote the sum by a capital sigma with sub- and superscript information in the following conventional way:</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{\text{index variable, lower bound}}^{\text{upper bound}} \text{(sequence rule in terms of index variable)}
 \end{equation*}
 </div>
-<p id="p-694">For example, the summation of terms from 0 to \(n\) is expressed:</p>
+<p id="p-752">For example, the summation of terms from 0 to \(n\) is expressed:</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{i=0}^n a_i = a_0 + a_1 + a_2 + \dots + a_{n-1} + a_n
 \end{equation*}
-</div></article><article class="example-like" id="example-90"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.1.12</span>.</h6>
-<p id="p-695">Find the value of the sum:</p>
+</div></article><article class="example example-like" id="example-91"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.12</span><span class="period">.</span>
+</h6>
+<p id="p-753">Find the value of the sum:</p>
 <ol class="decimal cols2">
-<li id="li-637">\(\displaystyle \sum_{j=0}^8 (1 + (-1)^j)\)</li>
-<li id="li-638">\(\displaystyle \sum_{k \in \{1, 3, 5\}} (k^2 + 2)\)</li>
-<li id="li-639">\(\displaystyle \sum_{j=1}^2 \sum_{k=1}^5 (j-k) \)</li>
-<li id="li-640">\(\displaystyle \sum_{j=1}^2 \sum_{k=1}^5 (k-j) \)</li>
-</ol></article><article class="example-like" id="example-91"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.1.13</span>.</h6>
-<p id="p-696">Verify the following formula for the sum of a geometric sequence, if \(r \not= 1\text{,}\)</p>
+<li id="li-683">\(\displaystyle \displaystyle \sum_{j=0}^8 (1 + (-1)^j)\)</li>
+<li id="li-684">\(\displaystyle \displaystyle \sum_{k \in \{1, 3, 5\}} (k^2 + 2)\)</li>
+<li id="li-685">\(\displaystyle \displaystyle \sum_{j=1}^2 \sum_{k=1}^5 (j-k) \)</li>
+<li id="li-686">\(\displaystyle \displaystyle \sum_{j=1}^2 \sum_{k=1}^5 (k-j) \)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-84" id="answer-84"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-84"><div class="answer solution-like"><iframe id="video-84" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/dCVopWx51sc?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-92"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.13</span><span class="period">.</span>
+</h6>
+<p id="p-754">Verify the following formula for the sum of a geometric sequence, if \(r \not= 1\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
-\sum_{k=0}^n ar^n = \frac{a-ar^{n+1}}{1-r}\text{.}
+\sum_{k=0}^n ar^k = \frac{a-ar^{n+1}}{1-r}\text{.}
 \end{equation*}
-</div></article><article class="example-like" id="example-telescoping-sum"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.1.14</span>.</h6>
-<p id="p-697">Show that</p>
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-85" id="answer-85"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-85"><div class="answer solution-like"><iframe id="video-85" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/K8eg6Cd_QL8?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-telescoping-sum"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.14</span><span class="period">.</span>
+</h6>
+<p id="p-755">Show that</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{j=1}^n (a_j - a_{j-1}) = a_n - a_0
 \end{equation*}
-</div></article><article class="example-like" id="example-93"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.1.15</span>.</h6>
-<p id="p-698">Find a formula for the following sums, using the <a data-knowl="./knowl/example-telescoping-sum.html" title="Example 4.1.14">telescoping example 4.1.14</a>:</p>
-<ol class="decimal"><li id="li-641">Using the sequence \(a_n=n^2\text{,}\) find a formula for the sum \(\displaystyle \sum_{k=1}^n k\) by the finding the sum two ways.</li></ol></article><section class="exercises" id="exercises-17"><h3 class="heading hide-type">
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-86" id="answer-86"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-86"><div class="answer solution-like"><iframe id="video-86" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/xY9ZHorCv4I?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-sum-of-integers"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.15</span><span class="period">.</span>
+</h6>
+<p id="p-756">Find a formula for the following sums, using the <a class="xref" data-knowl="./knowl/example-telescoping-sum.html" title="Example 4.1.14">telescoping example 4.1.14</a>:</p>
+<ol class="decimal"><li id="li-687">Using the sequence \(a_n=n^2\text{,}\) find a formula for the sum \(\displaystyle \sum_{k=1}^n k\) by the finding the sum two ways.</li></ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-87" id="answer-87"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-87"><div class="answer solution-like"><iframe id="video-87" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/1SD1LJv22Cg?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><section class="exercises" id="exercises-17"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">4.1.1</span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise-like" id="exercise-114"><h6 class="heading"><span class="codenumber">1.</span></h6>
-<p id="p-699">Find the first five terms of the sequence \(\{a_n\}\text{,}\) beginning with \(n=0\text{:}\)</p>
+<article class="exercise exercise-like" id="exercise-113"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-757">Find the first five terms of the sequence \(\{a_n\}\text{,}\) beginning with \(n=0\text{:}\)</p>
 <ol class="lower-alpha cols2">
-<li id="li-642">\(a_n = 2^n + 3\)</li>
-<li id="li-643">\(a_n = n^{n+1}\)</li>
-<li id="li-644">\(a_n = \lfloor n/2\rfloor + \lceil n/2 \rceil\)</li>
-<li id="li-645">\(a_n = 6a_{n-1},\hspace{1em} a_0 = 2\)</li>
-<li id="li-646">\(a_n = a_{n-1} + 3 a_{n-2},\hspace{1em} a_0 = 1, a_1 = 2\)</li>
-</ol></article><article class="exercise-like" id="exercise-115"><h6 class="heading"><span class="codenumber">2.</span></h6>
-<p id="p-700">Is the sequence \(\{a_n\}\) a solution of the recurrence relation \({a_n = 8a_{n-1}-16a_{n-2}}\) if</p>
-<ol class="lower-alpha cols2">
-<li id="li-647">\(a_n = 0\)</li>
-<li id="li-648">\(a_n = 2n\)</li>
-<li id="li-649">\(a_n = 2^n\)</li>
-<li id="li-650">\(a_n = 4^n\)</li>
-</ol></article><article class="exercise-like" id="exercise-116"><h6 class="heading"><span class="codenumber">3.</span></h6>
-<p id="p-701">Find a solution to the recurrence relation</p>
-<ol class="lower-alpha">
-<li id="li-651">\(a_n = 3a_{n-1},\hspace{1em} a_0 = 2\)</li>
-<li id="li-652">\(a_n = a_{n-1} + n,\hspace{1em} a_0 = 1\)</li>
-<li id="li-653">\(a_n = na_{n-1},\hspace{1em} a_0 = 1\)</li>
-</ol></article><article class="exercise-like" id="exercise-117"><h6 class="heading"><span class="codenumber">4.</span></h6>
-<p id="p-702">Find the value of each of the following sums:</p>
-<ol class="lower-alpha cols2">
-<li id="li-654">\(\displaystyle \sum_{k=0}^8 3\cdot 2^k\)</li>
-<li id="li-655">\(\displaystyle \sum_{k=1}^8 2^k \)</li>
-<li id="li-656">\(\displaystyle \sum_{k=1}^8 (1 + (-1)^k) \)</li>
-<li id="li-657">\(\displaystyle \sum_{k=1}^8 (2^{k+1} - 2^k) \)</li>
-<li id="li-658">\(\displaystyle \sum_{k=50}^{100} k\)</li>
-</ol></article><article class="exercise-like" id="exercise-118"><h6 class="heading"><span class="codenumber">5.</span></h6>
-<p id="p-703">Using <a data-knowl="./knowl/example-telescoping-sum.html" title="Example 4.1.14">the telescoping example 4.1.14</a> with the sequence \(a_n=(n+1)^3\text{,}\) derive a formula for \(\displaystyle \sum_{k=1}^n k^2\)</p></article><article class="exercise-like" id="exercise-119"><h6 class="heading"><span class="codenumber">6.</span></h6>
-<p id="p-704">Prove that there is a strictly increasing sequence \(a_1, a_2, a_3, \ldots\) of numbers (not necessarily integers) such that \(a_n \lt  100\) for all \(n \in \N\text{.}\) (By <dfn class="terminology">strictly increasing</dfn> we mean \(a_n \lt  a_{n+1}\) for all \(n\text{.}\) So each term must be larger than the last.)</p>
+<li id="li-688">\(\displaystyle a_n = 2^n + 3\)</li>
+<li id="li-689">\(\displaystyle a_n = n^{n+1}\)</li>
+<li id="li-690">\(\displaystyle a_n = \lfloor n/2\rfloor + \lceil n/2 \rceil\)</li>
+<li id="li-691">\(\displaystyle a_n = 6a_{n-1},\hspace{1em} a_0 = 2\)</li>
+<li id="li-692">\(\displaystyle a_n = a_{n-1} + 3 a_{n-2},\hspace{1em} {a_0 = 1, a_1 = 2}\)</li>
+</ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-52" id="solution-52"><span class="type">Solution</span></a><div id="hk-solution-52" class="hidden-content tex2jax_ignore"><div class="solution"><article class="proof" id="proof-15"><h6 class="heading"><span class="type">Proof.</span></h6>
-<p id="p-705">Let \(P(n)\) be the statement “there is a strictly increasing sequence \(a_1, a_2, \ldots, a_n\) with \(a_n \lt  100\text{.}\)” We will prove \(P(n)\) is true for all \(n \ge 1\text{.}\) First we establish the base case: \(P(1)\) says there is a single number \(a_1\) with \(a_1 \lt  100\text{.}\) This is true – take \(a_1 = 0\text{.}\) Now for the inductive step, assume \(P(k)\) is true. That is there exists a strictly increasing sequence \(a_1, a_2, a_3, \ldots, a_k\) with \(a_k \lt  100\text{.}\) Now consider this sequence, plus one more term, \(a_{k+1}\) which is greater than \(a_k\) but less than \(100\text{.}\) Such a number exists, for example, the average between \(a_k\) and 100. So then \(P(k+1)\) is true, so we have shown that \(P(k) \imp P(k+1)\text{.}\) Thus by the principle of mathematical induction, \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-79" id="solution-79"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-79"><div class="solution solution-like"><ol id="p-758" class="lower-alpha">
+<li id="li-693">\(\displaystyle \{4, 5, 7, 11, 19\}\)</li>
+<li id="li-694">\(\displaystyle \{ 0, 1, 8, 81, 1024 \}\)</li>
+<li id="li-695">\(\displaystyle \{ 0, 1, 2, 3, 4\}\)</li>
+<li id="li-696">\(\displaystyle \{2, 12, 72, 432, 2592 \}\)</li>
+<li id="li-697">\(\displaystyle \{1, 2, 5, 11, 26\}\)</li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-114"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-759">Is the sequence \(\{a_n\}\) a solution of the recurrence relation \({a_n = 8a_{n-1}-16a_{n-2}}\) if</p>
+<ol class="lower-alpha cols2">
+<li id="li-698">\(\displaystyle a_n = 0\)</li>
+<li id="li-699">\(\displaystyle a_n = 2n\)</li>
+<li id="li-700">\(\displaystyle a_n = 2^n\)</li>
+<li id="li-701">\(\displaystyle a_n = 4^n\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-80" id="solution-80"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-80"><div class="solution solution-like"><ol id="p-760" class="lower-alpha">
+<li id="li-702">Yes</li>
+<li id="li-703">No</li>
+<li id="li-704">No</li>
+<li id="li-705">Yes</li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-115"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-761">Find a solution to the recurrence relation</p>
+<ol class="lower-alpha">
+<li id="li-706">\(\displaystyle a_n = 3a_{n-1},\hspace{1em} a_0 = 2\)</li>
+<li id="li-707">\(\displaystyle a_n = a_{n-1} + n,\hspace{1em} a_0 = 1\)</li>
+<li id="li-708">\(\displaystyle a_n = na_{n-1},\hspace{1em} a_0 = 1\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-81" id="solution-81"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-81"><div class="solution solution-like"><ol id="p-762" class="lower-alpha">
+<li id="li-709">\(\displaystyle a_n = 2\cdot 3^n\)</li>
+<li id="li-710">\(\displaystyle a_n = \dfrac{n^2 + n + 2}{2}\)</li>
+<li id="li-711">\(\displaystyle a_n = n!\)</li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-116"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-763">Find the value of each of the following sums:</p>
+<ol class="lower-alpha cols2">
+<li id="li-712">\(\displaystyle \displaystyle \sum_{k=0}^8 3\cdot 2^k\)</li>
+<li id="li-713">\(\displaystyle \displaystyle \sum_{k=1}^8 2^k \)</li>
+<li id="li-714">\(\displaystyle \displaystyle \sum_{k=1}^8 (1 + (-1)^k) \)</li>
+<li id="li-715">\(\displaystyle \displaystyle \sum_{k=1}^8 (2^{k+1} - 2^k) \)</li>
+<li id="li-716">\(\displaystyle \displaystyle \sum_{k=50}^{100} k\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-82" id="solution-82"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-82"><div class="solution solution-like"><ol id="p-764" class="lower-alpha">
+<li id="li-717">1533</li>
+<li id="li-718">510</li>
+<li id="li-719">8</li>
+<li id="li-720">510</li>
+<li id="li-721">3825</li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-117"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-765">Using <a class="xref" data-knowl="./knowl/example-telescoping-sum.html" title="Example 4.1.14">the telescoping example 4.1.14</a> with the sequence \(a_n=(n+1)^3\text{,}\) derive a formula for \(\displaystyle \sum_{k=1}^n k^2\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-83" id="solution-83"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-83"><div class="solution solution-like">
+<p id="p-766">This one's a lot of fun, so let's do it in a lot of detail. This is approach Blaise Pascal used to discover the formula in his 1654 <span class="booktitle">Traité du triangle arithmétique</span>.</p>
+<p id="p-767">Let \(a_n = (n+1)^3\text{.}\) Then from <a class="xref" data-knowl="./knowl/example-telescoping-sum.html" title="Example 4.1.14">example 4.1.14</a>, we have that:</p>
+<div class="displaymath">
+\begin{align*}
+\sum_{j=1}^n (j+1)^3 - j^3 &amp; = a_n - a_0\\
+\sum_{j=1}^n (j+1)^3 - j^3 &amp; = (n+1)^3 - (0+1)^3\\
+\sum_{j=1}^n j^3 + 3j^2 + 3j + 1 - j^3 &amp; = n^3 + 3n^2 + 3n + 1 - 1\\
+\sum_{j=1}^n 3j^2 + 3j + 1 &amp; = n^3 + 3n^2 + 3n \\
+\sum_{j=1}^n 3j^2 + \sum_{j=1}^n 3j + \sum_{j=1}^n 1 &amp; = n^3 + 3n^2 + 3n \\
+3 \sum_{j=1}^n j^2 + 3 \sum_{j=1}^n j + \sum_{j=1}^n 1 &amp; = n^3 + 3n^2 + 3n \\
+3 \sum_{j=1}^n j^2 &amp; = n^3 + 3n^2 + 3n - 3 \sum_{j=1}^n j - \sum_{j=1}^n 1 
+\end{align*}
+</div>
+<p id="p-768">We have from <a class="xref" data-knowl="./knowl/example-sum-of-integers.html" title="Example 4.1.15">example 4.1.15</a> that \(\displaystyle \sum_{j=1}^n j = \dfrac{n(n+1)}{2}\) and if we add \(1\) a total of \(n\) times, we have \(\displaystyle \sum_{j=1}^n 1 = n\text{.}\) Plugging these in, we find:</p>
+<div class="displaymath" id="p-769">
+\begin{align*}
+3 \sum_{j=1}^n j^2  &amp; = n^3 + 3n^2 + 3n - 3 \sum_{j=1}^n j - \sum_{j=1}^n 1 \\
+3 \sum_{j=1}^n j^2  &amp; = n^3 + 3n^2 + 3n - 3\left( \dfrac{n(n+1)}{2}\right) - n\\
+3 \sum_{j=1}^n j^2  &amp; = n^3 + 3n^2 + 2n - 3\left(\dfrac{n^2 + n}{2}\right) \\
+3 \sum_{j=1}^n j^2  &amp; = \frac{2n^3}{2} + \frac{6n^2}{2} + \frac{4n}{2} - \dfrac{3n^2}{2} - \frac{3n}{2}\\
+3 \sum_{j=1}^n j^2  &amp; = \frac{2n^3 + 3n^2 + n}{2}  \\
+3 \sum_{j=1}^n j^2  &amp; = \frac{n(2n+1)(n+1)}{2}  \\
+\sum_{j=1}^n j^2  &amp; = \frac{n(2n+1)(n+1)}{6}  
+\end{align*}
+</div>
+<p data-braille="continuation">which is exactly the formula you learned in calculus!</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-118"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-770">Prove that there is a strictly increasing sequence \(a_1, a_2, a_3, \ldots\) of numbers (not necessarily integers) such that \(a_n \lt  100\) for all \(n \in \N\text{.}\) (By <dfn class="terminology">strictly increasing</dfn> we mean \(a_n \lt  a_{n+1}\) for all \(n\text{.}\) So each term must be larger than the last.)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-84" id="solution-84"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-84"><div class="solution solution-like">
+<p id="p-771">The original answer (available in the printed version) requires math induction, which is section 4.3. I missed this when I rearranged the structure of the book.... sorry!</p>
+<p id="p-772">In the mean time, here's an interesting alterative. I'll claim that \(a_n = \dfrac{n}{n+1}\) works. Show that this is true.</p>
+</div></div>
 </div></article></section><section class="subsection" id="subsection-40"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.1.2</span> <span class="title">Forum Posts about this section</span>
 </h3>
@@ -377,7 +480,5 @@ F_n = F_{n-1} + F_{n-2} \text{ For } n \ge 2, \text{ where } F_0 = 0, F_1 = 1
         })();
       </script></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.11/login.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-12T17:53:54-05:00    *-->
+<!--*    on 2020-12-06T18:12:58-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Mathematical Induction</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -50,20 +50,17 @@ MathJax.Hub.Config({
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(gcse, s);
 })();
-</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.11;
-</script>
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\def\ds{\displaystyle}
@@ -150,7 +147,7 @@ var js_version = 0.11;
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
@@ -205,63 +202,94 @@ var js_version = 0.11;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_logic_induction"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.3</span> <span class="title">Mathematical Induction</span>
 </h2>
-<a href="sec_logic_induction.html" class="permalink">¶</a><article class="definition-like" id="definition-58"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">4.3.1</span>.</h6>
-<p id="p-738">To prove that a statement \(P(n)\) is true for all integers \(n\ge 0\text{,}\) we use the <dfn class="terminology">principal of math induction</dfn>. The process has two core steps:</p>
+<article class="definition definition-like" id="definition-59"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.3.1</span><span class="period">.</span>
+</h6>
+<p id="p-810">To prove that a statement \(P(n)\) is true for all integers \(n\ge 0\text{,}\) we use the <dfn class="terminology">principal of math induction</dfn>. The process has two core steps:</p>
 <ol class="decimal">
-<li id="li-666">Basis step: Prove that \(P(0)\) is true.</li>
-<li id="li-667">Inductive step: Assume that \(P(k)\) is true for some value of \(k \ge 0\) and show that \(P(k+1)\) is true.</li>
-</ol></article><article class="remark-like" id="note-26"><h6 class="heading">
-<span class="type">Note</span> <span class="codenumber">4.3.2</span>.</h6>
-<p id="p-739">You can think of math induction like an infinite ladder. First, you put your foot on the bottom rung. If you're able to go from the \(k\)-th rung to the \(k+1\)-st rung, you'll be able to climb forever.</p></article><article class="example-like" id="example-102"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.3.3</span>.</h6>
-<p id="p-740">The model of induction will always follow the following structure:</p>
-<article class="proof" id="proof-16"><h6 class="heading"><span class="type">Proof.</span></h6>
-<p id="p-741">Proof by math induction.</p>
+<li id="li-729">Basis step: Prove that \(P(0)\) is true.</li>
+<li id="li-730">Inductive step: Assume that \(P(k)\) is true for some value of \(k \ge 0\) and show that \(P(k+1)\) is true.</li>
+</ol>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-95" id="answer-95"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-95"><div class="answer solution-like"><iframe id="video-95" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/D-Ol2N5Tno0?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></article><article class="note remark-like" id="note-26"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">4.3.2</span><span class="period">.</span>
+</h6>
+<p id="p-811">You can think of math induction like an infinite ladder. First, you put your foot on the bottom rung. If you're able to go from the \(k\)-th rung to the \(k+1\)-st rung, you'll be able to climb forever.</p></article><article class="example example-like" id="example-103"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3.3</span><span class="period">.</span>
+</h6>
+<p id="p-812">The model of induction will always follow the following structure:</p>
+<article class="proof" id="proof-21"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-813">Proof by math induction.</p>
 <ol class="decimal">
-<li id="li-668">Basis step. [here you prove \(P(0)\) is true]</li>
-<li id="li-669">
-<p id="p-742">Inductive step. Assume \(P(k)\) is true for some \(k\ge 0\) [explicitly say what this statement is. This is called the <dfn class="terminology">inductive hypothesis</dfn>]. We will show \(P(k+1)\) is true.</p>
-<p id="p-743">[here you actually prove \(P(k+1)\) is true. You should use the inductive hypothesis. If you didn't, you've made an error somewhere]</p>
+<li id="li-731">Basis step. [here you prove \(P(0)\) is true]</li>
+<li id="li-732">
+<p id="p-814">Inductive step. Assume \(P(k)\) is true for some \(k\ge 0\) [explicitly say what this statement is. This is called the <dfn class="terminology">inductive hypothesis</dfn>]. We will show \(P(k+1)\) is true.</p>
+<p id="p-815">[here you actually prove \(P(k+1)\) is true. You should use the inductive hypothesis. If you didn't, you've made an error somewhere]</p>
 </li>
-</ol></article></article><article class="example-like" id="example-103"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.3.4</span>.</h6>
-<p id="p-744">Prove that \(\ds 1 + 2 + 3 + \dots + n = \frac{n(n+1)}{2}\text{.}\)</p></article><article class="example-like" id="example-104"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.3.5</span>.</h6>
-<p id="p-745">Prove that \(a + ar + ar^2 + ar^3 + \dots + ar^n = \frac{ar^{k+1}-a}{r-1}\) if \(r \ne 1\text{.}\)</p></article><article class="example-like" id="example-105"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.3.6</span>.</h6>
-<ol id="p-746" class="decimal">
-<li id="li-670">Find a formula for \(\frac{1}{1\cdot 2} + \frac{1}{2\cdot 3} + \frac{1}{3\cdot 4} + \dots + \frac{1}{n(n+1)}\) for \(n\ge 1\) by examining small values of \(n\text{.}\)</li>
-<li id="li-671">Prove the conjecture you just made.</li>
-</ol></article><article class="example-like" id="example-106"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.3.7</span>.</h6>
-<p id="p-747">Prove that \(2^n \gt n^2\) for \(n &gt; 4\)</p></article><article class="example-like" id="example-107"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.3.8</span>.</h6>
-<p id="p-748">What is wrong with the following “proof” that all horses are the same color?</p>
-<p id="p-749">Proof by induction:</p>
+</ol></article></article><article class="example example-like" id="example-104"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3.4</span><span class="period">.</span>
+</h6>
+<p id="p-816">Prove that \(\ds 1 + 2 + 3 + \dots + n = \frac{n(n+1)}{2}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-96" id="answer-96"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-96"><div class="answer solution-like"><iframe id="video-96" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/_LI6XX-l3Es?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-105"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3.5</span><span class="period">.</span>
+</h6>
+<p id="p-817">Prove that \(a + ar + ar^2 + ar^3 + \dots + ar^n = \frac{ar^{n+1}-a}{r-1}\) if \(r \ne 1\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-97" id="answer-97"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-97"><div class="answer solution-like"><iframe id="video-97" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/n1IX0Dye7x0?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-106"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3.6</span><span class="period">.</span>
+</h6>
+<ol id="p-818" class="decimal">
+<li id="li-733">Find a formula for \(\frac{1}{1\cdot 2} + \frac{1}{2\cdot 3} + \frac{1}{3\cdot 4} + \dots + \frac{1}{n(n+1)}\) for \(n\ge 1\) by examining small values of \(n\text{.}\)</li>
+<li id="li-734">Prove the conjecture you just made.</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-98" id="answer-98"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-98"><div class="answer solution-like"><iframe id="video-98" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/bJ-56RhKkfc?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-107"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3.7</span><span class="period">.</span>
+</h6>
+<p id="p-819">Prove that \(2^n \gt n^2\) for \(n &gt; 4\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-99" id="answer-99"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-99"><div class="answer solution-like"><iframe id="video-99" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/DLiv7yoaEUE?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-108"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3.8</span><span class="period">.</span>
+</h6>
+<p id="p-820">What is wrong with the following “proof” that all horses are the same color?</p>
+<p id="p-821">Proof by induction:</p>
 <ul class="disc">
-<li id="li-672"><p id="p-750">Base step: the statement \(P(1)\) is the statement “one horse is the same color as itself”. This is clearly true.</p></li>
-<li id="li-673">
-<p id="p-751">Induction step: Assume that \(P(k)\) is true for some integer \(k\text{.}\) That is, any group of \(k\) horses are all the same color.</p>
-<p id="p-752">Consider a group of \(k+1\) horses. Let's line them up. If we look at first \(k\) horses, our induction hypothesis tells us they are the same color. Similarly, if we look at the last \(k\) horses, they are also the same color. This shows that all \(k+1\) horses are the same color.</p>
+<li id="li-735"><p id="p-822">Base step: the statement \(P(1)\) is the statement “one horse is the same color as itself”. This is clearly true.</p></li>
+<li id="li-736">
+<p id="p-823">Induction step: Assume that \(P(k)\) is true for some integer \(k\text{.}\) That is, any group of \(k\) horses are all the same color.</p>
+<p id="p-824">Consider a group of \(k+1\) horses. Let's line them up. If we look at first \(k\) horses, our induction hypothesis tells us they are the same color. Similarly, if we look at the last \(k\) horses, they are also the same color. This shows that all \(k+1\) horses are the same color.</p>
 </li>
 </ul>
-<p>Thus, by math induction, all horses are the same color.</p></article><article class="definition-like" id="definition-59"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">4.3.9</span>.</h6>
-<p id="p-753">The principal of <dfn class="terminology">strong math induction</dfn> is like the so-called weak induction, except instead of proving \(P(k) \to P(k+1)\text{,}\) we assume that \(P(m)\) is true for all values of \(m\) such that \(0 \le m \le k\text{,}\) and we show that the next statement, \(P(k+1)\text{,}\) is true.</p></article><article class="example-like" id="example-108"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.3.10</span>.</h6>
-<p id="p-754">Let \(P(n)\) be the statement that “postage of \(n\) cents can be formed using just 4 cent and 7 cent stamps”. Prove \(P(n)\) is true for \(n\ge 18\text{.}\)</p></article><article class="example-like" id="example-109"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.3.11</span>.</h6>
-<p id="p-755">Prove that every positive integer has a binary expansion, that is, it is either a power of two or it is a sum of distinct powers of two.</p></article><section class="exercises" id="exercises-19"><h3 class="heading hide-type">
+<p data-braille="continuation">Thus, by math induction, all horses are the same color.</p></article><article class="definition definition-like" id="definition-60"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.3.9</span><span class="period">.</span>
+</h6>
+<p id="p-825">The principal of <dfn class="terminology">strong math induction</dfn> is like the so-called weak induction, except instead of proving \(P(k) \to P(k+1)\text{,}\) we assume that \(P(m)\) is true for all values of \(m\) such that \(0 \le m \le k\text{,}\) and we show that the next statement, \(P(k+1)\text{,}\) is true.</p></article><article class="example example-like" id="example-109"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3.10</span><span class="period">.</span>
+</h6>
+<p id="p-826">Let \(P(n)\) be the statement that “postage of \(n\) cents can be formed using just 4 cent and 7 cent stamps”. Prove \(P(n)\) is true for \(n\ge 18\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-100" id="answer-100"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-100"><div class="answer solution-like"><iframe id="video-100" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/73v1BI2omjs?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-110"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3.11</span><span class="period">.</span>
+</h6>
+<p id="p-827">Prove that every positive integer has a binary expansion, that is, it is either a power of two or it is a sum of distinct powers of two.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-101" id="answer-101"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-101"><div class="answer solution-like"><iframe id="video-101" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/PvnCjyp9NHc?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><section class="exercises" id="exercises-19"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">4.3.1</span> <span class="title">Exercises</span>
 </h3>
-<article class="remark-like" id="note-27"><h6 class="heading">
-<span class="type">Note</span> <span class="codenumber">4.3.12</span>.</h6>
-<p id="p-756">Below, when we write \(n \in \N\text{,}\) we mean “n is an integer with \(n \ge 0\)”</p></article><article class="exercise-like" id="exercise-128"><h6 class="heading"><span class="codenumber">1.</span></h6>
-<p id="p-757">Use induction to prove for all \(n \in \N\) that \(\d 1 + 2 + 2^2 + 2^3 + \dots + 2^n = 2^{n+1} - 1\text{.}\)</p>
+<article class="note remark-like" id="note-27"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">4.3.12</span><span class="period">.</span>
+</h6>
+<p id="p-828">Recall, when we write \(n \in \N\text{,}\) we mean “n is an integer with \(n \ge 0\)”</p></article><article class="exercise exercise-like" id="exercise-127"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-829">Use induction to prove for all \(n \in \N\) that \(\d 1 + 2 + 2^2 + 2^3 + \dots + 2^n = 2^{n+1} - 1\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-57" id="solution-57"><span class="type">Solution</span></a><div id="hk-solution-57" class="hidden-content tex2jax_ignore"><div class="solution"><article class="proof" id="proof-17"><h6 class="heading"><span class="type">Proof.</span></h6>
-<p id="p-758">We must prove that \(1 + 2 + 2^2 + 2^3 + \cdots +2^n = 2^{n+1} - 1\) for all \(n \in \N\text{.}\) Thus let \(P(n)\) be the statement \(1 + 2 + 2^2 + \cdots + 2^n = 2^{n+1} - 1\text{.}\) We will prove that \(P(n)\) is true for all \(n \in \N\text{.}\) First we establish the base case, \(P(0)\text{,}\) which claims that \(1 = 2^{0+1} -1\text{.}\) Since \(2^1 - 1 = 2 - 1 = 1\text{,}\) we see that \(P(0)\) is true. Now for the inductive case. Assume that \(P(k)\) is true for an arbitrary \(k \in \N\text{.}\) That is, \(1 + 2 + 2^2 + \cdots + 2^k = 2^{k+1} - 1\text{.}\) We must show that \(P(k+1)\) is true (i.e., that \(1 + 2 + 2^2 + \cdots + 2^{k+1} = 2^{k+2} - 1\)). To do this, we start with the left-hand side of \(P(k+1)\) and work to the right-hand side:</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-94" id="solution-94"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-94"><div class="solution solution-like"><article class="proof" id="proof-22"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-830">We must prove that \(1 + 2 + 2^2 + 2^3 + \cdots +2^n = 2^{n+1} - 1\) for all \(n \in \N\text{.}\) Thus let \(P(n)\) be the statement \(1 + 2 + 2^2 + \cdots + 2^n = 2^{n+1} - 1\text{.}\) We will prove that \(P(n)\) is true for all \(n \in \N\text{.}\) First we establish the base case, \(P(0)\text{,}\) which claims that \(1 = 2^{0+1} -1\text{.}\) Since \(2^1 - 1 = 2 - 1 = 1\text{,}\) we see that \(P(0)\) is true. Now for the inductive case. Assume that \(P(k)\) is true for an arbitrary \(k \in \N\text{.}\) That is, \(1 + 2 + 2^2 + \cdots + 2^k = 2^{k+1} - 1\text{.}\) We must show that \(P(k+1)\) is true (i.e., that \(1 + 2 + 2^2 + \cdots + 2^{k+1} = 2^{k+2} - 1\)). To do this, we start with the left-hand side of \(P(k+1)\) and work to the right-hand side:</p>
 <div class="displaymath">
 \begin{align*}
 1 + 2 + 2^2 + \cdots + 2^k + 2^{k+1} = \amp ~ 2^{k+1} - 1 + 2^{k+1} \amp \text{by inductive hypothesis}\\
@@ -269,24 +297,24 @@ var js_version = 0.11;
 = \amp ~ 2^{k+2} - 1 \amp
 \end{align*}
 </div>
-<p id="p-759">Thus \(P(k+1)\) is true so by the principle of mathematical induction, \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article></div></div>
-</div></article><article class="exercise-like" id="exercise-129"><h6 class="heading"><span class="codenumber">2.</span></h6>
-<p id="p-760">Prove that \(1 + 3 + 5 + \cdots + (2n-1) = n^2\) for all \(n \ge 1\text{.}\)</p>
+<p id="p-831">Thus \(P(k+1)\) is true so by the principle of mathematical induction, \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-128"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-832">Prove that \(1 + 3 + 5 + \cdots + (2n-1) = n^2\) for all \(n \ge 1\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-58" id="solution-58"><span class="type">Solution</span></a><div id="hk-solution-58" class="hidden-content tex2jax_ignore"><div class="solution"><article class="proof" id="proof-18"><h6 class="heading"><span class="type">Proof.</span></h6>
-<p id="p-761">Let \(P(n)\) be the statement \(1+3 +5 + \cdots + (2n-1) = n^2\text{.}\) We will prove that \(P(n)\) is true for all \(n \ge 1\text{.}\) First the base case, \(P(1)\text{.}\) We have \(1 = 1^2\) which is true, so \(P(1)\) is established. Now the inductive case. Assume that \(P(k)\) is true for some fixed arbitrary \(k \ge 1\text{.}\) That is, \(1 + 3 + 5 + \cdots + (2k-1) = k^2\text{.}\) We will now prove that \(P(k+1)\) is also true (i.e., that \(1 + 3 + 5 + \cdots + (2k+1) = (k+1)^2\)). We start with the left-hand side of \(P(k+1)\) and work to the right-hand side:</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-95" id="solution-95"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-95"><div class="solution solution-like"><article class="proof" id="proof-23"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-833">Let \(P(n)\) be the statement \(1+3 +5 + \cdots + (2n-1) = n^2\text{.}\) We will prove that \(P(n)\) is true for all \(n \ge 1\text{.}\) First the base case, \(P(1)\text{.}\) We have \(1 = 1^2\) which is true, so \(P(1)\) is established. Now the inductive case. Assume that \(P(k)\) is true for some fixed arbitrary \(k \ge 1\text{.}\) That is, \(1 + 3 + 5 + \cdots + (2k-1) = k^2\text{.}\) We will now prove that \(P(k+1)\) is also true (i.e., that \(1 + 3 + 5 + \cdots + (2k+1) = (k+1)^2\)). We start with the left-hand side of \(P(k+1)\) and work to the right-hand side:</p>
 <div class="displaymath">
 \begin{align*}
 1 + 3 + 5 + \cdots + (2k-1) + (2k+1) ~ \amp = k^2 + (2k+1) \amp \text{by ind. hyp.}\\
 \amp = (k+1)^2 \amp \text{by factoring}
 \end{align*}
 </div>
-<p id="p-762">Thus \(P(k+1)\) holds, so by the principle of mathematical induction, \(P(n)\) is true for all \(n \ge 1\text{.}\)</p></article></div></div>
-</div></article><article class="exercise-like" id="exercise-130"><h6 class="heading"><span class="codenumber">3.</span></h6>
-<p id="p-763">Prove that \(2^n \lt  n!\) for all \(n \ge 4\text{.}\) (Recall, \(n! = 1\cdot 2 \cdot 3 \cdot \cdots\cdot n\text{.}\))</p>
+<p id="p-834">Thus \(P(k+1)\) holds, so by the principle of mathematical induction, \(P(n)\) is true for all \(n \ge 1\text{.}\)</p></article></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-129"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-835">Prove that \(2^n \lt  n!\) for all \(n \ge 4\text{.}\) (Recall, \(n! = 1\cdot 2 \cdot 3 \cdot \cdots\cdot n\text{.}\))</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-59" id="solution-59"><span class="type">Solution</span></a><div id="hk-solution-59" class="hidden-content tex2jax_ignore"><div class="solution"><article class="proof" id="proof-19"><h6 class="heading"><span class="type">Proof.</span></h6>
-<p id="p-764">Let \(P(n)\) be the statement \(2^n \lt  n!\text{.}\) We will show \(P(n)\) is true for all \(n \ge 4\text{.}\) First, we check the base case and see that yes, \(2^4 \lt  4!\) (as \(16 \lt  24\)) so \(P(4)\) is true. Now for the inductive case. Assume \(P(k)\) is true for an arbitrary \(k \ge 4\text{.}\) That is, \(2^k \lt  k!\text{.}\) Now consider \(P(k+1)\text{:}\) \(2^{k+1} \lt  (k+1)!\text{.}\) To prove this, we start with the left side and work to the right side.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-96" id="solution-96"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-96"><div class="solution solution-like"><article class="proof" id="proof-24"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-836">Let \(P(n)\) be the statement \(2^n \lt  n!\text{.}\) We will show \(P(n)\) is true for all \(n \ge 4\text{.}\) First, we check the base case and see that yes, \(2^4 \lt  4!\) (as \(16 \lt  24\)) so \(P(4)\) is true. Now for the inductive case. Assume \(P(k)\) is true for an arbitrary \(k \ge 4\text{.}\) That is, \(2^k \lt  k!\text{.}\) Now consider \(P(k+1)\text{:}\) \(2^{k+1} \lt  (k+1)!\text{.}\) To prove this, we start with the left side and work to the right side.</p>
 <div class="displaymath">
 \begin{align*}
 2^{k+1}~ \amp = 2\cdot 2^k \amp\\
@@ -295,71 +323,139 @@ var js_version = 0.11;
 \amp = (k+1)! \amp
 \end{align*}
 </div>
-<p id="p-765">Therefore \(2^{k+1} \lt  (k+1)!\) so we have established \(P(k+1)\text{.}\) Thus by the principle of mathematical induction \(P(n)\) is true for all \(n \ge 4\text{.}\)</p></article></div></div>
-</div></article><article class="exercise-like" id="exercise-131"><h6 class="heading"><span class="codenumber">4.</span></h6>
-<p id="p-766">Prove that the sum of \(n\) squares can be found as follows</p>
+<p id="p-837">Therefore \(2^{k+1} \lt  (k+1)!\) so we have established \(P(k+1)\text{.}\) Thus by the principle of mathematical induction \(P(n)\) is true for all \(n \ge 4\text{.}\)</p></article></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-130"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-838">Prove that the sum of \(n\) squares can be found as follows</p>
 <div class="displaymath">
 \begin{equation*}
 1^2 +2^2 +3^2+...+n^2 = \frac{n(n+1)(2n+1)}{6}
 \end{equation*}
-</div></article><article class="exercise-like" id="exercise-132"><h6 class="heading"><span class="codenumber">5.</span></h6>
-<p id="p-767">What is wrong with the following “proof” of the “fact” that \(n+3 = n+7\) for all values of \(n\) (besides of course that the thing it is claiming to prove is false)?</p>
-<article class="proof" id="proof-20"><h6 class="heading"><span class="type">Proof.</span></h6>
-<p id="p-768">Let \(P(n)\) be the statement that \(n + 3 = n + 7\text{.}\) We will prove that \(P(n)\) is true for all \(n \in \N\text{.}\) Assume, for induction that \(P(k)\) is true. That is, \(k+3 = k+7\text{.}\) We must show that \(P(k+1)\) is true. Now since \(k + 3 = k + 7\text{,}\) add 1 to both sides. This gives \(k + 3 + 1 = k + 7 + 1\text{.}\) Regrouping \((k+1) + 3 = (k+1) + 7\text{.}\) But this is simply \(P(k+1)\text{.}\) Thus by the principle of mathematical induction \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article><div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-60" id="solution-60"><span class="type">Solution</span></a><div id="hk-solution-60" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-769">The only problem is that we never established the base case. Of course, when \(n = 0\text{,}\) \(0+3 \ne 0+7\text{.}\)</p></div></div>
-</div></article><article class="exercise-like" id="exercise-133"><h6 class="heading"><span class="codenumber">6.</span></h6>
-<p id="p-770">The proof in the previous problem does not work. But if we modify the “fact,” we can get a working proof. Prove that \(n + 3 \lt  n + 7\) for all values of \(n \in \N\text{.}\) You can do this proof with algebra (without induction), but the goal of this exercise is to write out a valid induction proof.</p>
+</div>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-61" id="solution-61"><span class="type">Solution</span></a><div id="hk-solution-61" class="hidden-content tex2jax_ignore"><div class="solution"><article class="proof" id="proof-21"><h6 class="heading"><span class="type">Proof.</span></h6>
-<p id="p-771">Let \(P(n)\) be the statement that \(n + 3 \lt  n + 7\text{.}\) We will prove that \(P(n)\) is true for all \(n \in \N\text{.}\) First, note that the base case holds: \(0+3 \lt  0+7\text{.}\) Now assume for induction that \(P(k)\) is true. That is, \(k+3 \lt  k+7\text{.}\) We must show that \(P(k+1)\) is true. Now since \(k + 3 \lt  k + 7\text{,}\) add 1 to both sides. This gives \(k + 3 + 1 \lt  k + 7 + 1\text{.}\) Regrouping \((k+1) + 3 \lt  (k+1) + 7\text{.}\) But this is simply \(P(k+1)\text{.}\) Thus by the principle of mathematical induction \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article></div></div>
-</div></article><article class="exercise-like" id="exercise-134"><h6 class="heading"><span class="codenumber">7.</span></h6>
-<p id="p-772">Find the flaw in the following “proof” of the “fact” that \(n \lt  100\) for every \(n \in \N\text{.}\)</p>
-<article class="proof" id="proof-22"><h6 class="heading"><span class="type">Proof.</span></h6>
-<p id="p-773">Let \(P(n)\) be the statement \(n \lt  100\text{.}\) We will prove \(P(n)\) is true for all \(n \in \N\text{.}\) First we establish the base case: when \(n = 0\text{,}\) \(P(n)\) is true, because \(0 \lt  100\text{.}\) Now for the inductive step, assume \(P(k)\) is true. That is, \(k \lt  100\text{.}\) Now if \(k \lt  100\text{,}\) then \(k\) is some number, like 80. Of course \(80+1 = 81\) which is still less than 100. So \(k +1 \lt  100\) as well. But this is what \(P(k+1)\) claims, so we have shown that \(P(k) \imp P(k+1)\text{.}\) Thus by the principle of mathematical induction, \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article><div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-62" id="solution-62"><span class="type">Solution</span></a><div id="hk-solution-62" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-774">The problem here is that while \(P(0)\) is true, and while \(P(k) \imp P(k+1)\) for <em class="emphasis">some</em> values of \(k\text{,}\) there is at least one value of \(k\) (namely \(k = 99\)) when that implication fails. For a valid proof by induction, \(P(k) \imp P(k+1)\) must be true for all values of \(k\) greater than or equal to the base case.</p></div></div>
-</div></article><article class="exercise-like" id="exercise-135"><h6 class="heading"><span class="codenumber">8.</span></h6>
-<p id="p-775">What is wrong with the following “proof” of the “fact” that for all \(n \in \N\text{,}\) the number \(n^2 + n\) is odd?</p>
-<article class="proof" id="proof-23"><h6 class="heading"><span class="type">Proof.</span></h6>
-<p id="p-776">Let \(P(n)\) be the statement “\(n^2 + n\) is odd.” We will prove that \(P(n)\) is true for all \(n \in \N\text{.}\) Suppose for induction that \(P(k)\) is true, that is, that \(k^2 + k\) is odd. Now consider the statement \(P(k+1)\text{.}\) Now \((k+1)^2 + (k+1) = k^2 + 2k + 1 + k + 1 = k^2 + k + 2k + 2\text{.}\) By the inductive hypothesis, \(k^2 + k\) is odd, and of course \(2k + 2\) is even. An odd plus an even is always odd, so therefore \((k+1)^2 + (k+1)\) is odd. Therefore by the principle of mathematical induction, \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article></article><article class="exercise-like" id="exercise-136"><h6 class="heading"><span class="codenumber">9.</span></h6>
-<p id="p-777">Now give a valid proof (by induction, even though you might be able to do so without using induction) of the statement, “for all \(n \in \N\text{,}\) the number \(n^2 + n\) is even.”</p></article><article class="exercise-like" id="exercise-137"><h6 class="heading"><span class="codenumber">10.</span></h6>
-<p id="p-778">Use induction to prove that if \(n\) people all shake hands with each other, that the total number of handshakes is \(\frac{n(n-1)}{2}\text{.}\)</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-97" id="solution-97"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-97"><div class="solution solution-like"><article class="proof" id="proof-25"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-839">Let \(P(n)\) be the statement “\(1^2 +2^2 +3^2+...+n^2 = \frac{n(n+1)(2n+1)}{6}\)”. For the base case, we show that \(P(1)\) is true. That is:</p>
+<div class="displaymath">
+\begin{equation*}
+P(1) := 1^2 = \frac{1(1+1)(2\cdot1+1)}{6} 
+\end{equation*}
+</div>
+<p data-braille="continuation">which is true.</p>
+<p id="p-840">For the inductive step, assume that \(P(k)\) is true for some integer \(k \ge 1\text{,}\) that is</p>
+<div class="displaymath">
+\begin{equation*}
+1^2 +2^2 +3^2+...+k^2 = \frac{k(k+1)(2k+1)}{6}
+\end{equation*}
+</div>
+<p data-braille="continuation">and consider the statement:</p>
+<div class="displaymath">
+\begin{align*}
+1^2 + 2^2 + 3^2 + \dots + k^2 + (k+1)^2 &amp;=  \frac{k(k+1)(2k+1)}{6}  + (k+1)^2 \\
+&amp; = \frac{k(k+1)(2k+1)}{6} \frac{6(k+1)^2}{6} \\
+&amp; = \frac{(k+1)[k(2k+1) + 6(k+1)]}{6} \\
+&amp; = \frac{(k+1)[2k^2 + k + 6k+6]}{6} \\
+&amp; = \frac{(k+1)[2k^2 + 7k+6]}{6} \\
+&amp; = \frac{(k+1)[(2k+3)(k+2)]}{6} \\
+&amp; = \frac{(k+1)(2(k+1)+1)((k+1) + 1)}{6} 
+\end{align*}
+</div></article></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-131"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-841">What is wrong with the following “proof” of the “fact” that \(n+3 = n+7\) for all values of \(n\) (besides of course that the thing it is claiming to prove is false)?</p>
+<article class="proof" id="proof-26"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-842">Let \(P(n)\) be the statement that \(n + 3 = n + 7\text{.}\) We will prove that \(P(n)\) is true for all \(n \in \N\text{.}\) Assume, for induction that \(P(k)\) is true. That is, \(k+3 = k+7\text{.}\) We must show that \(P(k+1)\) is true. Now since \(k + 3 = k + 7\text{,}\) add 1 to both sides. This gives \(k + 3 + 1 = k + 7 + 1\text{.}\) Regrouping \((k+1) + 3 = (k+1) + 7\text{.}\) But this is simply \(P(k+1)\text{.}\) Thus by the principle of mathematical induction \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article><div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-98" id="solution-98"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-98"><div class="solution solution-like"><p id="p-843">The only problem is that we never established the base case. Of course, when \(n = 0\text{,}\) \(0+3 \ne 0+7\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-132"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-844">The proof in the previous problem does not work. But if we modify the “fact,” we can get a working proof. Prove that \(n + 3 \lt  n + 7\) for all values of \(n \in \N\text{.}\) You can do this proof with algebra (without induction), but the goal of this exercise is to write out a valid induction proof.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-63" id="solution-63"><span class="type">Solution</span></a><div id="hk-solution-63" class="hidden-content tex2jax_ignore"><div class="solution"><article class="proof" id="proof-24"><h6 class="heading"><span class="type">Proof.</span></h6>
-<p id="p-779">Let \(P(n)\) be the statement “when \(n\) people shake hands with each other, there are a total of \(\frac{n(n-1)}{2}\) handshakes.”</p>
-<p id="p-780">Base case: When \(n=2\text{,}\) there will be one handshake, and \(\frac{2(2-1)}{2} = 1\text{.}\)  Thus \(P(2)\) is true.</p>
-<p id="p-781">Inductive case: Assume \(P(k)\) is true for arbitrary \(k\ge 2\) (that the number of handshakes among \(k\) people is \(\frac{k(k-1)}{2}\text{.}\)  What happens if a \(k+1\)st person shows up?  How many <em class="emphasis">new</em> handshakes take place?  The new person must shake hands with everyone there, which is \(k\) new  handshakes.  So the total is now \(\frac{k(k-1)}{2} + k = \frac{(k+1)k}{2}\text{,}\) as needed.</p>
-<p id="p-782">Therefore, by the principle of mathematical induction, \(P(n)\) is true for all \(n \ge 2\text{.}\)</p></article></div></div>
-</div></article><article class="exercise-like" id="exercise-138"><h6 class="heading"><span class="codenumber">11.</span></h6>
-<p id="p-783">Use the product rule for logarithms (\(\log(ab) = \log(a) + \log(b)\)) to prove, by induction on \(n\text{,}\) that \(\log(a^n) = n \log(a)\text{,}\) for all natural numbers \(n \ge 2\text{.}\)</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-99" id="solution-99"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-99"><div class="solution solution-like"><article class="proof" id="proof-27"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-845">Let \(P(n)\) be the statement that \(n + 3 \lt  n + 7\text{.}\) We will prove that \(P(n)\) is true for all \(n \in \N\text{.}\) First, note that the base case holds: \(0+3 \lt  0+7\text{.}\) Now assume for induction that \(P(k)\) is true. That is, \(k+3 \lt  k+7\text{.}\) We must show that \(P(k+1)\) is true. Now since \(k + 3 \lt  k + 7\text{,}\) add 1 to both sides. This gives \(k + 3 + 1 \lt  k + 7 + 1\text{.}\) Regrouping \((k+1) + 3 \lt  (k+1) + 7\text{.}\) But this is simply \(P(k+1)\text{.}\) Thus by the principle of mathematical induction \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-133"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-846">Find the flaw in the following “proof” of the “fact” that \(n \lt  100\) for every \(n \in \N\text{.}\)</p>
+<article class="proof" id="proof-28"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-847">Let \(P(n)\) be the statement \(n \lt  100\text{.}\) We will prove \(P(n)\) is true for all \(n \in \N\text{.}\) First we establish the base case: when \(n = 0\text{,}\) \(P(n)\) is true, because \(0 \lt  100\text{.}\) Now for the inductive step, assume \(P(k)\) is true. That is, \(k \lt  100\text{.}\) Now if \(k \lt  100\text{,}\) then \(k\) is some number, like 80. Of course \(80+1 = 81\) which is still less than 100. So \(k +1 \lt  100\) as well. But this is what \(P(k+1)\) claims, so we have shown that \(P(k) \imp P(k+1)\text{.}\) Thus by the principle of mathematical induction, \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article><div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-100" id="solution-100"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-100"><div class="solution solution-like"><p id="p-848">The problem here is that while \(P(0)\) is true, and while \(P(k) \imp P(k+1)\) for <em class="emphasis">some</em> values of \(k\text{,}\) there is at least one value of \(k\) (namely \(k = 99\)) when that implication fails. For a valid proof by induction, \(P(k) \imp P(k+1)\) must be true for all values of \(k\) greater than or equal to the base case.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-134"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-849">What is wrong with the following “proof” of the “fact” that for all \(n \in \N\text{,}\) the number \(n^2 + n\) is odd?</p>
+<article class="proof" id="proof-29"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-850">Let \(P(n)\) be the statement “\(n^2 + n\) is odd.” We will prove that \(P(n)\) is true for all \(n \in \N\text{.}\) Suppose for induction that \(P(k)\) is true, that is, that \(k^2 + k\) is odd. Now consider the statement \(P(k+1)\text{.}\) Now \((k+1)^2 + (k+1) = k^2 + 2k + 1 + k + 1 = k^2 + k + 2k + 2\text{.}\) By the inductive hypothesis, \(k^2 + k\) is odd, and of course \(2k + 2\) is even. An odd plus an even is always odd, so therefore \((k+1)^2 + (k+1)\) is odd. Therefore by the principle of mathematical induction, \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article><div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-14" id="hint-14"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-14"><div class="hint solution-like"><p id="p-851">Rather than give a solution, here's just a hint. What happens if  \(n\) is even?</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-135"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-852">Now give a valid proof (by induction, even though you might be able to do so without using induction) of the statement, “for all \(n \in \N\text{,}\) the number \(n^2 + n\) is even.”</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-64" id="solution-64"><span class="type">Solution</span></a><div id="hk-solution-64" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-784">The idea here is that if we take the logarithm of \(a^n\text{,}\) we can increase \(n\) by 1 if we multiply by another \(a\) (inside the logarithm). This results in adding 1 more \(\log(a)\) to the total.</p>
-<article class="proof" id="proof-25"><h6 class="heading"><span class="type">Proof.</span></h6>
-<p id="p-785">Let \(P(n)\) be the statement \(\log(a^n) = n \log(a)\text{.}\) The base case, \(P(2)\) is true, because \(\log(a^2) = \log(a\cdot a) = \log(a) + \log(a) = 2\log(a)\text{,}\) by the product rule for logarithms. Now assume, for induction, that \(P(k)\) is true. That is, \(\log(a^k) = k\log(a)\text{.}\) Consider \(\log(a^{k+1})\text{.}\) We have</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-101" id="solution-101"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-101"><div class="solution solution-like"><article class="proof" id="proof-30"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-853">Let \(P(n)\) be the statement “\(n^2 + n \) is even.”</p>
+<p id="p-854">Basis step: when \(n = 0\) we have \(0^0 + 0 = 0\) which is a even.</p>
+<p id="p-855">Inductive step: Assume that \(P(k)\) is true for some integer \(k \ge 0\text{,}\) that is, \(k^2 + k\) is even, and let's consider the following:</p>
+<div class="displaymath">
+\begin{align*}
+(k+1)^2 + (k+1) \amp = k^2 + 2k + 1 + k + 1 \\
+\amp = k^2 + 3k  + 2 \\
+\amp = k^2 + k + 2k + 2 
+\end{align*}
+</div>
+<p data-braille="continuation">now \(k^2 + k = 2l\) for some integer \(l\) by inductive hypothesis, so we have:</p>
+<div class="displaymath">
+\begin{align*}
+(k+1)^2 + (k+1) \amp =  k^2 + k + 2k + 2 \\
+\amp =  2l + 2k + 2 \\
+\amp =  2(l + k + 1) 
+\end{align*}
+</div>
+<p data-braille="continuation">and thus \((k+1)^2 + (k+1)\) is even.</p>
+<p id="p-856">Therefore, by math induction, \(n^2 + n\) is even for all natural numbers</p>.</article></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-136"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="p-857">Use induction to prove that if \(n\) people all shake hands with each other, that the total number of handshakes is \(\frac{n(n-1)}{2}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-102" id="solution-102"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-102"><div class="solution solution-like"><article class="proof" id="proof-31"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-858">Let \(P(n)\) be the statement “when \(n\) people shake hands with each other, there are a total of \(\frac{n(n-1)}{2}\) handshakes.”</p>
+<p id="p-859">Base case: When \(n=2\text{,}\) there will be one handshake, and \(\frac{2(2-1)}{2} = 1\text{.}\)  Thus \(P(2)\) is true.</p>
+<p id="p-860">Inductive case: Assume \(P(k)\) is true for arbitrary \(k\ge 2\) (that the number of handshakes among \(k\) people is \(\frac{k(k-1)}{2}\text{.}\)  What happens if a \(k+1\)st person shows up?  How many <em class="emphasis">new</em> handshakes take place?  The new person must shake hands with everyone there, which is \(k\) new  handshakes.  So the total is now \(\frac{k(k-1)}{2} + k = \frac{(k+1)k}{2}\text{,}\) as needed.</p>
+<p id="p-861">Therefore, by the principle of mathematical induction, \(P(n)\) is true for all \(n \ge 2\text{.}\)</p></article></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-137"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="p-862">Use the product rule for logarithms (\(\log(ab) = \log(a) + \log(b)\)) to prove, by induction on \(n\text{,}\) that \(\log(a^n) = n \log(a)\text{,}\) for all natural numbers \(n \ge 2\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-103" id="solution-103"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-103"><div class="solution solution-like">
+<p id="p-863">The idea here is that if we take the logarithm of \(a^n\text{,}\) we can increase \(n\) by 1 if we multiply by another \(a\) (inside the logarithm). This results in adding 1 more \(\log(a)\) to the total.</p>
+<article class="proof" id="proof-32"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-864">Let \(P(n)\) be the statement \(\log(a^n) = n \log(a)\text{.}\) The base case, \(P(2)\) is true, because \(\log(a^2) = \log(a\cdot a) = \log(a) + \log(a) = 2\log(a)\text{,}\) by the product rule for logarithms. Now assume, for induction, that \(P(k)\) is true. That is, \(\log(a^k) = k\log(a)\text{.}\) Consider \(\log(a^{k+1})\text{.}\) We have</p>
 <div class="displaymath">
 \begin{equation*}
 \log(a^{k+1}) = \log(a^k\cdot a) = \log(a^k) + \log(a) = k\log(a) + \log(a)
 \end{equation*}
 </div>
-<p>with the last equality due to the inductive hypothesis. But this simplifies to \((k+1) \log(a)\text{,}\) establishing \(P(k+1)\text{.}\) Therefore by the principle of mathematical induction, \(P(n)\) is true for all \(n \ge 2\text{.}\)</p></article>
+<p data-braille="continuation">with the last equality due to the inductive hypothesis. But this simplifies to \((k+1) \log(a)\text{,}\) establishing \(P(k+1)\text{.}\) Therefore by the principle of mathematical induction, \(P(n)\) is true for all \(n \ge 2\text{.}\)</p></article>
 </div></div>
-</div></article><article class="exercise-like" id="exercise-139"><h6 class="heading"><span class="codenumber">12.</span></h6>
-<p id="p-786">Let \(f_1, f_2,\ldots, f_n\) be differentiable functions. Prove, using induction, that</p>
+</div></article><article class="exercise exercise-like" id="exercise-138"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<p id="p-865">Let \(f_1, f_2,\ldots, f_n\) be differentiable functions. Prove, using induction, that</p>
 <div class="displaymath">
 \begin{equation*}
 (f_1 + f_2 + \cdots + f_n)' = f_1' + f_2' + \cdots + f_n'
 \end{equation*}
 </div>
-<p id="p-787">You may assume \((f+g)' = f' + g'\) for any differentiable functions \(f\) and \(g\text{.}\) (You don't actually need to know calculus to be able to do this).</p>
+<p id="p-866">You may assume \((f+g)' = f' + g'\) for any differentiable functions \(f\) and \(g\text{.}\) (You don't actually need to know calculus to be able to do this).</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-10" id="hint-10"><span class="type">Hint</span></a><div id="hk-hint-10" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-788">You are allowed to assume the base case. For the inductive case, group all but the last function together as one sum of functions, then apply the usual sum of derivatives rule, and then the inductive hypothesis.</p></div></div>
-</div></article><article class="exercise-like" id="exercise-140"><h6 class="heading"><span class="codenumber">13.</span></h6>
-<p id="p-789">Recall that \(F_n\) is the \(n\)th Fibonacci number defined in <a data-knowl="./knowl/fib-def.html" title="Example 4.1.5">Example 4.1.5</a>.</p>
-<p id="p-790">Prove, by mathematical induction, that \(F_0 + F_1 + F_2 + \cdots + F_{n} = F_{n+2} - 1\text{.}\)</p></article><article class="exercise-like" id="fibonacci-sum-of-evens"><h6 class="heading"><span class="codenumber">14.</span></h6>
-<p id="p-791">Prove that \(F_0 + F_2 + F_4 + \cdots + F_{2n} = F_{2n+1} - 1\) where \(F_n\) is the \(n\)th Fibonacci number.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-15" id="hint-15"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-15"><div class="hint solution-like"><p id="p-867">You are allowed to assume the base case. For the inductive case, group all but the last function together as one sum of functions, then apply the usual sum of derivatives rule, and then the inductive hypothesis.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-139"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
+<p id="p-868">Recall that \(F_n\) is the \(n\)th Fibonacci number defined in <a class="xref" data-knowl="./knowl/fib-def.html" title="Example 4.1.5">Example 4.1.5</a>.</p>
+<p id="p-869">Prove, by mathematical induction, that \(F_0 + F_1 + F_2 + \cdots + F_{n} = F_{n+2} - 1\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-65" id="solution-65"><span class="type">Solution</span></a><div id="hk-solution-65" class="hidden-content tex2jax_ignore"><div class="solution"><article class="proof" id="proof-26"><h6 class="heading"><span class="type">Proof.</span></h6>
-<p id="p-792">Let \(P(n)\) be the statement \(F_0 + F_2 + F_4 + \cdots + F_{2n} = F_{2n+1} - 1\text{.}\) We will show that \(P(n)\) is true for all \(n \ge 0\text{.}\) First the base case is easy because \(F_0 = 0\) and \(F_1 = 1\) so \(F_0 = F_1 - 1\text{.}\) Now consider the inductive case. Assume \(P(k)\) is true, that is, assume \(F_0 + F_2 + F_4 + \cdots + F_{2k} = F_{2k+1} - 1\text{.}\) To establish \(P(k+1)\) we work from left to right:</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-104" id="solution-104"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-104"><div class="solution solution-like"><article class="proof" id="proof-33"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-870">Let \(P(n)\) be the statement “\(F_0 + F_1 + F_2 + \cdots + F_{n} = F_{n+2} - 1\text{.}\)”</p>
+<p id="p-871">Basis step: if \(n = 0\) then \(F_0 = 0\) while \(F_{n+2} - 1 = 1 - 1 = 0\) so the basis step is true.</p>
+<p id="p-872">Inductive step: Assume that \(P(k)\) is true for some integer \(k \ge 0\text{.}\) That is, \(F_0 + F_1 + F_2 + \cdots + F_{k} = F_{k+2} - 1\text{.}\) Now consider</p>
+<div class="displaymath">
+\begin{align*}
+F_0 + F_1 + F_2 + \dots F_k + F_{k+1} \amp= ( F_{k+2} - 1 ) + F_{k+1} \amp \text{by ind. hyp.}\\
+\amp=  F_{k+2} + F_{k+1} - 1 \amp\\
+\amp=  F_{k+3} - 1 \amp \text{by recursive def.}
+\end{align*}
+</div>
+<p data-braille="continuation">thus \(P(k+1)\) is true.</p>
+<p id="p-873">Therefore, by math induction, \(F_0 + F_1 + F_2 + \cdots + F_{n} = F_{n+2} - 1\) for all natural numbers.</p></article></div></div>
+</div></article><article class="exercise exercise-like" id="fibonacci-sum-of-evens"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<p id="p-874">Prove that \(F_0 + F_2 + F_4 + \cdots + F_{2n} = F_{2n+1} - 1\) where \(F_n\) is the \(n\)th Fibonacci number.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-105" id="solution-105"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-105"><div class="solution solution-like"><article class="proof" id="proof-34"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-875">Let \(P(n)\) be the statement \(F_0 + F_2 + F_4 + \cdots + F_{2n} = F_{2n+1} - 1\text{.}\) We will show that \(P(n)\) is true for all \(n \ge 0\text{.}\) First the base case is easy because \(F_0 = 0\) and \(F_1 = 1\) so \(F_0 = F_1 - 1\text{.}\) Now consider the inductive case. Assume \(P(k)\) is true, that is, assume \(F_0 + F_2 + F_4 + \cdots + F_{2k} = F_{2k+1} - 1\text{.}\) To establish \(P(k+1)\) we work from left to right:</p>
 <div class="displaymath">
 \begin{align*}
 F_0 + F_2 + \cdots + F_{2k} + F_{2k+2} ~ \amp = F_{2k+1} - 1 + F_{2k+2} \amp \text{by ind. hyp.}\\
@@ -367,13 +463,54 @@ F_0 + F_2 + \cdots + F_{2k} + F_{2k+2} ~ \amp = F_{2k+1} - 1 + F_{2k+2} \amp \te
 \amp = F_{2k+3} - 1 \amp \text{by recursive def.}
 \end{align*}
 </div>
-<p id="p-793">Therefore \(F_0 + F_2 + F_4 + \cdots + F_{2k+2} = F_{2k+3} - 1\text{,}\) which is to say \(P(k+1)\) holds. Therefore by the principle of mathematical induction, \(P(n)\) is true for all \(n \ge 0\text{.}\)</p></article></div></div>
-</div></article><article class="exercise-like" id="exercise-142"><h6 class="heading"><span class="codenumber">15.</span></h6>
-<p id="p-794">Prove, using strong induction, that every natural number is either a Fibonacci number or can be written as the <em class="emphasis">sum</em> of <em class="emphasis">distinct</em> Fibonacci numbers.</p></article><article class="exercise-like" id="fibonacci-sum-of-odds"><h6 class="heading"><span class="codenumber">16.</span></h6>
-<p id="p-795">Prove, by mathematical induction, that \(F_1 + F_3 + F_5 + \dots + F_{2n -1} = F_{2n}\text{,}\) where \(F_n\) is the \(n\)th Fibonacci number.</p></article><article class="exercise-like" id="fibonacci-sum_of_squares"><h6 class="heading"><span class="codenumber">17.</span></h6>
-<p id="p-796">Prove, by mathematical induction, that \(F_1^2 + F_2^2 + F_3^2 + \dots + F_n^2 = F_n \cdot F_{n+1}\text{,}\) where \(F_n\) is the \(n\)th Fibonacci number.</p>
+<p id="p-876">Therefore \(F_0 + F_2 + F_4 + \cdots + F_{2k+2} = F_{2k+3} - 1\text{,}\) which is to say \(P(k+1)\) holds. Therefore by the principle of mathematical induction, \(P(n)\) is true for all \(n \ge 0\text{.}\)</p></article></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-141"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
+<p id="p-877">Prove, using strong induction, that every natural number is either a Fibonacci number or can be written as the <em class="emphasis">sum</em> of <em class="emphasis">distinct</em> Fibonacci numbers.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-11" id="hint-11"><span class="type">Hint</span></a><div id="hk-hint-11" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-797">\(F_{k+1}\left(F_{k} + F_{k+1}\right) = F_{k+1}F_{k+2} \)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-106" id="solution-106"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-106"><div class="solution solution-like"><article class="proof" id="proof-35"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-878">Let \(P(n)\) be the statement that \(n\) is either a Fibonacci number of the sum of distinct Fibonacci numbers</p>
+<p id="p-879">Basis step: For \(n=0\text{,}\) we have that \(0 = F_0\) is a Fibonacci number.</p>
+<p id="p-880">Inductive step: Assume that there is an integer \(k \ge 0\) such that \(P(m)\) is true for all \(0\le m \le k\text{.}\) That is, \(m\) is either a Fibonacci number or the sum of distinct Fibonacci numbers. Now let's consider the next number, \(k+1\text{:}\)</p>
+<p id="p-881">Case 1: If \(k+1\) is a Fibonacci number, then we're done.</p>
+<p id="p-882">Case 2: If \(k+1\) is not a Fibonacci number, then let \(F_m\) be the largest Fibonacci number less than \(k+1\text{.}\) Since \(k+1 - F_m \le k\) then we have that \(k+1 - F_m\) is the sum of distinct Fibonacci numbers, by inductive hypothesis.</p>
+<p id="p-883">Adding \(F_m\) to this sum gives us \(k+1 - F_m + F_m = k+1\) which then itself a sum of distinct Fibonacci numbers.</p>
+<p id="p-884">Thus, by induction, every natural number is either a Fibonacci number of the sum of distinct Fibonacci numbers.</p></article></div></div>
+</div></article><article class="exercise exercise-like" id="fibonacci-sum-of-odds"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
+<p id="p-885">Prove, by mathematical induction, that \(F_1 + F_3 + F_5 + \dots + F_{2n -1} = F_{2n}\text{,}\) where \(F_n\) is the \(n\)th Fibonacci number.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-107" id="solution-107"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-107"><div class="solution solution-like"><article class="proof" id="proof-36"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-886">Let \(P(n)\) be the statement “\(F_1 + F_3 + F_5 + \dots + F_{2n -1} = F_{2n}\)”</p>
+<p id="p-887">Basis step: If \(n =1\) then \(F_1 =1\) and \(F_{2\cdot 1} = 1\) so that \(P(1)\) is true.</p>
+<p id="p-888">Inductive step: Assume that \(P(k)\) is true for some integer \(k\ge 1\text{.}\) That is, \(F_1 + F_3 + F_5 + \dots + F_{2k -1} = F_{2k}\) and consider:</p>
+<div class="displaymath">
+\begin{align*}
+F_1 + F_3 + F_5 + \dots + F_{2k -1} + F_{2(k+1) - 1} \amp = F_1 + F_3 + F_5 + \dots + F_{2k -1} + F_{2k+1} \amp \\
+\amp = F_{2k} + F_{2k+1} \amp \text{by ind. hyp.} \\
+\amp = F_{2k+2} \amp \text{by rec. def.}\\
+\amp = F_{2(k+1)}\amp
+\end{align*}
+</div>
+<p data-braille="continuation">And thus \(P(k+1)\) is true.</p>
+<p id="p-889">Therefore, by math induction, \(F_1 + F_3 + F_5 + \dots + F_{2n -1} = F_{2n}\) for all integers \(n\ge 1\text{.}\)</p></article></div></div>
+</div></article><article class="exercise exercise-like" id="fibonacci-sum_of_squares"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
+<p id="p-890">Prove, by mathematical induction, that \(F_1^2 + F_2^2 + F_3^2 + \dots + F_n^2 = F_n \cdot F_{n+1}\text{,}\) where \(F_n\) is the \(n\)th Fibonacci number.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-16" id="hint-16"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-16"><div class="hint solution-like"><p id="p-891">\(F_{k+1}\left(F_{k} + F_{k+1}\right) = F_{k+1}F_{k+2} \)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-144"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
+<p id="p-892">Prove that 6 divides \(7^n - 1\) for all \(n \in \N\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-17" id="hint-17"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-17"><div class="hint solution-like"><p id="p-893">(Alternative idea to the below proof) In the inductive step add and subtract \(7^k\text{.}\) That is, you'll have \(7\cdot 7^{k} - 1 - 7^k + 7^k\text{.}\) Now algebra.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-108" id="solution-108"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-108"><div class="solution solution-like"><article class="proof" id="proof-37"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-894">Let \(P(n)\) be the statement “6 divides \(7^n - 1\text{.}\)” We will show \(P(n)\) is true for all \(n \in \N\text{.}\) First we establish the base case, \(P(0)\text{.}\) Since \(7^0 - 1 = 0\text{,}\) and \(0\) is a multiple of 6, \(P(0)\) is true. Now for the inductive case. Assume \(P(k)\) holds for an arbitrary \(k \in \N\text{.}\) That is, 6 divides \(7^k - 1\text{,}\) or in other words, \(7^k - 1 = 6j\) for some integer \(j\text{.}\) Now consider \(7^{k+1} - 1\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+7^{k+1} - 1 ~ \amp = 7^{k+1} - 7 + 6 \amp \text{by cleverness:} -1 = -7 + 6\\
+\amp = 7(7^k - 1) + 6 \amp \text{factor out a 7 from the first two terms}\\
+\amp = 7(6j) + 6 \amp \text{by the inductive hypothesis}\\
+\amp = 6(7j + 1) \amp \text{factor out a 6}
+\end{align*}
+</div>
+<p id="p-895">Therefore 6 divides \(7^{k+1} - 1\text{,}\) or in other words, \(P(k+1)\) is true. Therefore by the principle of mathematical induction, \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article></div></div>
 </div></article></section><section class="subsection" id="subsection-45"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.3.2</span> <span class="title">Forum Posts about this section</span>
 </h3>
@@ -389,7 +526,5 @@ F_0 + F_2 + \cdots + F_{2k} + F_{2k+2} ~ \amp = F_{2k+1} - 1 + F_{2k+2} \amp \te
         })();
       </script></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.11/login.js"></script>
 </body>
 </html>

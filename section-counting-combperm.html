@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-12T17:53:54-05:00    *-->
+<!--*    on 2020-12-06T18:12:59-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Combinations and Permutations</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -50,20 +50,17 @@ MathJax.Hub.Config({
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(gcse, s);
 })();
-</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.11;
-</script>
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\def\ds{\displaystyle}
@@ -150,7 +147,7 @@ var js_version = 0.11;
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
@@ -205,97 +202,150 @@ var js_version = 0.11;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="section-counting-combperm"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.2</span> <span class="title">Combinations and Permutations</span>
 </h2>
-<a href="section-counting-combperm.html" class="permalink">¶</a><article class="definition-like" id="definition-65"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">5.2.1</span>.</h6>
-<p id="p-859">A <dfn class="terminology">permutation</dfn> is an ordered arrangement of objects.</p></article><article class="example-like" id="example-121"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">5.2.2</span>.</h6>
-<p id="p-860">If I want to arrange five books on a shelf, how many possible arrangements of the books are there?</p></article><article class="example-like" id="example-122"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">5.2.3</span>.</h6>
-<p id="p-861">How many functions \(f: \{1,2,3\} \to \{1, 2, 3\}\) are bijections?</p></article><article class="example-like" id="example-123"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">5.2.4</span>.</h6>
-<p id="p-862">If I only want to arrange three of the five books on my shelf, how many ways are there to do that?</p></article><article class="theorem-like" id="theorem-10"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">5.2.5</span>.</h6>
-<p id="p-863">If \(n\) is a positive integer and \(r\) is an integer such that \(1 \le r \le n\text{,}\) then there are \(P(n,r) = n\cdot (n-1) \cdot (n-2) \cdot \dots \cdot (n-(r-1))\) \(r\)-permutations of a set of \(n\) elements.</p></article><article class="theorem-like" id="corollary-2"><h6 class="heading">
-<span class="type">Corollary</span> <span class="codenumber">5.2.6</span>.</h6>
-<p id="p-864">If \(n\) and \(r\) are integers with \(0\le r \le n\text{,}\) then:</p>
+<article class="definition definition-like" id="definition-66"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.2.1</span><span class="period">.</span>
+</h6>
+<p id="p-959">A <dfn class="terminology">permutation</dfn> is an ordered arrangement of objects.</p></article><article class="example example-like" id="example-122"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.2</span><span class="period">.</span>
+</h6>
+<p id="p-960">If I want to arrange five books on a shelf, how many possible arrangements of the books are there?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-112" id="answer-112"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-112"><div class="answer solution-like"><iframe id="video-112" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/UF_xPGO71hw?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-123"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.3</span><span class="period">.</span>
+</h6>
+<p id="p-961">How many functions \(f: \{1,2,3\} \to \{1, 2, 3\}\) are bijections?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-113" id="answer-113"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-113"><div class="answer solution-like"><iframe id="video-113" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/5pR7X1gqOcI?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-124"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.4</span><span class="period">.</span>
+</h6>
+<p id="p-962">If I only want to arrange three of the five books on my shelf, how many ways are there to do that?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-114" id="answer-114"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-114"><div class="answer solution-like"><iframe id="video-114" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/fTxhoMDB5A8?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="theorem theorem-like" id="theorem-10"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.2.5</span><span class="period">.</span>
+</h6>
+<p id="p-963">If \(n\) is a positive integer and \(r\) is an integer such that \(1 \le r \le n\text{,}\) then there are \(P(n,r) = n\cdot (n-1) \cdot (n-2) \cdot \dots \cdot (n-(r-1))\) \(r\)-permutations of a set of \(n\) elements.</p></article><article class="corollary theorem-like" id="corollary-2"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">5.2.6</span><span class="period">.</span>
+</h6>
+<p id="p-964">If \(n\) and \(r\) are integers with \(0\le r \le n\text{,}\) then:</p>
 <div class="displaymath">
 \begin{equation*}
 P(n,r) = \dfrac{n!}{(n-r)!}
 \end{equation*}
-</div></article><article class="example-like" id="example-124"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">5.2.7</span>.</h6>
-<p id="p-865">How many six-letter vanity license plates are there that have no repeated letters?</p></article><article class="example-like" id="example-125"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">5.2.8</span>.</h6>
-<p id="p-866">How many functions \(f: \{1,2,3,4\} \to \{1,2,3,4,5,6\}\) are injective? [Recall a function is injective \(\forall a, \forall b ( f(a) = f(b)) \to ( a = b )\)]</p></article><article class="definition-like" id="definition-66"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">5.2.9</span>.</h6>
-<p id="p-867">A <dfn class="terminology">combination</dfn> is an unordered selection of objects.</p></article><article class="example-like" id="example-126"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">5.2.10</span>.</h6>
-<p id="p-868">If I want only to select three books from my five books on the bookshelf, in how many ways can I do this?</p></article><article class="remark-like" id="note-30"><h6 class="heading">
-<span class="type">Note</span> <span class="codenumber">5.2.11</span>.</h6>
-<p id="p-869">If \(n \and r\) are integers such that \(0 \le r \le n\text{,}\) then the number of \(r\)-combinations from a set of \(n\) elements is</p>
+</div></article><article class="example example-like" id="example-125"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.7</span><span class="period">.</span>
+</h6>
+<p id="p-965">How many six-letter vanity license plates are there that have no repeated letters?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-115" id="answer-115"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-115"><div class="answer solution-like"><iframe id="video-115" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/u9ypy1ZZ6qI?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-126"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.8</span><span class="period">.</span>
+</h6>
+<p id="p-966">How many functions \(f: \{1,2,3,4\} \to \{1,2,3,4,5,6\}\) are injective? [Recall a function is injective \(\forall a, \forall b ( f(a) = f(b)) \to ( a = b )\)]</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-116" id="answer-116"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-116"><div class="answer solution-like"><iframe id="video-116" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/7-6KTaUl2G8?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="definition definition-like" id="definition-67"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.2.9</span><span class="period">.</span>
+</h6>
+<p id="p-967">A <dfn class="terminology">combination</dfn> is an unordered selection of objects.</p></article><article class="example example-like" id="example-127"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.10</span><span class="period">.</span>
+</h6>
+<p id="p-968">If I want only to select three books from my five books on the bookshelf, in how many ways can I do this?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-117" id="answer-117"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-117"><div class="answer solution-like"><iframe id="video-117" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/0DGmoVjw4Ms?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="note remark-like" id="note-30"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">5.2.11</span><span class="period">.</span>
+</h6>
+<p id="p-969">If \(n \and r\) are integers such that \(0 \le r \le n\text{,}\) then the number of \(r\)-combinations from a set of \(n\) elements is</p>
 <div class="displaymath">
 \begin{equation*}
 \binom{n}{r} = \dfrac{n!}{r!(n-r)!}
 \end{equation*}
-</div></article><article class="example-like" id="example-127"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">5.2.12</span>.</h6>
-<p id="p-870">How many ways are there to choose five out of ten friends to invite over for dinner?</p></article><article class="example-like" id="example-128"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">5.2.13</span>.</h6>
-<p id="p-871">Two of your ten friends, Tim and Tammy just broke up. They can't stand to be in a room together. How many ways are there to choose five out of ten friends to invite to dinner, ensuring that Tim and Tammy are not both invited?</p></article><article class="example-like" id="example-129"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">5.2.14</span>.</h6>
-<p id="p-872">How many three element subsets from a set of five elements are there?</p></article><article class="example-like" id="example-130"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">5.2.15</span>.</h6>
-<p id="p-873">From a standard deck of 52 cards, how many five card hands are possible?</p></article><article class="example-like" id="example-131"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">5.2.16</span>.</h6>
-<p id="p-874">How many five card cards have exactly the same suit?</p></article><article class="example-like" id="example-132"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">5.2.17</span>.</h6>
-<p id="p-875">How many five card hands have at least one heart?</p></article><section class="exercises" id="exercises-21"><h3 class="heading hide-type">
+</div></article><article class="example example-like" id="example-128"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.12</span><span class="period">.</span>
+</h6>
+<p id="p-970">How many ways are there to choose five out of ten friends to invite over for dinner?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-118" id="answer-118"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-118"><div class="answer solution-like"><iframe id="video-118" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/PX5JPp49HBw?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-129"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.13</span><span class="period">.</span>
+</h6>
+<p id="p-971">Two of your ten friends, Tim and Tammy just broke up. They can't stand to be in a room together. How many ways are there to choose five out of ten friends to invite to dinner, ensuring that Tim and Tammy are not both invited?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-119" id="answer-119"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-119"><div class="answer solution-like"><iframe id="video-119" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/XDS19xuU2d8?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-130"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.14</span><span class="period">.</span>
+</h6>
+<p id="p-972">How many three element subsets from a set of five elements are there?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-120" id="answer-120"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-120"><div class="answer solution-like"><iframe id="video-120" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/djWnHnLekz0?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-131"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.15</span><span class="period">.</span>
+</h6>
+<p id="p-973">From a standard deck of 52 cards, how many five card hands are possible?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-121" id="answer-121"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-121"><div class="answer solution-like"><iframe id="video-121" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/taUwZ3TCJ2Y?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-132"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.16</span><span class="period">.</span>
+</h6>
+<p id="p-974">How many five card cards have exactly the same suit?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-122" id="answer-122"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-122"><div class="answer solution-like"><iframe id="video-122" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/uVvEBsD082s?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="example-133"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.17</span><span class="period">.</span>
+</h6>
+<p id="p-975">How many five card hands have at least one heart?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-123" id="answer-123"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-123"><div class="answer solution-like"><iframe id="video-123" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/h7IgJde5bvY?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><section class="exercises" id="exercises-21"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">5.2.1</span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise-like" id="exercise-159"><h6 class="heading"><span class="codenumber">1.</span></h6>
-<p id="p-876">A pizza parlor offers 10 toppings.</p>
+<article class="exercise exercise-like" id="exercise-159"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-976">A pizza parlor offers 10 toppings.</p>
 <ol class="lower-alpha">
-<li id="li-711"><p id="p-877">How many 3-topping pizzas could they put on their menu?  Assume double toppings are not allowed.</p></li>
-<li id="li-712"><p id="p-878">How many total pizzas are possible, with between zero and ten toppings (but not double toppings) allowed?</p></li>
-<li id="li-713"><p id="p-879">The pizza parlor will list the 10 toppings in two equal-sized columns on their menu.  How many ways can they arrange the toppings in the left column?</p></li>
+<li id="li-774"><p id="p-977">How many 3-topping pizzas could they put on their menu?  Assume double toppings are not allowed.</p></li>
+<li id="li-775"><p id="p-978">How many total pizzas are possible, with between zero and ten toppings (but not double toppings) allowed?</p></li>
+<li id="li-776"><p id="p-979">The pizza parlor will list the 10 toppings in two equal-sized columns on their menu.  How many ways can they arrange the toppings in the left column?</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-76" id="solution-76"><span class="type">Solution</span></a><div id="hk-solution-76" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-880" class="lower-alpha">
-<li id="li-714">\({10 \choose 3} = 120\) pizzas.  We must choose (in no particular order) 3 out of the 10 toppings.</li>
-<li id="li-715">\(2^{10} = 1024\) pizzas.  Say yes or no to each topping.</li>
-<li id="li-716">\(P(10,5) = 30240\) ways.  Assign each of the 5 spots in the left column to a unique pizza topping.</li>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-119" id="solution-119"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-119"><div class="solution solution-like"><ol id="p-980" class="lower-alpha">
+<li id="li-777">\({10 \choose 3} = 120\) pizzas.  We must choose (in no particular order) 3 out of the 10 toppings.</li>
+<li id="li-778">\(2^{10} = 1024\) pizzas.  Say yes or no to each topping.</li>
+<li id="li-779">\(P(10,5) = 30240\) ways.  Assign each of the 5 spots in the left column to a unique pizza topping.</li>
 </ol></div></div>
-</div></article><article class="exercise-like" id="exercise-160"><h6 class="heading"><span class="codenumber">2.</span></h6>
-<p id="p-881">A combination lock consists of a dial with 40 numbers on it. To open the lock, you turn the dial to the right until you reach a first number, then to the left until you get to second number, then to the right again to the third number. The numbers must be distinct. How many different combinations are possible?</p>
+</div></article><article class="exercise exercise-like" id="exercise-160"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-981">A combination lock consists of a dial with 40 numbers on it. To open the lock, you turn the dial to the right until you reach a first number, then to the left until you get to second number, then to the right again to the third number. The numbers must be distinct. How many different combinations are possible?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-77" id="solution-77"><span class="type">Solution</span></a><div id="hk-solution-77" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-882">Despite its name, we are not looking for a combination here. The order in which the three numbers appears matters. There are \(P(40,3) = 40\cdot 39 \cdot 38\) different possibilities for the “combination”. This is assuming you cannot repeat any of the numbers (if you could, the answer would be \(40^3\)).</p></div></div>
-</div></article><article class="exercise-like" id="exercise-161"><h6 class="heading"><span class="codenumber">3.</span></h6>
-<p id="p-883">An <em class="emphasis">anagram</em> of a word is just a rearrangement of its letters. How many different anagrams of “uncopyrightable” are there? (This happens to be the longest common English word without any repeated letters.)</p></article><article class="exercise-like" id="exercise-162"><h6 class="heading"><span class="codenumber">4.</span></h6>
-<p id="p-884">How many anagrams are there of the word “assesses” that start with the letter “a”?</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-120" id="solution-120"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-120"><div class="solution solution-like"><p id="p-982">Despite its name, we are not looking for a combination here. The order in which the three numbers appears matters. There are \(P(40,3) = 40\cdot 39 \cdot 38\) different possibilities for the “combination”. This is assuming you cannot repeat any of the numbers (if you could, the answer would be \(40^3\)).</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-161"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-983">An <em class="emphasis">anagram</em> of a word is just a rearrangement of its letters. How many different anagrams of “uncopyrightable” are there? (This happens to be the longest common English word without any repeated letters.)</p></article><article class="exercise exercise-like" id="exercise-162"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-984">How many anagrams are there of the word “assesses” that start with the letter “a”?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-78" id="solution-78"><span class="type">Solution</span></a><div id="hk-solution-78" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-885">After the first letter (a), we must rearrange the remaining 7 letters. There are only two letters (s and e), so this is really just a bit-string question (think of s as 1 and e as 0). Thus there \({7 \choose 2} = 21\) anagrams starting with “a”.</p></div></div>
-</div></article><article class="exercise-like" id="exercise-163"><h6 class="heading"><span class="codenumber">5.</span></h6>
-<p id="p-886">How many anagrams are there of “anagram”?</p></article><article class="exercise-like" id="exercise-164"><h6 class="heading"><span class="codenumber">6.</span></h6>
-<p id="p-887">On a business retreat, your company of 20 businessmen and businesswomen go golfing.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-121" id="solution-121"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-121"><div class="solution solution-like"><p id="p-985">After the first letter (a), we must rearrange the remaining 7 letters. There are only two letters (s and e), so this is really just a bit-string question (think of s as 1 and e as 0). Thus there \({7 \choose 2} = 21\) anagrams starting with “a”.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-163"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-986">How many anagrams are there of “anagram”?</p></article><article class="exercise exercise-like" id="exercise-164"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-987">On a business retreat, your company of 20 businessmen and businesswomen go golfing.</p>
 <ol class="lower-alpha">
-<li id="li-717"><p id="p-888">You need to divide up into foursomes (groups of 4 people): a first foursome, a second foursome, and so on.  How many ways can you do this?</p></li>
-<li id="li-718"><p id="p-889">After all your hard work, you realize that in fact, you want each foursome to include one of the five Board members.  How many ways can you do this?</p></li>
+<li id="li-780"><p id="p-988">You need to divide up into foursomes (groups of 4 people): a first foursome, a second foursome, and so on.  How many ways can you do this?</p></li>
+<li id="li-781"><p id="p-989">After all your hard work, you realize that in fact, you want each foursome to include one of the five Board members.  How many ways can you do this?</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-79" id="solution-79"><span class="type">Solution</span></a><div id="hk-solution-79" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-890" class="lower-alpha">
-<li id="li-719">\({20 \choose 4}{16 \choose 4}{12 \choose 4}{8 \choose 4}{4 \choose 4}\) ways. Pick 4 out of 20 people to be in the first foursome, then 4 of the remaining 16 for the second foursome, and so on (use the multiplicative principle to combine).</li>
-<li id="li-720">\(5!{15 \choose 3}{12 \choose 3}{9 \choose 3}{6 \choose 3}{3 \choose 3}\) ways.  First determine the tee time of the 5 board members, then select 3 of the 15 non board members to golf with the first board member, then 3 of the remaining 12 to golf with the second, and so on.</li>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-122" id="solution-122"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-122"><div class="solution solution-like"><ol id="p-990" class="lower-alpha">
+<li id="li-782">\({20 \choose 4}{16 \choose 4}{12 \choose 4}{8 \choose 4}{4 \choose 4}\) ways. Pick 4 out of 20 people to be in the first foursome, then 4 of the remaining 16 for the second foursome, and so on (use the multiplicative principle to combine).</li>
+<li id="li-783">\(5!{15 \choose 3}{12 \choose 3}{9 \choose 3}{6 \choose 3}{3 \choose 3}\) ways.  First determine the tee time of the 5 board members, then select 3 of the 15 non board members to golf with the first board member, then 3 of the remaining 12 to golf with the second, and so on.</li>
 </ol></div></div>
-</div></article><article class="exercise-like" id="exercise-165"><h6 class="heading"><span class="codenumber">7.</span></h6>
-<p id="p-891">Consider sets \(A\) and \(B\) with \(|A| = 10\) and \(|B| = 17\text{.}\)</p>
+</div></article><article class="exercise exercise-like" id="exercise-165"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-991">Consider sets \(A\) and \(B\) with \(|A| = 10\) and \(|B| = 17\text{.}\)</p>
 <ol class="lower-alpha">
-<li id="li-721"><p id="p-892">How many functions \(f: A \to B\) are there?</p></li>
-<li id="li-722"><p id="p-893">How many functions \(f: A \to B\) are injective?</p></li>
+<li id="li-784"><p id="p-992">How many functions \(f: A \to B\) are there?</p></li>
+<li id="li-785"><p id="p-993">How many functions \(f: A \to B\) are injective?</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-80" id="solution-80"><span class="type">Solution</span></a><div id="hk-solution-80" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-894" class="lower-alpha">
-<li id="li-723">\(17^{10}\) functions.  There are 17 choices for the image of each element in the domain.</li>
-<li id="li-724">\(P(17, 10)\) injective functions.  There are 17 choices for image of the first element of the domain, then only 16 choices for the second, and so on.</li>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-123" id="solution-123"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-123"><div class="solution solution-like"><ol id="p-994" class="lower-alpha">
+<li id="li-786">\(17^{10}\) functions.  There are 17 choices for the image of each element in the domain.</li>
+<li id="li-787">\(P(17, 10)\) injective functions.  There are 17 choices for image of the first element of the domain, then only 16 choices for the second, and so on.</li>
 </ol></div></div>
 </div></article></section><section class="subsection" id="subsection-47"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.2.2</span> <span class="title">Forum Posts about this section</span>
@@ -312,7 +362,5 @@ P(n,r) = \dfrac{n!}{(n-r)!}
         })();
       </script></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.11/login.js"></script>
 </body>
 </html>

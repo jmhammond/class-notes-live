@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-12T17:53:53-05:00    *-->
+<!--*    on 2020-12-06T18:12:56-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Multiplicative Inverses</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -58,20 +58,17 @@ MathJax.Hub.Config({
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(gcse, s);
 })();
-</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.11;
-</script>
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\def\ds{\displaystyle}
@@ -158,7 +155,7 @@ var js_version = 0.11;
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
@@ -213,15 +210,23 @@ var js_version = 0.11;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="section-multiplicative-inverses"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.4</span> <span class="title">Multiplicative Inverses</span>
 </h2>
-<a href="section-multiplicative-inverses.html" class="permalink">¶</a><article class="example-like" id="example-77"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.4.1</span>.</h6>
-<ol id="p-631" class="decimal">
-<li id="li-558">Find every multiple of 4 modulo 9.</li>
-<li id="li-559">Find the inverse of 4 modulo 9.</li>
+<article class="definition definition-like" id="definition-48"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span>
+</h6>
+<p id="p-677">Let \(a\) be an integer and \(m\) a positive integer. We define a <dfn class="terminology">multiplicative inverse of \(a\) modulo \(m\)</dfn> to be an integer \(b\) such that \(ab \equiv 1 \pmod{m}\text{.}\)</p></article><article class="example example-like" id="example-77"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span>
+</h6>
+<p id="p-678">Since \(5\cdot 3 \equiv 1 \pmod{7}\text{,}\) we say that \(3\) is a multiplicative inverse of 5 modulo 7. Similarly, 5 is a multiplicative inverse of 3 modulo 7.</p></article><article class="example example-like" id="example-78"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.3</span><span class="period">.</span>
+</h6>
+<ol id="p-679" class="decimal">
+<li id="li-594">Find every multiple of 4 modulo 9.</li>
+<li id="li-595">Find the inverse of 4 modulo 9.</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-50" id="solution-50"><span class="type">Solution</span></a><div id="hk-solution-50" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-632">Here's the multiplication table. Remember to reduce modulo 9. <figure class="figure-like" id="table-7"><table>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-71" id="answer-71"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-71"><div class="answer solution-like"><iframe id="video-70" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/MyWZyvJUlI4?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-69" id="solution-69"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-69"><div class="solution solution-like">
+<p id="p-680">Here's the multiplication table. Remember to reduce modulo 9. <figure class="table table-like" id="table-7"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.4.4<span class="period">.</span></span><span class="space"> </span>Multiplication table of 4 modulo 9</figcaption><table>
 <tr>
 <td class="c m b2 r2 l0 t0 lines">*</td>
 <td class="c m b2 r0 l0 t0 lines">1</td>
@@ -232,7 +237,7 @@ var js_version = 0.11;
 <td class="l m b2 r0 l0 t0 lines">6</td>
 <td class="l m b2 r0 l0 t0 lines">7</td>
 <td class="l m b2 r0 l0 t0 lines">8</td>
-<td class="l m b2 r0 l0 t0 lines">9</td>
+<td class="l m b2 r0 l0 t0 lines" data-braille="last-cell">9</td>
 </tr>
 <tr>
 <td class="c m b0 r2 l0 t0 lines">4</td>
@@ -244,55 +249,88 @@ var js_version = 0.11;
 <td class="l m b0 r0 l0 t0 lines">6</td>
 <td class="l m b0 r0 l0 t0 lines">1</td>
 <td class="l m b0 r0 l0 t0 lines">5</td>
-<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">0</td>
 </tr>
-</table>
-<figcaption><span class="type">Table</span> <span class="codenumber">3.4.2.</span> Multiplication table of 4 modulo 9</figcaption></figure></p>
-<p id="p-633">The inverse of 4 modulo 9 is 7. Why?</p>
+</table></figure></p>
+<p id="p-681">The inverse of 4 modulo 9 is 7. Why?</p>
 </div></div>
-</div></article><article class="example-like" id="example-78"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.4.3</span>.</h6>
-<p id="p-634">Solve the congruence \(4x = 5 \pmod 9 \text{.}\)</p></article><article class="example-like" id="multiplication-table"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.4.4</span>.</h6>
-<p id="p-635">Let's create a multiplication table modulo 9. The following Sage code does it for us. You can change the variable <code class="code-inline tex2jax_ignore">n</code> to other numbers to quickly generate other multiplication tables.</p>
-<p id="p-636">The output is a table/matrix whose \(i, j\)th entry is \(i \cdot j \pmod \text{n}\text{.}\) <div class="sagecell-sage" id="sage-1"><script type="text/x-sage">n = 9
+</div></article><article class="example example-like" id="example-79"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.5</span><span class="period">.</span>
+</h6>
+<p id="p-682">Solve the congruence \(4x \equiv 5 \pmod 9 \text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-72" id="answer-72"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-72"><div class="answer solution-like"><iframe id="video-71" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/-_3jKc2ul4w?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="example example-like" id="multiplication-table"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.6</span><span class="period">.</span>
+</h6>
+<p id="p-683">Let's create a multiplication table modulo 9. The following Sage code does it for us. You can change the variable <code class="code-inline tex2jax_ignore">n</code> to other numbers to quickly generate other multiplication tables.</p>
+<p id="p-684">The output is a table/matrix whose \(i, j\)th entry is \(i \cdot j \pmod{n}\text{.}\) <div class="sagecell-sage" id="sage-1"><script type="text/x-sage">n = 9
 rows = []
 for i in range(1, n):
-rows.append( map((lambda x: (i*x)%n), [x for x in range(1,n)]))
+    rows.append(list(map((lambda x: (i*x)%n), [x for x in range(1,n)])))
 
 table(rows)
 </script></div></p>
 <ol class="decimal">
-<li id="li-560">What is the inverse of 7 modulo 9?</li>
-<li id="li-561">Does 6 have an inverse modulo 9? Why or why not?</li>
-<li id="li-562">What numbers are invertible modulo 9? What numbers are not?</li>
-</ol></article><article class="theorem-like" id="proposition-6"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">3.4.5</span>.</h6>
-<p id="p-637">If \(a \and m\) are relatively prime integers and \(m \gt 1\text{,}\) then an inverse of \(a\) modulo \(m\) exists.</p></article><article class="remark-like" id="note-19"><h6 class="heading">
-<span class="type">Note</span> <span class="codenumber">3.4.6</span>.</h6>
-<ol id="p-638" class="decimal">
-<li id="li-563">The inverse of \(a \text{ modulo } m\) is its Bezout coefficient in \({\gcd(a,m) = as + mt}\)</li>
-<li id="li-564">The inverse is unique, but we won't prove that here.</li>
-</ol></article><section class="exercises" id="exercises-13"><h3 class="heading hide-type">
+<li id="li-596">What is the inverse of 7 modulo 9?</li>
+<li id="li-597">Does 6 have an inverse modulo 9? Why or why not?</li>
+<li id="li-598">What numbers are invertible modulo 9? What numbers are not?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-73" id="answer-73"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-73"><div class="answer solution-like"><iframe id="video-72" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/IQ3D_dVSl9k?&amp;modestbranding=1&amp;rel=0"></iframe></div></div>
+</div></article><article class="proposition theorem-like" id="proposition-6"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.4.7</span><span class="period">.</span>
+</h6>
+<p id="p-685">If \(a \and m\) are relatively prime integers and \(m \gt 1\text{,}\) then an inverse of \(a\) modulo \(m\) exists.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-74" id="answer-74"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-74"><div class="answer solution-like"><iframe id="video-73" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/R14CL5b6GjE?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></article><article class="note remark-like" id="note-19"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">3.4.8</span><span class="period">.</span>
+</h6>
+<ol id="p-686" class="decimal">
+<li id="li-599">The inverse of \(a \text{ modulo } m\) is its Bezout coefficient in \({\gcd(a,m) = as + mt}\)</li>
+<li id="li-600">The inverse is unique, but we won't prove that here.</li>
+</ol></article><p id="p-687">Here's an additional example: solve \(5x + 3 = 0\pmod{14}\) <a data-knowl="" class="id-ref original" data-refid="hk-answer-75" id="answer-75"><span class="type">Answer/Video</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-75"><div class="answer solution-like"><iframe id="video-74" width="600" height="337" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/J-Iu16MEKeo?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></p>
+<section class="exercises" id="exercises-13"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">3.4.1</span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise-like" id="exercise-106"><h6 class="heading"><span class="codenumber">1.</span></h6>
-<p id="p-639">Solve the congruence:</p>
+<article class="exercise exercise-like" id="exercise-105"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-688">Solve the congruence:</p>
 <ol class="lower-alpha">
-<li id="li-565">\(3x + 4 = 7 \pmod 8 \)</li>
-<li id="li-566">\(9x = 4 \pmod{22}\)</li>
-<li id="li-567">\(5x + 14 = 0 \pmod{26}\)</li>
-</ol></article><article class="exercise-like" id="exercise-107"><h6 class="heading"><span class="codenumber">2.</span></h6>
-<p id="p-640">Find all solutions to the congruence (there could be more than one):</p>
+<li id="li-601">\(\displaystyle 3x + 4 \equiv 7 \pmod 8 \)</li>
+<li id="li-602">\(\displaystyle 9x \equiv 4 \pmod{22}\)</li>
+<li id="li-603">\(\displaystyle 5x + 14 \equiv 0 \pmod{26}\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-70" id="solution-70"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-70"><div class="solution solution-like"><ol id="p-689" class="lower-alpha">
+<li id="li-604">\(\displaystyle x \equiv 1 \pmod 8\)</li>
+<li id="li-605">\(\displaystyle x \equiv 20 \pmod{22}\)</li>
+<li id="li-606">\(\displaystyle x \equiv 18 \pmod{26}\)</li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-106"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-690">Find all solutions to the congruence (there could be more than one):</p>
 <ol class="lower-alpha">
-<li id="li-568">\(3x =6 \pmod 9 \)</li>
-<li id="li-569">\(4x = 3 \pmod 8 \)</li>
-</ol></article><article class="exercise-like" id="exercise-108"><h6 class="heading"><span class="codenumber">3.</span></h6>
-<p id="p-641">Play around with making <a data-knowl="./knowl/multiplication-table.html" title="Example 3.4.4">multiplication tables of various moduli in the Sage code in example 3.4.4</a>.</p>
+<li id="li-607">\(\displaystyle 3x \equiv6 \pmod 9 \)</li>
+<li id="li-608">\(\displaystyle 4x \equiv 3 \pmod 8 \)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-71" id="solution-71"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-71"><div class="solution solution-like">
+<p id="p-691">Here, since the coefficient of \(x\) isn't relatively prime to the modulus there are either multiple answers per modulus or no solution.</p>
 <ol class="lower-alpha">
-<li id="li-570">What condition is required for a number \(a\) to have an inverse modulo \(n\text{?}\)</li>
-<li id="li-571">What is a condition on \(n\) for every element to have an inverse modulo \(n\text{?}\)</li>
-</ol></article></section><section class="subsection" id="subsection-34"><h3 class="heading hide-type">
+<li id="li-609"><p id="p-692">Each of \(x \equiv 2 \pmod{9}\text{,}\) \(x\equiv 5 \pmod{9}\text{,}\) and \(x \equiv 8 \pmod{9}\) satisfy the given equation. We can summarize this as \(x \equiv 2 \pmod{3}\)</p></li>
+<li id="li-610">There is no solution to this equality. No multiple of 4 will ever have a remainder of 3 modulo 8.</li>
+</ol>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-107"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-693">Play around with making <a class="xref" data-knowl="./knowl/multiplication-table.html" title="Example 3.4.6">multiplication tables of various moduli in the Sage code in example 3.4.6</a>.</p>
+<ol class="lower-alpha">
+<li id="li-611">What condition is required for a number \(a\) to have an inverse modulo \(n\text{?}\)</li>
+<li id="li-612">What is a condition on \(n\) for every element to have an inverse modulo \(n\text{?}\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-72" id="solution-72"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-72"><div class="solution solution-like"><ol id="p-694" class="lower-alpha">
+<li id="li-613">To have an inverse modulo \(n\text{,}\) a number \(a\) must be relatively prime to \(n\)</li>
+<li id="li-614">To have the property that every number has an inverse modulo \(n\text{,}\) the number \(n\) must be prime</li>
+</ol></div></div>
+</div></article></section><section class="subsection" id="subsection-34"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.4.2</span> <span class="title">Forum Posts about this section</span>
 </h3>
 <div xmlns:xi="http://www.w3.org/2001/XInclude" id="discourse-comments"></div>
@@ -307,7 +345,5 @@ table(rows)
         })();
       </script></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.11/login.js"></script>
 </body>
 </html>
